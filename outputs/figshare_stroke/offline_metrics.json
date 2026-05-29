@@ -1,0 +1,24 @@
+{
+  "dataset": "figshare_stroke",
+  "config_path": "configs\\figshare_stroke.yaml",
+  "n_epochs_total": 480,
+  "n_epochs_valid": 448,
+  "rejected_epochs": 32,
+  "quality_reject_rate": 0.06666666666666665,
+  "train_epochs": 336,
+  "test_epochs": 112,
+  "balanced_accuracy": 0.6073365231259968,
+  "auc": 0.6711323763955342,
+  "f1": 0.6071428571428571,
+  "confusion_matrix": [
+    [
+      34,
+      23
+    ],
+    [
+      21,
+      34
+    ]
+  ],
+  "quality_score_mean": 82.83333333333333
+}

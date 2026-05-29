@@ -1,0 +1,174 @@
+{
+  "dataset": "figshare_stroke",
+  "config_path": "configs\\figshare_stroke.yaml",
+  "split": "leave_one_subject_out",
+  "n_subjects": 6,
+  "n_epochs_total": 480,
+  "n_epochs_valid": 448,
+  "rejected_epochs": 32,
+  "quality_reject_rate": 0.06666666666666665,
+  "quality_score_mean": 82.83333333333333,
+  "valid_folds": 6,
+  "balanced_accuracy_mean": 0.5386627261627261,
+  "balanced_accuracy_std": 0.08128025212416093,
+  "auc_mean": 0.603524635087135,
+  "auc_std": 0.0973007932914638,
+  "f1_mean": 0.45033933245315366,
+  "f1_std": 0.27520141212040045,
+  "pooled_balanced_accuracy": 0.5496012759170654,
+  "pooled_auc": 0.5592703349282296,
+  "pooled_f1": 0.5570175438596491,
+  "pooled_confusion_matrix": [
+    [
+      119,
+      109
+    ],
+    [
+      93,
+      127
+    ]
+  ],
+  "online_trigger_rate_mean": 0.2658119658119658,
+  "online_false_trigger_rate_mean": 0.2142857142857143,
+  "online_mean_trigger_delay_seconds": 1.0697244623655915,
+  "folds": [
+    {
+      "fold": 1,
+      "heldout_subject": "sub-01",
+      "train_epochs": 368,
+      "test_epochs": 80,
+      "balanced_accuracy": 0.45,
+      "auc": 0.51125,
+      "f1": 0.5925925925925926,
+      "confusion_matrix": [
+        [
+          4,
+          36
+        ],
+        [
+          8,
+          32
+        ]
+      ],
+      "online_trigger_rate": 0.6,
+      "online_false_trigger_rate": 0.525,
+      "online_mean_trigger_delay_seconds": 1.0208333333333333,
+      "skipped": false
+    },
+    {
+      "fold": 2,
+      "heldout_subject": "sub-02",
+      "train_epochs": 369,
+      "test_epochs": 79,
+      "balanced_accuracy": 0.5125,
+      "auc": 0.6961538461538462,
+      "f1": 0.6666666666666666,
+      "confusion_matrix": [
+        [
+          1,
+          39
+        ],
+        [
+          0,
+          39
+        ]
+      ],
+      "online_trigger_rate": 0.7948717948717948,
+      "online_false_trigger_rate": 0.575,
+      "online_mean_trigger_delay_seconds": 1.0080645161290323,
+      "skipped": false
+    },
+    {
+      "fold": 3,
+      "heldout_subject": "sub-03",
+      "train_epochs": 369,
+      "test_epochs": 79,
+      "balanced_accuracy": 0.5003205128205128,
+      "auc": 0.5435897435897437,
+      "f1": 0.04878048780487805,
+      "confusion_matrix": [
+        [
+          39,
+          1
+        ],
+        [
+          38,
+          1
+        ]
+      ],
+      "online_trigger_rate": 0.0,
+      "online_false_trigger_rate": 0.0,
+      "online_mean_trigger_delay_seconds": null,
+      "skipped": false
+    },
+    {
+      "fold": 4,
+      "heldout_subject": "sub-04",
+      "train_epochs": 368,
+      "test_epochs": 80,
+      "balanced_accuracy": 0.65,
+      "auc": 0.700625,
+      "f1": 0.6585365853658537,
+      "confusion_matrix": [
+        [
+          25,
+          15
+        ],
+        [
+          13,
+          27
+        ]
+      ],
+      "online_trigger_rate": 0.1,
+      "online_false_trigger_rate": 0.075,
+      "online_mean_trigger_delay_seconds": 1.125,
+      "skipped": false
+    },
+    {
+      "fold": 5,
+      "heldout_subject": "sub-05",
+      "train_epochs": 368,
+      "test_epochs": 80,
+      "balanced_accuracy": 0.65,
+      "auc": 0.69875,
+      "f1": 0.6585365853658537,
+      "confusion_matrix": [
+        [
+          25,
+          15
+        ],
+        [
+          13,
+          27
+        ]
+      ],
+      "online_trigger_rate": 0.1,
+      "online_false_trigger_rate": 0.075,
+      "online_mean_trigger_delay_seconds": 1.125,
+      "skipped": false
+    },
+    {
+      "fold": 6,
+      "heldout_subject": "sub-06",
+      "train_epochs": 398,
+      "test_epochs": 50,
+      "balanced_accuracy": 0.46915584415584416,
+      "auc": 0.47077922077922074,
+      "f1": 0.07692307692307693,
+      "confusion_matrix": [
+        [
+          25,
+          3
+        ],
+        [
+          21,
+          1
+        ]
+      ],
+      "online_trigger_rate": 0.0,
+      "online_false_trigger_rate": 0.03571428571428571,
+      "online_mean_trigger_delay_seconds": null,
+      "skipped": false
+    }
+  ]
+}

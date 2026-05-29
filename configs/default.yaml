@@ -1,0 +1,54 @@
+dataset:
+  name: synthetic
+  random_state: 7
+  n_subjects: 6
+  trials_per_subject: 60
+  sfreq: 160
+  epoch_seconds: 4.0
+  channels:
+    - F3
+    - Fz
+    - F4
+    - C3
+    - Cz
+    - C4
+    - P3
+    - Pz
+    - P4
+
+preprocessing:
+  notch_hz: 50
+  bandpass_hz: [8, 30]
+
+quality:
+  min_score: 70
+  max_abs_uv: 150
+  min_channel_std_uv: 0.05
+  max_bad_channel_ratio: 0.35
+  max_line_noise_ratio: 0.35
+
+model:
+  type: fbcsp_lda
+  bands:
+    - [8, 12]
+    - [12, 16]
+    - [16, 24]
+    - [24, 30]
+  csp_components: 4
+  test_size: 0.25
+
+online:
+  window_seconds: 1.0
+  step_seconds: 0.25
+  trigger_threshold: 0.9
+  consecutive_windows: 4
+  refractory_seconds: 3.0
+  task_start_seconds: 0.5
+  task_end_seconds: 3.5
+
+outputs:
+  dir: outputs
+  model_path: outputs/model.joblib
+  offline_metrics_path: outputs/offline_metrics.json
+  session_report_json: outputs/session_report.json
+  session_report_md: outputs/session_report.md

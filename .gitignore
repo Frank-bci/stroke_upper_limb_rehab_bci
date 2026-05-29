@@ -1,0 +1,30 @@
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# IDE / editor
+.idea/
+.vscode/
+
+# Raw datasets and downloaded archives are too large for normal Git history.
+data/raw/
+*.edf
+*.zip
+
+# Local logs
+*.log
