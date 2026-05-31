@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian/model.joblib",
+    "threshold": 0.55,
+    "threshold_source": "calibrated",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "subjects": [
+    {
+      "subject_id": "sub-02",
+      "n_epochs": 79,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 39
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 395,
+        "balanced_accuracy": 0.6257051282051282,
+        "auc": 0.6638974358974359,
+        "f1": 0.5476923076923077,
+        "confusion_matrix": [
+          [
+            159,
+            41
+          ],
+          [
+            106,
+            89
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 79,
+        "true_intention_trials": 39,
+        "rest_trials": 40,
+        "triggered_intention_trials": 2,
+        "triggered_rest_trials": 2,
+        "trigger_rate": 0.05128205128205128,
+        "false_trigger_rate": 0.05,
+        "mean_trigger_delay_seconds": 1.125
+      }
+    },
+    {
+      "subject_id": "sub-11",
+      "n_epochs": 79,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 39
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 395,
+        "balanced_accuracy": 0.8600641025641026,
+        "auc": 0.9548717948717949,
+        "f1": 0.8509485094850948,
+        "confusion_matrix": [
+          [
+            183,
+            17
+          ],
+          [
+            38,
+            157
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 79,
+        "true_intention_trials": 39,
+        "rest_trials": 40,
+        "triggered_intention_trials": 18,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.46153846153846156,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": 1.125
+      }
+    },
+    {
+      "subject_id": "sub-14",
+      "n_epochs": 80,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 400,
+        "balanced_accuracy": 0.6799999999999999,
+        "auc": 0.732175,
+        "f1": 0.7077625570776256,
+        "confusion_matrix": [
+          [
+            117,
+            83
+          ],
+          [
+            45,
+            155
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 80,
+        "true_intention_trials": 40,
+        "rest_trials": 40,
+        "triggered_intention_trials": 12,
+        "triggered_rest_trials": 2,
+        "trigger_rate": 0.3,
+        "false_trigger_rate": 0.05,
+        "mean_trigger_delay_seconds": 1.0833333333333333
+      }
+    },
+    {
+      "subject_id": "sub-16",
+      "n_epochs": 75,
+      "label_counts": {
+        "rest": 39,
+        "motor_intention": 36
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 375,
+        "balanced_accuracy": 0.5576923076923077,
+        "auc": 0.6113105413105413,
+        "f1": 0.5513513513513514,
+        "confusion_matrix": [
+          [
+            107,
+            88
+          ],
+          [
+            78,
+            102
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 75,
+        "true_intention_trials": 36,
+        "rest_trials": 39,
+        "triggered_intention_trials": 4,
+        "triggered_rest_trials": 4,
+        "trigger_rate": 0.1111111111111111,
+        "false_trigger_rate": 0.10256410256410256,
+        "mean_trigger_delay_seconds": 1.0625
+      }
+    },
+    {
+      "subject_id": "sub-21",
+      "n_epochs": 76,
+      "label_counts": {
+        "rest": 38,
+        "motor_intention": 38
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 380,
+        "balanced_accuracy": 0.6026315789473684,
+        "auc": 0.7241551246537397,
+        "f1": 0.7123809523809523,
+        "confusion_matrix": [
+          [
+            42,
+            148
+          ],
+          [
+            3,
+            187
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 76,
+        "true_intention_trials": 38,
+        "rest_trials": 38,
+        "triggered_intention_trials": 28,
+        "triggered_rest_trials": 13,
+        "trigger_rate": 0.7368421052631579,
+        "false_trigger_rate": 0.34210526315789475,
+        "mean_trigger_delay_seconds": 1.0
+      }
+    },
+    {
+      "subject_id": "sub-23",
+      "n_epochs": 80,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 400,
+        "balanced_accuracy": 0.545,
+        "auc": 0.609275,
+        "f1": 0.2601626016260163,
+        "confusion_matrix": [
+          [
+            186,
+            14
+          ],
+          [
+            168,
+            32
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 80,
+        "true_intention_trials": 40,
+        "rest_trials": 40,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      }
+    },
+    {
+      "subject_id": "sub-28",
+      "n_epochs": 80,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 400,
+        "balanced_accuracy": 0.615,
+        "auc": 0.6515,
+        "f1": 0.6592920353982301,
+        "confusion_matrix": [
+          [
+            97,
+            103
+          ],
+          [
+            51,
+            149
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 80,
+        "true_intention_trials": 40,
+        "rest_trials": 40,
+        "triggered_intention_trials": 9,
+        "triggered_rest_trials": 5,
+        "trigger_rate": 0.225,
+        "false_trigger_rate": 0.125,
+        "mean_trigger_delay_seconds": 1.0277777777777777
+      }
+    },
+    {
+      "subject_id": "sub-31",
+      "n_epochs": 80,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 400,
+        "balanced_accuracy": 0.6325000000000001,
+        "auc": 0.7115250000000001,
+        "f1": 0.4948453608247423,
+        "confusion_matrix": [
+          [
+            181,
+            19
+          ],
+          [
+            128,
+            72
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 80,
+        "true_intention_trials": 40,
+        "rest_trials": 40,
+        "triggered_intention_trials": 5,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.125,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": 1.2
+      }
+    },
+    {
+      "subject_id": "sub-33",
+      "n_epochs": 75,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 35
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 375,
+        "balanced_accuracy": 0.6271428571428572,
+        "auc": 0.6764857142857142,
+        "f1": 0.6377551020408163,
+        "confusion_matrix": [
+          [
+            108,
+            92
+          ],
+          [
+            50,
+            125
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 75,
+        "true_intention_trials": 35,
+        "rest_trials": 40,
+        "triggered_intention_trials": 5,
+        "triggered_rest_trials": 3,
+        "trigger_rate": 0.14285714285714285,
+        "false_trigger_rate": 0.075,
+        "mean_trigger_delay_seconds": 1.1
+      }
+    },
+    {
+      "subject_id": "sub-35",
+      "n_epochs": 62,
+      "label_counts": {
+        "rest": 35,
+        "motor_intention": 27
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 310,
+        "balanced_accuracy": 0.6030687830687831,
+        "auc": 0.6350899470899471,
+        "f1": 0.5104602510460251,
+        "confusion_matrix": [
+          [
+            132,
+            43
+          ],
+          [
+            74,
+            61
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 62,
+        "true_intention_trials": 27,
+        "rest_trials": 35,
+        "triggered_intention_trials": 1,
+        "triggered_rest_trials": 1,
+        "trigger_rate": 0.037037037037037035,
+        "false_trigger_rate": 0.02857142857142857,
+        "mean_trigger_delay_seconds": 1.0
+      }
+    },
+    {
+      "subject_id": "sub-37",
+      "n_epochs": 50,
+      "label_counts": {
+        "rest": 26,
+        "motor_intention": 24
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 250,
+        "balanced_accuracy": 0.5714743589743589,
+        "auc": 0.608525641025641,
+        "f1": 0.5939849624060151,
+        "confusion_matrix": [
+          [
+            63,
+            67
+          ],
+          [
+            41,
+            79
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 50,
+        "true_intention_trials": 24,
+        "rest_trials": 26,
+        "triggered_intention_trials": 7,
+        "triggered_rest_trials": 4,
+        "trigger_rate": 0.2916666666666667,
+        "false_trigger_rate": 0.15384615384615385,
+        "mean_trigger_delay_seconds": 1.0714285714285714
+      }
+    },
+    {
+      "subject_id": "sub-43",
+      "n_epochs": 70,
+      "label_counts": {
+        "rest": 38,
+        "motor_intention": 32
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 350,
+        "balanced_accuracy": 0.5103618421052631,
+        "auc": 0.7285197368421052,
+        "f1": 0.6182572614107884,
+        "confusion_matrix": [
+          [
+            17,
+            173
+          ],
+          [
+            11,
+            149
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 70,
+        "true_intention_trials": 32,
+        "rest_trials": 38,
+        "triggered_intention_trials": 26,
+        "triggered_rest_trials": 22,
+        "trigger_rate": 0.8125,
+        "false_trigger_rate": 0.5789473684210527,
+        "mean_trigger_delay_seconds": 1.0096153846153846
+      }
+    },
+    {
+      "subject_id": "sub-47",
+      "n_epochs": 78,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 38
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 390,
+        "balanced_accuracy": 0.8951315789473684,
+        "auc": 0.954921052631579,
+        "f1": 0.8935064935064935,
+        "confusion_matrix": [
+          [
+            177,
+            23
+          ],
+          [
+            18,
+            172
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 78,
+        "true_intention_trials": 38,
+        "rest_trials": 40,
+        "triggered_intention_trials": 21,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.5526315789473685,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": 1.0595238095238095
+      }
+    }
+  ]
+}

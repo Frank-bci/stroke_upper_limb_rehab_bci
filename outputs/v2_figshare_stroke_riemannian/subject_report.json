@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_riemannian.yaml",
+    "model_path": "outputs/v2_figshare_stroke_riemannian/model.joblib",
+    "threshold": 0.55,
+    "threshold_source": "calibrated",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-04",
+      "sub-06"
+    ]
+  },
+  "subjects": [
+    {
+      "subject_id": "sub-04",
+      "n_epochs": 80,
+      "label_counts": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 400,
+        "balanced_accuracy": 0.9175,
+        "auc": 0.9753750000000001,
+        "f1": 0.9156010230179028,
+        "confusion_matrix": [
+          [
+            188,
+            12
+          ],
+          [
+            21,
+            179
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 80,
+        "true_intention_trials": 40,
+        "rest_trials": 40,
+        "triggered_intention_trials": 11,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.275,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": 1.0454545454545454
+      }
+    },
+    {
+      "subject_id": "sub-06",
+      "n_epochs": 50,
+      "label_counts": {
+        "rest": 28,
+        "motor_intention": 22
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 250,
+        "balanced_accuracy": 0.5574675324675324,
+        "auc": 0.594935064935065,
+        "f1": 0.4729064039408867,
+        "confusion_matrix": [
+          [
+            95,
+            45
+          ],
+          [
+            62,
+            48
+          ]
+        ]
+      },
+      "session": {
+        "n_trials": 50,
+        "true_intention_trials": 22,
+        "rest_trials": 28,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 1,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.03571428571428571,
+        "mean_trigger_delay_seconds": null
+      }
+    }
+  ]
+}

@@ -34,7 +34,7 @@ model:
 online:
   window_seconds: 1.0
   step_seconds: 0.25
-  trigger_threshold: 0.7
+  trigger_threshold: 0.6
   consecutive_windows: 4
   refractory_seconds: 3.0
   task_start_seconds: 0.25
