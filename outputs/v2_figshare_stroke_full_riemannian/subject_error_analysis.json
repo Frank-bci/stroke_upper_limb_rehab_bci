@@ -1,0 +1,662 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ],
+    "subject_thresholds_path": "outputs/v2_figshare_stroke_full_riemannian/subject_thresholds.json",
+    "top_windows": 12
+  },
+  "subjects": [
+    {
+      "subject_id": "sub-21",
+      "skipped": false,
+      "threshold": 0.65,
+      "session": {
+        "n_trials": 76,
+        "true_intention_trials": 38,
+        "rest_trials": 38,
+        "triggered_intention_trials": 2,
+        "triggered_rest_trials": 3,
+        "trigger_rate": 0.05263157894736842,
+        "false_trigger_rate": 0.07894736842105263,
+        "mean_trigger_delay_seconds": 1.125
+      },
+      "probability_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 0.5574899999999999,
+          "std": 0.08513752932755331,
+          "min": 0.35,
+          "p95": 0.68541,
+          "max": 0.7337
+        },
+        "motor_intention": {
+          "count": 190,
+          "mean": 0.6210194736842105,
+          "std": 0.053709942133030805,
+          "min": 0.4435,
+          "p95": 0.70031,
+          "max": 0.733
+        },
+        "rest_minus_intention_mean": -0.06352947368421058
+      },
+      "quality_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 80.05263157894737,
+          "std": 6.09118158281234,
+          "min": 65.0,
+          "p95": 90.0,
+          "max": 90.0
+        },
+        "motor_intention": {
+          "count": 190,
+          "mean": 79.42105263157895,
+          "std": 2.3354429191930306,
+          "min": 70.0,
+          "p95": 80.0,
+          "max": 80.0
+        }
+      },
+      "false_trigger_trials": [
+        {
+          "trial_index": 36,
+          "source_epoch_index": 1539,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7229,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.6827,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6693,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.7128,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.68596,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6783,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 51,
+          "source_epoch_index": 1554,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7337,
+          "max_probability_time_seconds": 0.5,
+          "mean_probability": 0.67006,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6757,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "true_trigger_trials": [
+        {
+          "trial_index": 2,
+          "source_epoch_index": 1505,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.6997,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.6874399999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6882,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 37,
+          "source_epoch_index": 1540,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.733,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.66564,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6879,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "top_high_probability_rest_windows": [
+        {
+          "trial_index": 51,
+          "source_epoch_index": 1554,
+          "time_seconds": 0.5,
+          "intention_probability": 0.7337,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 36,
+          "source_epoch_index": 1539,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7229,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 36,
+          "source_epoch_index": 1539,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7129,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 1.25,
+          "intention_probability": 0.7128,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 65,
+          "source_epoch_index": 1568,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7052,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7045,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 65,
+          "source_epoch_index": 1568,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7017,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 51,
+          "source_epoch_index": 1554,
+          "time_seconds": 0.75,
+          "intention_probability": 0.6911,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 1.0,
+          "intention_probability": 0.691,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 61,
+          "source_epoch_index": 1564,
+          "time_seconds": 1.5,
+          "intention_probability": 0.6864,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 41,
+          "source_epoch_index": 1544,
+          "time_seconds": 0.5,
+          "intention_probability": 0.6842,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 34,
+          "source_epoch_index": 1537,
+          "time_seconds": 0.75,
+          "intention_probability": 0.6819,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        }
+      ],
+      "decision_reasons": {
+        "low_intention_probability": 285,
+        "waiting_for_confirmation": 77,
+        "trigger_bu100_assist_open_hand": 5,
+        "refractory_period": 3,
+        "low_signal_quality": 10
+      }
+    },
+    {
+      "subject_id": "sub-43",
+      "skipped": false,
+      "threshold": 0.65,
+      "session": {
+        "n_trials": 70,
+        "true_intention_trials": 32,
+        "rest_trials": 38,
+        "triggered_intention_trials": 9,
+        "triggered_rest_trials": 1,
+        "trigger_rate": 0.28125,
+        "false_trigger_rate": 0.02631578947368421,
+        "mean_trigger_delay_seconds": 1.0833333333333333
+      },
+      "probability_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 0.5955778947368422,
+          "std": 0.06707182117378256,
+          "min": 0.3401,
+          "p95": 0.687005,
+          "max": 0.7357
+        },
+        "motor_intention": {
+          "count": 160,
+          "mean": 0.648754375,
+          "std": 0.07241091927920384,
+          "min": 0.424,
+          "p95": 0.7515299999999999,
+          "max": 0.7768
+        },
+        "rest_minus_intention_mean": -0.0531764802631578
+      },
+      "quality_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 80.8157894736842,
+          "std": 4.919645168836633,
+          "min": 65.0,
+          "p95": 90.0,
+          "max": 90.0
+        },
+        "motor_intention": {
+          "count": 160,
+          "mean": 79.6875,
+          "std": 1.7399263633843818,
+          "min": 70.0,
+          "p95": 80.0,
+          "max": 80.0
+        }
+      },
+      "false_trigger_trials": [
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7103,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.68644,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6977,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "true_trigger_trials": [
+        {
+          "trial_index": 2,
+          "source_epoch_index": 3130,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7623,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.7321799999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7299,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 8,
+          "source_epoch_index": 3136,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7763,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.73094,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7555,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 10,
+          "source_epoch_index": 3138,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7224,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.69874,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6978,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 15,
+          "source_epoch_index": 3143,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7189,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.70252,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7189,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 17,
+          "source_epoch_index": 3145,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.7521,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.69446,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.7137,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 3166,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.6742,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.65366,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6638,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 42,
+          "source_epoch_index": 3170,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7768,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.74672,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7427,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 44,
+          "source_epoch_index": 3172,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7499,
+          "max_probability_time_seconds": 1.5,
+          "mean_probability": 0.71548,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7334,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 53,
+          "source_epoch_index": 3181,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.742,
+          "max_probability_time_seconds": 1.5,
+          "mean_probability": 0.71124,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.742,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "top_high_probability_rest_windows": [
+        {
+          "trial_index": 37,
+          "source_epoch_index": 3165,
+          "time_seconds": 0.5,
+          "intention_probability": 0.7357,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 28,
+          "source_epoch_index": 3156,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7252,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 5,
+          "source_epoch_index": 3133,
+          "time_seconds": 1.5,
+          "intention_probability": 0.7178,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7103,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 37,
+          "source_epoch_index": 3165,
+          "time_seconds": 0.75,
+          "intention_probability": 0.709,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7065,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 28,
+          "source_epoch_index": 3156,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7059,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 5,
+          "source_epoch_index": 3133,
+          "time_seconds": 1.25,
+          "intention_probability": 0.699,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 1.25,
+          "intention_probability": 0.6977,
+          "quality_score": 80.0,
+          "triggered": true,
+          "reason": "trigger_bu100_assist_open_hand"
+        },
+        {
+          "trial_index": 33,
+          "source_epoch_index": 3161,
+          "time_seconds": 1.0,
+          "intention_probability": 0.6884,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 0.5,
+          "intention_probability": 0.6853,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 33,
+          "source_epoch_index": 3161,
+          "time_seconds": 0.75,
+          "intention_probability": 0.68,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        }
+      ],
+      "decision_reasons": {
+        "low_intention_probability": 227,
+        "waiting_for_confirmation": 105,
+        "trigger_bu100_assist_open_hand": 10,
+        "refractory_period": 7,
+        "low_signal_quality": 1
+      }
+    }
+  ],
+  "interpretation": [
+    "sub-21: personalized threshold controls false triggers, but inspect top rest windows for drift.",
+    "sub-43: personalized threshold controls false triggers, but inspect top rest windows for drift."
+  ]
+}
