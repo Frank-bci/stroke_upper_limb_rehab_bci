@@ -1,0 +1,31 @@
+{
+  "dataset": "physionet",
+  "config_path": "configs/v2/physionet_riemannian.yaml",
+  "n_epochs_total": 240,
+  "n_epochs_valid": 146,
+  "rejected_epochs": 94,
+  "quality_reject_rate": 0.3916666666666667,
+  "train_epochs": 139,
+  "test_epochs": 7,
+  "training_mode": "online_windows",
+  "train_samples": 1807,
+  "test_samples": 91,
+  "split_strategy": "subject",
+  "test_subject_ids": [
+    "S003"
+  ],
+  "balanced_accuracy": 0.4903846153846154,
+  "auc": 0.46893491124260356,
+  "f1": 0.5794392523364486,
+  "confusion_matrix": [
+    [
+      15,
+      24
+    ],
+    [
+      21,
+      31
+    ]
+  ],
+  "quality_score_mean": 81.125
+}

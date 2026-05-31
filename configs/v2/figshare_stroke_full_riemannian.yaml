@@ -1,0 +1,54 @@
+dataset:
+  name: figshare_stroke
+  path: data/raw/figshare_stroke/edffile
+  events_path: data/raw/figshare_stroke/task-motor-imagery_events.tsv
+  sfreq: 160
+  epoch_seconds: 2.0
+  random_state: 7
+
+preprocessing:
+  notch_hz: 50
+  bandpass_hz: [8, 30]
+
+quality:
+  min_score: 70
+  max_abs_uv: 250
+  min_channel_std_uv: 0.05
+  max_bad_channel_ratio: 0.35
+  max_line_noise_ratio: 0.35
+
+model:
+  type: riemannian_logreg
+  covariance_estimator: oas
+  riemannian_metric: riemann
+  class_weight: balanced
+  max_iter: 1000
+  training_mode: online_windows
+  split_strategy: subject
+  test_size: 0.25
+  probability_calibration:
+    enabled: true
+    method: sigmoid
+    cv: 3
+
+online:
+  window_seconds: 1.0
+  step_seconds: 0.25
+  trigger_threshold: 0.7
+  consecutive_windows: 4
+  refractory_seconds: 3.0
+  task_start_seconds: 0.25
+  task_end_seconds: 1.75
+
+calibration:
+  max_false_trigger_rate: 0.1
+  cv_folds: 3
+  thresholds: [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85]
+
+outputs:
+  dir: outputs/v2_figshare_stroke_full_riemannian
+  model_path: outputs/v2_figshare_stroke_full_riemannian/model.joblib
+  offline_metrics_path: outputs/v2_figshare_stroke_full_riemannian/offline_metrics.json
+  session_report_json: outputs/v2_figshare_stroke_full_riemannian/session_report.json
+  session_report_md: outputs/v2_figshare_stroke_full_riemannian/session_report.md
+  threshold_calibration_json: outputs/v2_figshare_stroke_full_riemannian/threshold_calibration.json

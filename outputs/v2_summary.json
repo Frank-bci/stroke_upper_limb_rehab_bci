@@ -1,0 +1,113 @@
+[
+  {
+    "config_path": "configs/v2/figshare_stroke_riemannian.yaml",
+    "dataset": "figshare_stroke",
+    "model_type": "riemannian_logreg",
+    "offline": {
+      "n_epochs_valid": 448,
+      "train_epochs": 318,
+      "test_epochs": 130,
+      "train_samples": 1590,
+      "test_samples": 650,
+      "split_strategy": "subject",
+      "test_subject_ids": [
+        "sub-04",
+        "sub-06"
+      ],
+      "balanced_accuracy": 0.7823055028462998,
+      "auc": 0.8391366223908918,
+      "f1": 0.7643097643097643
+    },
+    "session": {
+      "n_trials": 130,
+      "true_intention_trials": 62,
+      "rest_trials": 68,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    },
+    "threshold": {
+      "selected_threshold": 0.55,
+      "selection_reason": "max_cv_trigger_rate_under_false_trigger_constraint",
+      "calibration_strategy": "subject_cv",
+      "max_false_trigger_rate": 0.1,
+      "selected_metrics": {
+        "threshold": 0.55,
+        "true_intention_trials": 158,
+        "rest_trials": 160,
+        "triggered_intention_trials": 8,
+        "triggered_rest_trials": 4,
+        "trigger_rate": 0.05063291139240506,
+        "false_trigger_rate": 0.025,
+        "mean_trigger_delay_seconds": 1.0625
+      },
+      "heldout_test_metrics_at_selected_threshold": {
+        "n_trials": 130,
+        "true_intention_trials": 62,
+        "rest_trials": 68,
+        "trigger_rate": 0.1774193548387097,
+        "false_trigger_rate": 0.014705882352941176,
+        "mean_trigger_delay_seconds": 1.0454545454545454,
+        "triggered_intention_trials": 11,
+        "triggered_rest_trials": 1
+      }
+    }
+  },
+  {
+    "config_path": "configs/v2/physionet_riemannian.yaml",
+    "dataset": "physionet",
+    "model_type": "riemannian_logreg",
+    "offline": {
+      "n_epochs_valid": 146,
+      "train_epochs": 139,
+      "test_epochs": 7,
+      "train_samples": 1807,
+      "test_samples": 91,
+      "split_strategy": "subject",
+      "test_subject_ids": [
+        "S003"
+      ],
+      "balanced_accuracy": 0.4903846153846154,
+      "auc": 0.46893491124260356,
+      "f1": 0.5794392523364486
+    },
+    "session": {
+      "n_trials": 7,
+      "true_intention_trials": 4,
+      "rest_trials": 3,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    },
+    "threshold": {
+      "selected_threshold": 0.8,
+      "selection_reason": "max_cv_trigger_rate_under_false_trigger_constraint",
+      "calibration_strategy": "subject_cv",
+      "max_false_trigger_rate": 0.1,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "true_intention_trials": 70,
+        "rest_trials": 69,
+        "triggered_intention_trials": 6,
+        "triggered_rest_trials": 6,
+        "trigger_rate": 0.08571428571428572,
+        "false_trigger_rate": 0.08695652173913043,
+        "mean_trigger_delay_seconds": 1.9583333333333333
+      },
+      "heldout_test_metrics_at_selected_threshold": {
+        "n_trials": 7,
+        "true_intention_trials": 4,
+        "rest_trials": 3,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0
+      }
+    }
+  }
+]

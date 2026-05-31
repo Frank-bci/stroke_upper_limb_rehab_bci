@@ -1,0 +1,5621 @@
+{
+  "n_trials": 130,
+  "true_intention_trials": 62,
+  "rest_trials": 68,
+  "triggered_intention_trials": 0,
+  "triggered_rest_trials": 0,
+  "trigger_rate": 0.0,
+  "false_trigger_rate": 0.0,
+  "mean_trigger_delay_seconds": null,
+  "decision_reasons": {
+    "low_intention_probability": 649,
+    "low_signal_quality": 1
+  },
+  "trials": [
+    {
+      "trial_index": 0,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.604,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5632,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5724,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5712,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5777,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 1,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.467,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4221,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4442,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4296,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4706,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 2,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5287,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5674,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5896,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5609,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5452,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 3,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.425,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4571,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4689,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4865,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4915,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 4,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5607,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6042,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5589,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5444,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5973,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 5,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4331,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5096,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4195,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4072,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4603,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 6,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6004,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5798,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5789,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5332,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.514,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 7,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4763,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4315,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5267,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5231,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4705,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 8,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5903,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5834,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5069,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.524,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.6243,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 9,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4409,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4454,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4316,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3723,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4088,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 10,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5472,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6039,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.577,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5797,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.532,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 11,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4626,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5009,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4691,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4842,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4415,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 12,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5994,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.58,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5326,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5111,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5155,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 13,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4778,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4854,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4866,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4824,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4816,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 14,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5658,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5626,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5468,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6303,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5532,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 15,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.452,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4021,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4307,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4197,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3964,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 16,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5214,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6157,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5517,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5239,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.568,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 17,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4136,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4304,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3613,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3788,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4418,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 18,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5522,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5772,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6229,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5284,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5012,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 19,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3906,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3954,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4379,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4343,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4212,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 20,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6609,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5978,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5591,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5606,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5647,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 21,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4786,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4639,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4598,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4182,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4857,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 22,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.548,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5897,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6345,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5916,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5122,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 23,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.358,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4244,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4167,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4047,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5027,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 24,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5497,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.598,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6275,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6377,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5863,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 25,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4246,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4584,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4696,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4125,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4176,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 26,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5544,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5852,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5692,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6114,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.6317,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 27,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4433,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4488,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4631,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3956,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5183,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 28,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5541,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5773,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6059,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5826,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5284,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 29,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4467,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.399,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4216,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4084,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4164,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 30,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5707,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6193,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6276,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6028,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5568,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 31,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4803,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4766,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.477,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4972,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4978,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 32,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.548,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.535,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5771,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5855,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5438,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 33,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3846,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4328,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4692,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4218,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4293,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 34,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5219,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5329,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5849,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6416,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5985,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 35,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4146,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4502,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4019,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4272,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3686,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 36,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5924,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5893,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5544,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5317,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.6112,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 37,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4224,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4139,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.351,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4037,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4511,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 38,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5547,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.542,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5378,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6009,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5468,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 39,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4351,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4471,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4437,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4744,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5236,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 40,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5881,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.605,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5784,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.552,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5192,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 41,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4021,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4715,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4735,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4324,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4473,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 42,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.452,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4508,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4512,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4956,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4597,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 43,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4522,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3772,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3356,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3888,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4121,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 44,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6292,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5592,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5318,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5399,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5404,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 45,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4712,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4647,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4686,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3852,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4829,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 46,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.513,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5279,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5111,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6054,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5415,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 47,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4618,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4319,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.49,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.425,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4437,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 48,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.565,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5285,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5181,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5409,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4753,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 49,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3664,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4067,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4127,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4442,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4218,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 50,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5354,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5506,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.504,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.544,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5837,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 51,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4654,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5001,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4452,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4382,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.466,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 52,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5623,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5582,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5088,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5023,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5294,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 53,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4039,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3175,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3779,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3312,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3693,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 54,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.546,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5591,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4715,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4666,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4963,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 55,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4489,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4737,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3811,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.398,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.422,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 56,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.497,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5368,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5511,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6085,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5558,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 57,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4949,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4557,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4684,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4908,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4706,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 58,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5722,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5823,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6016,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5758,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.534,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 59,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.353,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4028,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4789,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4668,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5036,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 60,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4692,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5306,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4963,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4699,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5121,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 61,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5243,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5083,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4662,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4959,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4948,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 62,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6198,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5693,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5668,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5371,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4965,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 63,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4855,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5003,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4478,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.379,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4664,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 64,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5043,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5337,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5783,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6119,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5439,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 65,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4768,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4815,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4405,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4024,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4708,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 66,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5351,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5649,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5659,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5735,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5667,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 67,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4512,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4404,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4223,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.475,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4928,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 68,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5903,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5577,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5762,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5663,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5492,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 69,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4721,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4529,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4395,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4129,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3845,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 70,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6237,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6182,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5982,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5082,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5439,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 71,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4274,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4632,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4487,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4545,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4608,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 72,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4968,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5225,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5173,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4917,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.53,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 73,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4385,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4862,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3774,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4391,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4466,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 74,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5363,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4904,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5254,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5866,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5187,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 75,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3859,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4277,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4125,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4276,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4735,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 76,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6071,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5727,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5625,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5558,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5307,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 77,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4049,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.418,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4333,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4628,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4578,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 78,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5528,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4751,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4989,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4567,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4989,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 79,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.422,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4387,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3987,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4846,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4956,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 80,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.631,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5967,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4792,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4403,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4116,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 81,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4643,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4759,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.491,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.502,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4392,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 82,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4968,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4865,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.51,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.535,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5607,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 83,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5164,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4902,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3845,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.388,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4356,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 84,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4708,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4768,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4647,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4594,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4413,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 85,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.545,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5729,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5109,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5065,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4929,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 86,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3063,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4175,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3286,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3378,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4091,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 87,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.205,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.2414,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4137,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5116,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4249,
+          "quality_score": 65.0,
+          "triggered": false,
+          "reason": "low_signal_quality"
+        }
+      ]
+    },
+    {
+      "trial_index": 88,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4202,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.2596,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.325,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.2731,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.2897,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 89,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4536,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3956,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5453,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5441,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5175,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 90,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4539,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4674,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4611,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4683,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4909,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 91,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4085,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4652,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4945,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4791,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5253,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 92,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4013,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4351,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3927,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4435,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5167,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 93,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.364,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3387,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3247,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4174,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4953,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 94,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5088,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5272,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.567,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.553,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5398,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 95,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4963,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5104,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4593,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4908,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4642,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 96,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4352,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.416,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4236,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.498,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3073,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 97,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4912,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4694,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4897,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.468,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5491,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 98,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4684,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4536,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.2749,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4096,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4039,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 99,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4008,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4069,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4338,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4748,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5016,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 100,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3701,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.362,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3766,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3555,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.2733,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 101,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.451,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4567,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4043,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4151,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3748,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 102,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.452,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4811,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4303,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4449,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5271,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 103,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5341,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5728,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5584,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5657,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5452,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 104,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4016,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3915,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4476,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4749,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5024,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 105,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5606,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5417,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5048,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5083,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5361,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 106,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4887,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4676,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4968,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4481,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4446,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 107,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.429,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4032,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4583,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4827,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4651,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 108,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4223,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4083,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4406,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4561,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.436,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 109,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.3934,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4052,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4228,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4186,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.3982,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 110,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5471,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5287,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5193,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5456,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5398,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 111,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.6107,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5487,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5223,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.489,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.508,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 112,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5528,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5412,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5187,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5213,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5675,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 113,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4005,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.3705,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3854,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.374,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4433,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 114,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4912,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4302,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4481,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4159,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4642,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 115,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.356,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.355,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.3793,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.3989,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4827,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 116,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5547,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5166,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4759,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4735,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4796,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 117,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.471,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4639,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5004,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4929,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4623,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 118,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5871,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5154,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4578,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4935,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.535,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 119,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.515,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5298,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5357,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5144,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5226,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 120,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4427,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4142,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5076,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5564,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5086,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 121,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5388,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5589,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6188,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6378,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.55,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 122,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5477,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5085,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4894,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5372,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.4679,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 123,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5347,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.586,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5669,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5117,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5128,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 124,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4393,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4347,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4511,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4828,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.465,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 125,
+      "label": 1,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5066,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5096,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5831,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.6113,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5917,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 126,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4771,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4629,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4663,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4445,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5387,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 127,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.5606,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.6101,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.6171,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.5686,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5003,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 128,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.4777,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.5365,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.4461,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4827,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5673,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    },
+    {
+      "trial_index": 129,
+      "label": 0,
+      "triggered": false,
+      "trigger_time_seconds": null,
+      "timeline": [
+        {
+          "time_seconds": 0.5,
+          "intention_probability": 0.495,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 0.75,
+          "intention_probability": 0.4629,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.0,
+          "intention_probability": 0.5203,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.25,
+          "intention_probability": 0.4999,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        },
+        {
+          "time_seconds": 1.5,
+          "intention_probability": 0.5145,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "low_intention_probability"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_riemannian.yaml",
+    "model_path": "outputs/v2_figshare_stroke_riemannian/model.joblib",
+    "label_mapping": {
+      "0": "rest",
+      "1": "motor_intention"
+    },
+    "training_mode": "online_windows",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-04",
+      "sub-06"
+    ]
+  }
+}

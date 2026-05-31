@@ -4,6 +4,7 @@ import numpy as np
 
 from stroke_bci_mvp.datasets.synthetic import make_synthetic_dataset
 from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
+from stroke_bci_mvp.models import build_model
 from stroke_bci_mvp.online.calibration import calibrate_trigger_threshold
 from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParams
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
@@ -85,6 +86,32 @@ def test_online_windows_follow_task_timing() -> None:
     assert set(windows.source_epoch_idx.tolist()) == {4, 5}
     assert windows.window_center_seconds.min() >= 0.5
     assert windows.window_center_seconds.max() <= 1.5
+
+
+def test_riemannian_model_fits_online_windows() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "model": {
+            "type": "riemannian_logreg",
+            "covariance_estimator": "oas",
+            "riemannian_metric": "riemann",
+            "class_weight": "balanced",
+            "training_mode": "online_windows",
+        },
+        "online": {
+            "window_seconds": 0.5,
+            "step_seconds": 0.25,
+            "task_start_seconds": 0.5,
+            "task_end_seconds": 1.5,
+        },
+    }
+    windows = make_online_windows(dataset.X, dataset.y, dataset.sfreq, config)
+
+    model = build_model(config, dataset.sfreq)
+    model.fit(windows.X, windows.y)
+    y_score = model.predict_proba(windows.X[:4])
+
+    assert y_score.shape == (4, 2)
 
 
 def test_trigger_decision_requires_consecutive_windows() -> None:

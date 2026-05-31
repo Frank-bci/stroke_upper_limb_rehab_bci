@@ -1,0 +1,32 @@
+{
+  "dataset": "figshare_stroke",
+  "config_path": "configs/v2/figshare_stroke_riemannian.yaml",
+  "n_epochs_total": 480,
+  "n_epochs_valid": 448,
+  "rejected_epochs": 32,
+  "quality_reject_rate": 0.06666666666666665,
+  "train_epochs": 318,
+  "test_epochs": 130,
+  "training_mode": "online_windows",
+  "train_samples": 1590,
+  "test_samples": 650,
+  "split_strategy": "subject",
+  "test_subject_ids": [
+    "sub-04",
+    "sub-06"
+  ],
+  "balanced_accuracy": 0.7823055028462998,
+  "auc": 0.8391366223908918,
+  "f1": 0.7643097643097643,
+  "confusion_matrix": [
+    [
+      283,
+      57
+    ],
+    [
+      83,
+      227
+    ]
+  ],
+  "quality_score_mean": 82.83333333333333
+}
