@@ -40,9 +40,14 @@ online:
   task_start_seconds: 0.5
   task_end_seconds: 3.5
 
+calibration:
+  max_false_trigger_rate: 0.1
+  thresholds: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
+
 outputs:
   dir: outputs/physionet
   model_path: outputs/physionet/model.joblib
   offline_metrics_path: outputs/physionet/offline_metrics.json
   session_report_json: outputs/physionet/session_report.json
   session_report_md: outputs/physionet/session_report.md
+  threshold_calibration_json: outputs/physionet/threshold_calibration.json

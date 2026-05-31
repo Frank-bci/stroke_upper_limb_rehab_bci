@@ -1,0 +1,133 @@
+{
+  "selected_threshold": 0.65,
+  "selection_reason": "max_trigger_rate_under_false_trigger_constraint",
+  "max_false_trigger_rate": 0.1,
+  "selected_metrics": {
+    "threshold": 0.65,
+    "trigger_rate": 0.379746835443038,
+    "false_trigger_rate": 0.08125,
+    "mean_trigger_delay_seconds": 1.0541666666666667,
+    "triggered_intention_trials": 60,
+    "triggered_rest_trials": 13
+  },
+  "candidates": [
+    {
+      "threshold": 0.35,
+      "trigger_rate": 0.8670886075949367,
+      "false_trigger_rate": 0.40625,
+      "mean_trigger_delay_seconds": 1.0182481751824817,
+      "triggered_intention_trials": 137,
+      "triggered_rest_trials": 65
+    },
+    {
+      "threshold": 0.4,
+      "trigger_rate": 0.7848101265822784,
+      "false_trigger_rate": 0.35625,
+      "mean_trigger_delay_seconds": 1.0241935483870968,
+      "triggered_intention_trials": 124,
+      "triggered_rest_trials": 57
+    },
+    {
+      "threshold": 0.45,
+      "trigger_rate": 0.6962025316455697,
+      "false_trigger_rate": 0.26875,
+      "mean_trigger_delay_seconds": 1.0227272727272727,
+      "triggered_intention_trials": 110,
+      "triggered_rest_trials": 43
+    },
+    {
+      "threshold": 0.5,
+      "trigger_rate": 0.6392405063291139,
+      "false_trigger_rate": 0.21875,
+      "mean_trigger_delay_seconds": 1.0272277227722773,
+      "triggered_intention_trials": 101,
+      "triggered_rest_trials": 35
+    },
+    {
+      "threshold": 0.55,
+      "trigger_rate": 0.5506329113924051,
+      "false_trigger_rate": 0.16875,
+      "mean_trigger_delay_seconds": 1.0258620689655173,
+      "triggered_intention_trials": 87,
+      "triggered_rest_trials": 27
+    },
+    {
+      "threshold": 0.6,
+      "trigger_rate": 0.44936708860759494,
+      "false_trigger_rate": 0.1375,
+      "mean_trigger_delay_seconds": 1.0352112676056338,
+      "triggered_intention_trials": 71,
+      "triggered_rest_trials": 22
+    },
+    {
+      "threshold": 0.65,
+      "trigger_rate": 0.379746835443038,
+      "false_trigger_rate": 0.08125,
+      "mean_trigger_delay_seconds": 1.0541666666666667,
+      "triggered_intention_trials": 60,
+      "triggered_rest_trials": 13
+    },
+    {
+      "threshold": 0.7,
+      "trigger_rate": 0.2974683544303797,
+      "false_trigger_rate": 0.0625,
+      "mean_trigger_delay_seconds": 1.047872340425532,
+      "triggered_intention_trials": 47,
+      "triggered_rest_trials": 10
+    },
+    {
+      "threshold": 0.75,
+      "trigger_rate": 0.21518987341772153,
+      "false_trigger_rate": 0.03125,
+      "mean_trigger_delay_seconds": 1.0661764705882353,
+      "triggered_intention_trials": 34,
+      "triggered_rest_trials": 5
+    },
+    {
+      "threshold": 0.8,
+      "trigger_rate": 0.12025316455696203,
+      "false_trigger_rate": 0.0125,
+      "mean_trigger_delay_seconds": 1.0921052631578947,
+      "triggered_intention_trials": 19,
+      "triggered_rest_trials": 2
+    },
+    {
+      "threshold": 0.85,
+      "trigger_rate": 0.0379746835443038,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.0416666666666667,
+      "triggered_intention_trials": 6,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.9,
+      "trigger_rate": 0.012658227848101266,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.0,
+      "triggered_intention_trials": 2,
+      "triggered_rest_trials": 0
+    }
+  ],
+  "heldout_test_metrics_at_selected_threshold": {
+    "n_trials": 130,
+    "true_intention_trials": 62,
+    "rest_trials": 68,
+    "trigger_rate": 0.06451612903225806,
+    "false_trigger_rate": 0.029411764705882353,
+    "mean_trigger_delay_seconds": 1.0625,
+    "triggered_intention_trials": 4,
+    "triggered_rest_trials": 2
+  },
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/figshare_stroke.yaml",
+    "model_path": "outputs/figshare_stroke/model.joblib",
+    "calibration_split": "subject",
+    "calibration_epochs": 318,
+    "heldout_test_subject_ids": [
+      "sub-04",
+      "sub-06"
+    ],
+    "training_mode": "online_windows"
+  }
+}

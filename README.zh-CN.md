@@ -111,6 +111,12 @@ python scripts/train_baseline.py --config configs/default.yaml
 python scripts/simulate_online.py --config configs/default.yaml
 ```
 
+在训练 split 上校准触发阈值，约束误触发率：
+
+```powershell
+python scripts/calibrate_trigger_threshold.py --config configs/default.yaml
+```
+
 扫描触发阈值，观察有效触发率和误触发率的权衡：
 
 ```powershell

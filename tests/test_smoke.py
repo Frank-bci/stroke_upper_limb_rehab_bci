@@ -4,6 +4,7 @@ import numpy as np
 
 from stroke_bci_mvp.datasets.synthetic import make_synthetic_dataset
 from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
+from stroke_bci_mvp.online.calibration import calibrate_trigger_threshold
 from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParams
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
 
@@ -103,3 +104,43 @@ def test_trigger_decision_requires_consecutive_windows() -> None:
 
     assert first == (False, "waiting_for_confirmation")
     assert second == (True, "trigger_bu100_assist_open_hand")
+
+
+def test_threshold_calibration_selects_feasible_candidate() -> None:
+    class ConstantModel:
+        def predict_proba(self, X):
+            return np.tile([[0.2, 0.8]], (len(X), 1))
+
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "online": {
+            "window_seconds": 0.5,
+            "step_seconds": 0.25,
+            "trigger_threshold": 0.5,
+            "consecutive_windows": 1,
+            "refractory_seconds": 3.0,
+            "task_start_seconds": 0.5,
+            "task_end_seconds": 1.5,
+        },
+        "quality": {
+            "min_score": 70,
+            "max_abs_uv": 250,
+            "min_channel_std_uv": 0.05,
+            "max_bad_channel_ratio": 0.35,
+            "max_line_noise_ratio": 0.35,
+        },
+    }
+
+    result = calibrate_trigger_threshold(
+        ConstantModel(),
+        dataset.X[:4],
+        dataset.y[:4],
+        dataset.sfreq,
+        dataset.ch_names,
+        config,
+        thresholds=[0.5, 0.85],
+        max_false_trigger_rate=0.0,
+    )
+
+    assert result["selected_threshold"] == 0.85
+    assert result["selected_metrics"]["false_trigger_rate"] == 0.0

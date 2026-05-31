@@ -1,0 +1,137 @@
+{
+  "selected_threshold": 0.6,
+  "selection_reason": "max_trigger_rate_under_false_trigger_constraint",
+  "max_false_trigger_rate": 0.1,
+  "selected_metrics": {
+    "threshold": 0.6,
+    "trigger_rate": 0.8518518518518519,
+    "false_trigger_rate": 0.06666666666666667,
+    "mean_trigger_delay_seconds": 1.3543478260869566,
+    "triggered_intention_trials": 115,
+    "triggered_rest_trials": 9
+  },
+  "candidates": [
+    {
+      "threshold": 0.35,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 0.5777777777777777,
+      "mean_trigger_delay_seconds": 1.0092592592592593,
+      "triggered_intention_trials": 135,
+      "triggered_rest_trials": 78
+    },
+    {
+      "threshold": 0.4,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 0.45185185185185184,
+      "mean_trigger_delay_seconds": 1.0925925925925926,
+      "triggered_intention_trials": 135,
+      "triggered_rest_trials": 61
+    },
+    {
+      "threshold": 0.45,
+      "trigger_rate": 0.9925925925925926,
+      "false_trigger_rate": 0.34814814814814815,
+      "mean_trigger_delay_seconds": 1.1343283582089552,
+      "triggered_intention_trials": 134,
+      "triggered_rest_trials": 47
+    },
+    {
+      "threshold": 0.5,
+      "trigger_rate": 0.9481481481481482,
+      "false_trigger_rate": 0.22962962962962963,
+      "mean_trigger_delay_seconds": 1.205078125,
+      "triggered_intention_trials": 128,
+      "triggered_rest_trials": 31
+    },
+    {
+      "threshold": 0.55,
+      "trigger_rate": 0.9185185185185185,
+      "false_trigger_rate": 0.13333333333333333,
+      "mean_trigger_delay_seconds": 1.2116935483870968,
+      "triggered_intention_trials": 124,
+      "triggered_rest_trials": 18
+    },
+    {
+      "threshold": 0.6,
+      "trigger_rate": 0.8518518518518519,
+      "false_trigger_rate": 0.06666666666666667,
+      "mean_trigger_delay_seconds": 1.3543478260869566,
+      "triggered_intention_trials": 115,
+      "triggered_rest_trials": 9
+    },
+    {
+      "threshold": 0.65,
+      "trigger_rate": 0.7481481481481481,
+      "false_trigger_rate": 0.022222222222222223,
+      "mean_trigger_delay_seconds": 1.4306930693069306,
+      "triggered_intention_trials": 101,
+      "triggered_rest_trials": 3
+    },
+    {
+      "threshold": 0.7,
+      "trigger_rate": 0.6592592592592592,
+      "false_trigger_rate": 0.007407407407407408,
+      "mean_trigger_delay_seconds": 1.5224719101123596,
+      "triggered_intention_trials": 89,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.75,
+      "trigger_rate": 0.5481481481481482,
+      "false_trigger_rate": 0.007407407407407408,
+      "mean_trigger_delay_seconds": 1.625,
+      "triggered_intention_trials": 74,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.8,
+      "trigger_rate": 0.3851851851851852,
+      "false_trigger_rate": 0.007407407407407408,
+      "mean_trigger_delay_seconds": 1.7596153846153846,
+      "triggered_intention_trials": 52,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.85,
+      "trigger_rate": 0.2222222222222222,
+      "false_trigger_rate": 0.007407407407407408,
+      "mean_trigger_delay_seconds": 1.7833333333333334,
+      "triggered_intention_trials": 30,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.9,
+      "trigger_rate": 0.08888888888888889,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.7083333333333333,
+      "triggered_intention_trials": 12,
+      "triggered_rest_trials": 0
+    }
+  ],
+  "heldout_test_metrics_at_selected_threshold": {
+    "n_trials": 90,
+    "true_intention_trials": 45,
+    "rest_trials": 45,
+    "trigger_rate": 0.8666666666666667,
+    "false_trigger_rate": 0.15555555555555556,
+    "mean_trigger_delay_seconds": 1.3076923076923077,
+    "triggered_intention_trials": 39,
+    "triggered_rest_trials": 7
+  },
+  "metadata": {
+    "dataset": "synthetic",
+    "config_path": "configs/default.yaml",
+    "model_path": "outputs/synthetic/model.joblib",
+    "calibration_split": "random",
+    "calibration_epochs": 270,
+    "heldout_test_subject_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ],
+    "training_mode": "online_windows"
+  }
+}

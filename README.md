@@ -20,6 +20,7 @@ The default demo uses synthetic EEG-like data so the full pipeline can run witho
 pip install -r requirements.txt
 python scripts/train_baseline.py --config configs/default.yaml
 python scripts/simulate_online.py --config configs/default.yaml
+python scripts/calibrate_trigger_threshold.py --config configs/default.yaml
 ```
 
 To run on the public PhysioNet EEG Motor Movement/Imagery dataset:
@@ -55,6 +56,7 @@ Outputs are written by dataset. The default synthetic demo writes to `outputs/sy
 - `offline_metrics.json`: balanced accuracy, AUC, F1, confusion matrix
 - `session_report.json`: pseudo-online trigger metrics
 - `session_report.md`: clinician-facing summary draft
+- `threshold_calibration.json`: selected threshold and candidate metrics from the training split
 
 Training uses `online_windows` mode by default: training samples are generated with the same window length, step, and task timing used by the pseudo-online controller, avoiding a mismatch between full-epoch training and 1-second window inference. Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
 

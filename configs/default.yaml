@@ -95,6 +95,11 @@ online:
   # 任务结束时间（秒）：trial在3.5秒时结束
   task_end_seconds: 3.5
 
+calibration:
+  # 在训练 split 上选择阈值时允许的最大误触发率
+  max_false_trigger_rate: 0.1
+  thresholds: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
+
 # -----------------------------------------------------------------------------
 # 输出配置：模型和结果的保存路径
 # -----------------------------------------------------------------------------
@@ -109,3 +114,4 @@ outputs:
   session_report_json: outputs/synthetic/session_report.json
   # 会话报告（Markdown格式），便于人类阅读
   session_report_md: outputs/synthetic/session_report.md
+  threshold_calibration_json: outputs/synthetic/threshold_calibration.json

@@ -1,0 +1,132 @@
+{
+  "selected_threshold": 0.55,
+  "selection_reason": "max_trigger_rate_under_false_trigger_constraint",
+  "max_false_trigger_rate": 0.1,
+  "selected_metrics": {
+    "threshold": 0.55,
+    "trigger_rate": 0.9857142857142858,
+    "false_trigger_rate": 0.057971014492753624,
+    "mean_trigger_delay_seconds": 0.967391304347826,
+    "triggered_intention_trials": 69,
+    "triggered_rest_trials": 4
+  },
+  "candidates": [
+    {
+      "threshold": 0.35,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 0.2028985507246377,
+      "mean_trigger_delay_seconds": 0.8821428571428571,
+      "triggered_intention_trials": 70,
+      "triggered_rest_trials": 14
+    },
+    {
+      "threshold": 0.4,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 0.17391304347826086,
+      "mean_trigger_delay_seconds": 0.9107142857142857,
+      "triggered_intention_trials": 70,
+      "triggered_rest_trials": 12
+    },
+    {
+      "threshold": 0.45,
+      "trigger_rate": 0.9857142857142858,
+      "false_trigger_rate": 0.15942028985507245,
+      "mean_trigger_delay_seconds": 0.9347826086956522,
+      "triggered_intention_trials": 69,
+      "triggered_rest_trials": 11
+    },
+    {
+      "threshold": 0.5,
+      "trigger_rate": 0.9857142857142858,
+      "false_trigger_rate": 0.13043478260869565,
+      "mean_trigger_delay_seconds": 0.9456521739130435,
+      "triggered_intention_trials": 69,
+      "triggered_rest_trials": 9
+    },
+    {
+      "threshold": 0.55,
+      "trigger_rate": 0.9857142857142858,
+      "false_trigger_rate": 0.057971014492753624,
+      "mean_trigger_delay_seconds": 0.967391304347826,
+      "triggered_intention_trials": 69,
+      "triggered_rest_trials": 4
+    },
+    {
+      "threshold": 0.6,
+      "trigger_rate": 0.9714285714285714,
+      "false_trigger_rate": 0.043478260869565216,
+      "mean_trigger_delay_seconds": 1.0330882352941178,
+      "triggered_intention_trials": 68,
+      "triggered_rest_trials": 3
+    },
+    {
+      "threshold": 0.65,
+      "trigger_rate": 0.9714285714285714,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.0588235294117647,
+      "triggered_intention_trials": 68,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.7,
+      "trigger_rate": 0.9714285714285714,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.1102941176470589,
+      "triggered_intention_trials": 68,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.75,
+      "trigger_rate": 0.9428571428571428,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.1818181818181819,
+      "triggered_intention_trials": 66,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.8,
+      "trigger_rate": 0.9428571428571428,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.2196969696969697,
+      "triggered_intention_trials": 66,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.85,
+      "trigger_rate": 0.8857142857142857,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.314516129032258,
+      "triggered_intention_trials": 62,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.9,
+      "trigger_rate": 0.8142857142857143,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.337719298245614,
+      "triggered_intention_trials": 57,
+      "triggered_rest_trials": 0
+    }
+  ],
+  "heldout_test_metrics_at_selected_threshold": {
+    "n_trials": 7,
+    "true_intention_trials": 4,
+    "rest_trials": 3,
+    "trigger_rate": 0.5,
+    "false_trigger_rate": 0.3333333333333333,
+    "mean_trigger_delay_seconds": 2.0,
+    "triggered_intention_trials": 2,
+    "triggered_rest_trials": 1
+  },
+  "metadata": {
+    "dataset": "physionet",
+    "config_path": "configs/physionet.yaml",
+    "model_path": "outputs/physionet/model.joblib",
+    "calibration_split": "subject",
+    "calibration_epochs": 139,
+    "heldout_test_subject_ids": [
+      "S003"
+    ],
+    "training_mode": "online_windows"
+  }
+}
