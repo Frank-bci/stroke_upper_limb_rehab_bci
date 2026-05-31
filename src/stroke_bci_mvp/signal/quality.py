@@ -40,10 +40,10 @@ def assess_epoch_quality(
         score -= 35.0
 
     freqs, psd = signal.welch(epoch, fs=sfreq, nperseg=min(epoch.shape[-1], int(sfreq)))
-    total_power = np.trapz(psd, freqs, axis=-1) + 1e-12
+    total_power = np.trapezoid(psd, freqs, axis=-1) + 1e-12
     line_mask = (freqs >= 48) & (freqs <= 52)
     if np.any(line_mask):
-        line_power = np.trapz(psd[:, line_mask], freqs[line_mask], axis=-1)
+        line_power = np.trapezoid(psd[:, line_mask], freqs[line_mask], axis=-1)
         line_ratio = float(np.median(line_power / total_power))
         if line_ratio > max_line_noise_ratio:
             reasons.append("line_noise")
@@ -64,4 +64,3 @@ def filter_valid_epochs(
     results = [assess_epoch_quality(epoch, sfreq, ch_names, config) for epoch in X]
     keep = np.asarray([result.valid for result in results], dtype=bool)
     return X[keep], y[keep], results
-

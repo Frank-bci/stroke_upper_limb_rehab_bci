@@ -18,7 +18,6 @@ class BandpowerTransformer(BaseEstimator, TransformerMixin):
         features = []
         for low, high in self.bands:
             mask = (freqs >= low) & (freqs <= high)
-            power = np.trapz(psd[..., mask], freqs[mask], axis=-1)
+            power = np.trapezoid(psd[..., mask], freqs[mask], axis=-1)
             features.append(np.log(power + 1e-12))
         return np.concatenate(features, axis=1)
-
