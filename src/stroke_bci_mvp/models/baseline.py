@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import numpy as np
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
@@ -97,7 +98,8 @@ def _build_riemannian_model(config: dict, sfreq: float) -> Pipeline:
         )
 
     return Pipeline(
-        steps=[
+        steps=_normalization_steps(model_cfg)
+        + [
             ("bandpass", BandpassTransformer(sfreq=sfreq, band=tuple(map(float, bandpass_hz)))),
             ("covariances", Covariances(estimator=covariance_estimator)),
             ("tangent_space", TangentSpace(metric=metric)),
@@ -105,6 +107,15 @@ def _build_riemannian_model(config: dict, sfreq: float) -> Pipeline:
             ("clf", classifier),
         ]
     )
+
+
+def _normalization_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
+    normalization = str(model_cfg.get("normalization", "none")).lower()
+    if normalization in {"none", ""}:
+        return []
+    if normalization in {"epoch_zscore", "epoch_standardize"}:
+        return [("epoch_standardize", EpochStandardizer())]
+    raise ValueError(f"Unsupported model normalization: {normalization}")
 
 
 def _maybe_calibrate(model, model_cfg: dict):
@@ -133,3 +144,18 @@ class BandpassTransformer(BaseEstimator, TransformerMixin):
         low, high = self.band
         sos = signal.butter(4, [low, high], btype="bandpass", fs=self.sfreq, output="sos")
         return signal.sosfiltfilt(sos, X, axis=-1)
+
+
+class EpochStandardizer(BaseEstimator, TransformerMixin):
+    """Remove per-epoch/channel DC drift and scale differences."""
+
+    def __init__(self, eps: float = 1e-6):
+        self.eps = eps
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        mean = X.mean(axis=-1, keepdims=True)
+        std = X.std(axis=-1, keepdims=True)
+        return (X - mean) / np.maximum(std, self.eps)
