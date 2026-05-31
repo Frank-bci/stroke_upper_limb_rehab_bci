@@ -115,6 +115,8 @@ def _normalization_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
         return []
     if normalization in {"epoch_zscore", "epoch_standardize"}:
         return [("epoch_standardize", EpochStandardizer())]
+    if normalization in {"train_channel_zscore", "train_channel_standardize", "channel_standardize"}:
+        return [("train_channel_standardize", TrainChannelStandardizer())]
     raise ValueError(f"Unsupported model normalization: {normalization}")
 
 
@@ -159,3 +161,18 @@ class EpochStandardizer(BaseEstimator, TransformerMixin):
         mean = X.mean(axis=-1, keepdims=True)
         std = X.std(axis=-1, keepdims=True)
         return (X - mean) / np.maximum(std, self.eps)
+
+
+class TrainChannelStandardizer(BaseEstimator, TransformerMixin):
+    """Standardize channels using statistics learned from the training split."""
+
+    def __init__(self, eps: float = 1e-6):
+        self.eps = eps
+
+    def fit(self, X, y=None):
+        self.mean_ = X.mean(axis=(0, 2), keepdims=True)
+        self.std_ = X.std(axis=(0, 2), keepdims=True)
+        return self
+
+    def transform(self, X):
+        return (X - self.mean_) / np.maximum(self.std_, self.eps)

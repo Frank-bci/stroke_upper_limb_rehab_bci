@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ],
+    "subject_thresholds_path": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized/subject_thresholds.json",
+    "top_windows": 12
+  },
+  "subjects": [
+    {
+      "subject_id": "sub-21",
+      "skipped": false,
+      "threshold": 0.65,
+      "session": {
+        "n_trials": 76,
+        "true_intention_trials": 38,
+        "rest_trials": 38,
+        "triggered_intention_trials": 2,
+        "triggered_rest_trials": 1,
+        "trigger_rate": 0.05263157894736842,
+        "false_trigger_rate": 0.02631578947368421,
+        "mean_trigger_delay_seconds": 1.25
+      },
+      "probability_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 0.5362499999999999,
+          "std": 0.08715120662268235,
+          "min": 0.3337,
+          "p95": 0.6694449999999998,
+          "max": 0.7202
+        },
+        "motor_intention": {
+          "count": 190,
+          "mean": 0.6095457894736843,
+          "std": 0.05597703719202888,
+          "min": 0.4405,
+          "p95": 0.698555,
+          "max": 0.7478
+        },
+        "rest_minus_intention_mean": -0.07329578947368443
+      },
+      "quality_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 80.05263157894737,
+          "std": 6.09118158281234,
+          "min": 65.0,
+          "p95": 90.0,
+          "max": 90.0
+        },
+        "motor_intention": {
+          "count": 190,
+          "mean": 79.42105263157895,
+          "std": 2.3354429191930306,
+          "min": 70.0,
+          "p95": 80.0,
+          "max": 80.0
+        }
+      },
+      "false_trigger_trials": [
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.7025,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.6561400000000001,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6596,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "true_trigger_trials": [
+        {
+          "trial_index": 2,
+          "source_epoch_index": 1505,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.6944,
+          "max_probability_time_seconds": 1.5,
+          "mean_probability": 0.67958,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6944,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 10,
+          "source_epoch_index": 1513,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.733,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.67336,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6631,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "top_high_probability_rest_windows": [
+        {
+          "trial_index": 36,
+          "source_epoch_index": 1539,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7202,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 36,
+          "source_epoch_index": 1539,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7091,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 65,
+          "source_epoch_index": 1568,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7041,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 1.25,
+          "intention_probability": 0.7025,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 63,
+          "source_epoch_index": 1566,
+          "time_seconds": 1.25,
+          "intention_probability": 0.6816,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 0.75,
+          "intention_probability": 0.6797,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 51,
+          "source_epoch_index": 1554,
+          "time_seconds": 0.5,
+          "intention_probability": 0.677,
+          "quality_score": 90.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 63,
+          "source_epoch_index": 1566,
+          "time_seconds": 1.0,
+          "intention_probability": 0.6757,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 1541,
+          "time_seconds": 1.0,
+          "intention_probability": 0.6749,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 51,
+          "source_epoch_index": 1554,
+          "time_seconds": 0.75,
+          "intention_probability": 0.673,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 71,
+          "source_epoch_index": 1574,
+          "time_seconds": 1.5,
+          "intention_probability": 0.6651,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 63,
+          "source_epoch_index": 1566,
+          "time_seconds": 0.75,
+          "intention_probability": 0.6639,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        }
+      ],
+      "decision_reasons": {
+        "low_intention_probability": 296,
+        "waiting_for_confirmation": 71,
+        "trigger_bu100_assist_open_hand": 3,
+        "low_signal_quality": 10
+      }
+    },
+    {
+      "subject_id": "sub-43",
+      "skipped": false,
+      "threshold": 0.65,
+      "session": {
+        "n_trials": 70,
+        "true_intention_trials": 32,
+        "rest_trials": 38,
+        "triggered_intention_trials": 15,
+        "triggered_rest_trials": 3,
+        "trigger_rate": 0.46875,
+        "false_trigger_rate": 0.07894736842105263,
+        "mean_trigger_delay_seconds": 1.05
+      },
+      "probability_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 0.601522105263158,
+          "std": 0.07858261717379778,
+          "min": 0.3199,
+          "p95": 0.71213,
+          "max": 0.7582
+        },
+        "motor_intention": {
+          "count": 160,
+          "mean": 0.672163125,
+          "std": 0.08453517139471817,
+          "min": 0.4123,
+          "p95": 0.79423,
+          "max": 0.8215
+        },
+        "rest_minus_intention_mean": -0.070641019736842
+      },
+      "quality_summary": {
+        "rest": {
+          "count": 190,
+          "mean": 80.8157894736842,
+          "std": 4.919645168836633,
+          "min": 65.0,
+          "p95": 90.0,
+          "max": 90.0
+        },
+        "motor_intention": {
+          "count": 160,
+          "mean": 79.6875,
+          "std": 1.7399263633843818,
+          "min": 70.0,
+          "p95": 80.0,
+          "max": 80.0
+        }
+      },
+      "false_trigger_trials": [
+        {
+          "trial_index": 1,
+          "source_epoch_index": 3129,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.6772,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.6514599999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6634,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 43,
+          "source_epoch_index": 3171,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.6833,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.6406599999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.6771,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7582,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.72008,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 82.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7324,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "true_trigger_trials": [
+        {
+          "trial_index": 2,
+          "source_epoch_index": 3130,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.8215,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.7841799999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7948,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 4,
+          "source_epoch_index": 3132,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7668,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.70356,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7146,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 6,
+          "source_epoch_index": 3134,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.785,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.72448,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.676,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 8,
+          "source_epoch_index": 3136,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.8134,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.76188,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.7984,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 10,
+          "source_epoch_index": 3138,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7667,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.73438,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7385,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 15,
+          "source_epoch_index": 3143,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7447,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.7279399999999999,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7447,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 17,
+          "source_epoch_index": 3145,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7849,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.72786,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7849,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 25,
+          "source_epoch_index": 3153,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.7942,
+          "max_probability_time_seconds": 1.5,
+          "mean_probability": 0.72606,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.7942,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 32,
+          "source_epoch_index": 3160,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7019,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.6683600000000001,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.6684,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 38,
+          "source_epoch_index": 3166,
+          "trigger_time_seconds": 1.5,
+          "max_probability": 0.7154,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.6831,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.5,
+              "intention_probability": 0.7022,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 42,
+          "source_epoch_index": 3170,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.8197,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.78452,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7802,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 44,
+          "source_epoch_index": 3172,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7684,
+          "max_probability_time_seconds": 1.25,
+          "mean_probability": 0.74522,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7684,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 46,
+          "source_epoch_index": 3174,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7214,
+          "max_probability_time_seconds": 1.0,
+          "mean_probability": 0.6809000000000001,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7069,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 53,
+          "source_epoch_index": 3181,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7776,
+          "max_probability_time_seconds": 1.5,
+          "mean_probability": 0.74976,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7663,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        },
+        {
+          "trial_index": 59,
+          "source_epoch_index": 3187,
+          "trigger_time_seconds": 1.25,
+          "max_probability": 0.7465,
+          "max_probability_time_seconds": 0.75,
+          "mean_probability": 0.7012,
+          "min_quality_score": 80.0,
+          "mean_quality_score": 80.0,
+          "trigger_windows": [
+            {
+              "time_seconds": 1.25,
+              "intention_probability": 0.7279,
+              "quality_score": 80.0,
+              "triggered": true,
+              "reason": "trigger_bu100_assist_open_hand"
+            }
+          ]
+        }
+      ],
+      "top_high_probability_rest_windows": [
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7582,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7512,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 28,
+          "source_epoch_index": 3156,
+          "time_seconds": 0.75,
+          "intention_probability": 0.743,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 37,
+          "source_epoch_index": 3165,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7386,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 5,
+          "source_epoch_index": 3133,
+          "time_seconds": 1.5,
+          "intention_probability": 0.736,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 45,
+          "source_epoch_index": 3173,
+          "time_seconds": 1.25,
+          "intention_probability": 0.7324,
+          "quality_score": 80.0,
+          "triggered": true,
+          "reason": "trigger_bu100_assist_open_hand"
+        },
+        {
+          "trial_index": 28,
+          "source_epoch_index": 3156,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7282,
+          "quality_score": 70.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 5,
+          "source_epoch_index": 3133,
+          "time_seconds": 1.25,
+          "intention_probability": 0.7185,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 14,
+          "source_epoch_index": 3142,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7124,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 33,
+          "source_epoch_index": 3161,
+          "time_seconds": 1.0,
+          "intention_probability": 0.7124,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 41,
+          "source_epoch_index": 3169,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7118,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        },
+        {
+          "trial_index": 33,
+          "source_epoch_index": 3161,
+          "time_seconds": 0.75,
+          "intention_probability": 0.7111,
+          "quality_score": 80.0,
+          "triggered": false,
+          "reason": "waiting_for_confirmation"
+        }
+      ],
+      "decision_reasons": {
+        "low_intention_probability": 192,
+        "waiting_for_confirmation": 126,
+        "trigger_bu100_assist_open_hand": 18,
+        "refractory_period": 13,
+        "low_signal_quality": 1
+      }
+    }
+  ],
+  "interpretation": [
+    "sub-21: personalized threshold controls false triggers, but inspect top rest windows for drift.",
+    "sub-43: personalized threshold controls false triggers, but inspect top rest windows for drift."
+  ]
+}

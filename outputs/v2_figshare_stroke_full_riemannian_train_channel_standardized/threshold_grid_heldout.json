@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "selected_threshold": 0.55,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 964,
+      "trigger_rate": 0.5,
+      "false_trigger_rate": 0.1975806451612903,
+      "mean_trigger_delay_seconds": 1.0512820512820513,
+      "triggered_intention_trials": 234,
+      "triggered_rest_trials": 98
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 964,
+      "trigger_rate": 0.33547008547008544,
+      "false_trigger_rate": 0.0967741935483871,
+      "mean_trigger_delay_seconds": 1.071656050955414,
+      "triggered_intention_trials": 157,
+      "triggered_rest_trials": 48
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 964,
+      "trigger_rate": 0.1752136752136752,
+      "false_trigger_rate": 0.046370967741935484,
+      "mean_trigger_delay_seconds": 1.0884146341463414,
+      "triggered_intention_trials": 82,
+      "triggered_rest_trials": 23
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 964,
+      "trigger_rate": 0.06623931623931624,
+      "false_trigger_rate": 0.010080645161290322,
+      "mean_trigger_delay_seconds": 1.1209677419354838,
+      "triggered_intention_trials": 31,
+      "triggered_rest_trials": 5
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 964,
+      "trigger_rate": 0.02564102564102564,
+      "false_trigger_rate": 0.0020161290322580645,
+      "mean_trigger_delay_seconds": 1.1666666666666667,
+      "triggered_intention_trials": 12,
+      "triggered_rest_trials": 1
+    }
+  ]
+}

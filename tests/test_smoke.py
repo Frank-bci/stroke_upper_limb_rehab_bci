@@ -139,6 +139,31 @@ def test_riemannian_model_supports_epoch_standardization() -> None:
     assert model.predict(windows.X[:4]).shape == (4,)
 
 
+def test_riemannian_model_supports_train_channel_standardization() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "model": {
+            "type": "riemannian_logreg",
+            "covariance_estimator": "oas",
+            "riemannian_metric": "riemann",
+            "class_weight": "balanced",
+            "normalization": "train_channel_standardize",
+        },
+        "online": {
+            "window_seconds": 0.5,
+            "step_seconds": 0.25,
+            "task_start_seconds": 0.5,
+            "task_end_seconds": 1.5,
+        },
+    }
+    windows = make_online_windows(dataset.X, dataset.y, dataset.sfreq, config)
+
+    model = build_model(config, dataset.sfreq)
+    model.fit(windows.X, windows.y)
+
+    assert model.predict_proba(windows.X[:4]).shape == (4, 2)
+
+
 def test_trigger_decision_requires_consecutive_windows() -> None:
     decision = TriggerDecision(
         TriggerParams(
