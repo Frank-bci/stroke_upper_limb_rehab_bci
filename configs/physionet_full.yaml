@@ -1,11 +1,10 @@
 dataset:
-  name: figshare_stroke
-  path: data/raw/figshare_stroke/edffile
-  events_path: data/raw/figshare_stroke/task-motor-imagery_events.tsv
+  name: physionet
+  path: data/raw/physionet
+  subjects: all
+  runs: [4, 8, 12]
   sfreq: 160
-  epoch_seconds: 2.0
-  max_files: 6
-  max_epochs: 480
+  epoch_seconds: 4.0
   random_state: 7
 
 preprocessing:
@@ -37,8 +36,8 @@ online:
   trigger_threshold: 0.65
   consecutive_windows: 4
   refractory_seconds: 3.0
-  task_start_seconds: 0.25
-  task_end_seconds: 1.75
+  task_start_seconds: 0.5
+  task_end_seconds: 3.5
 
 calibration:
   max_false_trigger_rate: 0.1
@@ -46,9 +45,9 @@ calibration:
   thresholds: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
 
 outputs:
-  dir: outputs/figshare_stroke
-  model_path: outputs/figshare_stroke/model.joblib
-  offline_metrics_path: outputs/figshare_stroke/offline_metrics.json
-  session_report_json: outputs/figshare_stroke/session_report.json
-  session_report_md: outputs/figshare_stroke/session_report.md
-  threshold_calibration_json: outputs/figshare_stroke/threshold_calibration.json
+  dir: outputs/physionet_full
+  model_path: outputs/physionet_full/model.joblib
+  offline_metrics_path: outputs/physionet_full/offline_metrics.json
+  session_report_json: outputs/physionet_full/session_report.json
+  session_report_md: outputs/physionet_full/session_report.md
+  threshold_calibration_json: outputs/physionet_full/threshold_calibration.json

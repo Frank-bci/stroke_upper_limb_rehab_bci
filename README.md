@@ -30,6 +30,13 @@ python scripts/train_baseline.py --config configs/physionet.yaml
 python scripts/simulate_online.py --config configs/physionet.yaml
 ```
 
+`configs/physionet.yaml` is a fast experiment config with 3 subjects. To run all PhysioNet subjects, use:
+
+```powershell
+python scripts/train_baseline.py --config configs/physionet_full.yaml
+python scripts/simulate_online.py --config configs/physionet_full.yaml
+```
+
 To prepare the Figshare stroke patient MI dataset metadata or EDF archive:
 
 ```powershell
@@ -42,6 +49,13 @@ After extracting `edffile.zip`, point `configs/figshare_stroke.yaml` to the EDF 
 ```powershell
 python scripts/train_baseline.py --config configs/figshare_stroke.yaml
 python scripts/simulate_online.py --config configs/figshare_stroke.yaml
+```
+
+`configs/figshare_stroke.yaml` is a fast experiment config with the first 6 EDF files. To use all locally downloaded Figshare EDF files, run:
+
+```powershell
+python scripts/train_baseline.py --config configs/figshare_stroke_full.yaml
+python scripts/simulate_online.py --config configs/figshare_stroke_full.yaml
 ```
 
 For a more realistic cross-patient estimate, run leave-one-subject-out evaluation:
@@ -59,6 +73,8 @@ Outputs are written by dataset. The default synthetic demo writes to `outputs/sy
 - `threshold_calibration.json`: selected threshold and candidate metrics from the training split
 
 Training uses `online_windows` mode by default: training samples are generated with the same window length, step, and task timing used by the pseudo-online controller, avoiding a mismatch between full-epoch training and 1-second window inference. Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
+
+Threshold calibration runs cross-validation inside the training split and also reports performance on the held-out test split. With very few real-data subjects, calibrated thresholds can be unstable; prefer the full configs for final experiments.
 
 Run the minimal test suite:
 

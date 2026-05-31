@@ -15,7 +15,11 @@ def load_physionet_eegmmi(config: dict) -> EpochDataset:
     annotations to label 0, matching the MVP's Rest vs Motor Intention target.
     """
 
-    subjects = [int(subject) for subject in config.get("subjects", [1])]
+    subjects_cfg = config.get("subjects", [1])
+    if isinstance(subjects_cfg, str) and subjects_cfg.lower() == "all":
+        subjects = list(range(1, 110))
+    else:
+        subjects = [int(subject) for subject in subjects_cfg]
     runs = [int(run) for run in config.get("runs", [4, 8, 12])]
     data_path = Path(config.get("path", "data/raw/physionet"))
     epoch_seconds = float(config.get("epoch_seconds", 4.0))

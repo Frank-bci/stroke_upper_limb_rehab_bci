@@ -29,6 +29,13 @@ python scripts/train_baseline.py --config configs/physionet.yaml
 python scripts/simulate_online.py --config configs/physionet.yaml
 ```
 
+当前 `configs/physionet.yaml` 是快速实验配置，只使用 3 个 subject。若要跑 PhysioNet 全量 subject，可使用：
+
+```powershell
+python scripts/train_baseline.py --config configs/physionet_full.yaml
+python scripts/simulate_online.py --config configs/physionet_full.yaml
+```
+
 如果要接入 Figshare 中风患者 MI 数据集，先下载元数据或 EDF 压缩包：
 
 ```powershell
@@ -41,6 +48,13 @@ python scripts/download_figshare_stroke.py --include-edf-zip
 ```powershell
 python scripts/train_baseline.py --config configs/figshare_stroke.yaml
 python scripts/simulate_online.py --config configs/figshare_stroke.yaml
+```
+
+当前 `configs/figshare_stroke.yaml` 是快速实验配置，只使用前 6 个 EDF 文件。若要使用本机已下载的 50 个 EDF 文件，可运行：
+
+```powershell
+python scripts/train_baseline.py --config configs/figshare_stroke_full.yaml
+python scripts/simulate_online.py --config configs/figshare_stroke_full.yaml
 ```
 
 如果要做更接近真实新患者泛化的评估，可以运行 leave-one-subject-out：
@@ -116,6 +130,8 @@ python scripts/simulate_online.py --config configs/default.yaml
 ```powershell
 python scripts/calibrate_trigger_threshold.py --config configs/default.yaml
 ```
+
+阈值校准会在训练 split 内做交叉验证，并额外报告所选阈值在 held-out test split 上的表现。真实数据 subject 数太少时，阈值可能非常不稳定；优先使用 full 配置做最终实验。
 
 扫描触发阈值，观察有效触发率和误触发率的权衡：
 

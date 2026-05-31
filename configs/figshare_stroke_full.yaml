@@ -4,8 +4,6 @@ dataset:
   events_path: data/raw/figshare_stroke/task-motor-imagery_events.tsv
   sfreq: 160
   epoch_seconds: 2.0
-  max_files: 6
-  max_epochs: 480
   random_state: 7
 
 preprocessing:
@@ -46,9 +44,9 @@ calibration:
   thresholds: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
 
 outputs:
-  dir: outputs/figshare_stroke
-  model_path: outputs/figshare_stroke/model.joblib
-  offline_metrics_path: outputs/figshare_stroke/offline_metrics.json
-  session_report_json: outputs/figshare_stroke/session_report.json
-  session_report_md: outputs/figshare_stroke/session_report.md
-  threshold_calibration_json: outputs/figshare_stroke/threshold_calibration.json
+  dir: outputs/figshare_stroke_full
+  model_path: outputs/figshare_stroke_full/model.joblib
+  offline_metrics_path: outputs/figshare_stroke_full/offline_metrics.json
+  session_report_json: outputs/figshare_stroke_full/session_report.json
+  session_report_md: outputs/figshare_stroke_full/session_report.md
+  threshold_calibration_json: outputs/figshare_stroke_full/threshold_calibration.json
