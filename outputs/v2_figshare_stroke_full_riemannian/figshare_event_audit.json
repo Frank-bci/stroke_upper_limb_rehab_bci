@@ -1,0 +1,964 @@
+{
+  "metadata": {
+    "root": "data/raw/figshare_stroke/edffile",
+    "events_path": "data/raw/figshare_stroke/task-motor-imagery_events.tsv",
+    "epoch_seconds": 2.0,
+    "audited_edf_count": 50
+  },
+  "shared_events": {
+    "n_rows": 120,
+    "value_counts": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+    },
+    "trial_type_counts": {
+      "1": 60,
+      "2": 60
+    },
+    "stim_file_counts": {
+      "stim1.png": 40,
+      "stim2.mp4": 40,
+      "stim3.png": 40
+    },
+    "first_onset_seconds": 0.001,
+    "last_onset_seconds": 318.001,
+    "last_declared_stop_seconds": 320.001,
+    "current_loader_used_rows": 80,
+    "current_loader_label_counts": {
+      "1": 40,
+      "0": 40
+    },
+    "current_loader_first_onset_seconds": 2.001,
+    "current_loader_last_onset_seconds": 318.001
+  },
+  "edf_summary": {
+    "duration_seconds_min": 320.0,
+    "duration_seconds_max": 320.0,
+    "annotation_count_distribution": {
+      "0": 50
+    },
+    "events_in_bounds_distribution": {
+      "80": 50
+    },
+    "nominal_epoch_stop_overrun_distribution": {
+      "1": 50
+    },
+    "rest_epoch_count_distribution": {
+      "40": 50
+    },
+    "motor_epoch_count_distribution": {
+      "40": 50
+    }
+  },
+  "subjects": [
+    {
+      "subject_id": "sub-01",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-01/eeg/sub-01_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-02",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-02/eeg/sub-02_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-03",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-03/eeg/sub-03_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-04",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-04/eeg/sub-04_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-05",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-05/eeg/sub-05_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-06",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-06/eeg/sub-06_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-07",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-07/eeg/sub-07_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-08",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-08/eeg/sub-08_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-09",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-09/eeg/sub-09_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-10",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-10/eeg/sub-10_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-11",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-11/eeg/sub-11_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-12",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-12/eeg/sub-12_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-13",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-13/eeg/sub-13_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-14",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-14/eeg/sub-14_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-15",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-15/eeg/sub-15_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-16",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-16/eeg/sub-16_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-17",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-17/eeg/sub-17_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-18",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-18/eeg/sub-18_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-19",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-19/eeg/sub-19_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-20",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-20/eeg/sub-20_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-21",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-21/eeg/sub-21_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-22",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-22/eeg/sub-22_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-23",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-23/eeg/sub-23_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-24",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-24/eeg/sub-24_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-25",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-25/eeg/sub-25_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-26",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-26/eeg/sub-26_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-27",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-27/eeg/sub-27_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-28",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-28/eeg/sub-28_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-29",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-29/eeg/sub-29_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-30",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-30/eeg/sub-30_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-31",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-31/eeg/sub-31_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-32",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-32/eeg/sub-32_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-33",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-33/eeg/sub-33_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-34",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-34/eeg/sub-34_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-35",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-35/eeg/sub-35_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-36",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-36/eeg/sub-36_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-37",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-37/eeg/sub-37_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-38",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-38/eeg/sub-38_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-39",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-39/eeg/sub-39_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-40",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-40/eeg/sub-40_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-41",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-41/eeg/sub-41_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-42",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-42/eeg/sub-42_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-43",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-43/eeg/sub-43_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-44",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-44/eeg/sub-44_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-45",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-45/eeg/sub-45_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-46",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-46/eeg/sub-46_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-47",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-47/eeg/sub-47_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-48",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-48/eeg/sub-48_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-49",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-49/eeg/sub-49_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    },
+    {
+      "subject_id": "sub-50",
+      "edf_path": "data/raw/figshare_stroke/edffile/edffile/sub-50/eeg/sub-50_task-motor-imagery_eeg.edf",
+      "sfreq": 500.0,
+      "n_times": 160000,
+      "duration_seconds": 320.0,
+      "annotation_count": 0,
+      "shared_events_total": 120,
+      "current_loader_candidate_events": 80,
+      "events_in_bounds": 80,
+      "events_out_of_bounds": 0,
+      "nominal_epoch_stop_overruns": 1,
+      "current_loader_epochs": {
+        "rest": 40,
+        "motor_intention": 40
+      },
+      "last_event_stop_seconds": 320.001
+    }
+  ],
+  "findings": [
+    "All audited EDF files have zero embedded annotations; the loader relies on the shared events TSV.",
+    "Current loader maps value=2 to motor_intention and value=3 to rest, producing 40/40 epochs per full-length EDF.",
+    "Events with value=1 are instruction markers and are intentionally ignored by the current loader.",
+    "All shared motor/rest events fit using the same sample-index logic as the current loader.",
+    "The final shared rest event nominally ends about 1 ms after the EDF duration, but sample-index conversion keeps it in bounds for the current loader.",
+    "All audited EDF files have the same number of usable shared events, so subject-level count imbalance is mostly from quality rejection, not event coverage."
+  ]
+}
