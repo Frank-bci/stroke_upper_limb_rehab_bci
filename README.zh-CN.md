@@ -131,7 +131,7 @@ python scripts/simulate_online.py --config configs/default.yaml
 python scripts/calibrate_trigger_threshold.py --config configs/default.yaml
 ```
 
-阈值校准会在训练 split 内做交叉验证，并额外报告所选阈值在 held-out test split 上的表现。真实数据 subject 数太少时，阈值可能非常不稳定；优先使用 full 配置做最终实验。
+阈值校准会在训练 split 内做交叉验证，并额外报告所选阈值在 held-out test split 上的表现。真实数据 subject 数太少时，阈值可能非常不稳定；优先使用 full 配置做最终实验。full 配置默认使用较少的校准折数和候选阈值，以控制运行时间。
 
 扫描触发阈值，观察有效触发率和误触发率的权衡：
 

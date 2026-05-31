@@ -74,7 +74,7 @@ Outputs are written by dataset. The default synthetic demo writes to `outputs/sy
 
 Training uses `online_windows` mode by default: training samples are generated with the same window length, step, and task timing used by the pseudo-online controller, avoiding a mismatch between full-epoch training and 1-second window inference. Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
 
-Threshold calibration runs cross-validation inside the training split and also reports performance on the held-out test split. With very few real-data subjects, calibrated thresholds can be unstable; prefer the full configs for final experiments.
+Threshold calibration runs cross-validation inside the training split and also reports performance on the held-out test split. With very few real-data subjects, calibrated thresholds can be unstable; prefer the full configs for final experiments. Full configs use fewer calibration folds and threshold candidates by default to keep runtime manageable.
 
 Run the minimal test suite:
 

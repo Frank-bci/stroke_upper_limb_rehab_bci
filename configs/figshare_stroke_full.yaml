@@ -32,7 +32,7 @@ model:
 online:
   window_seconds: 1.0
   step_seconds: 0.25
-  trigger_threshold: 0.65
+  trigger_threshold: 0.7
   consecutive_windows: 4
   refractory_seconds: 3.0
   task_start_seconds: 0.25
@@ -40,8 +40,8 @@ online:
 
 calibration:
   max_false_trigger_rate: 0.1
-  cv_folds: 5
-  thresholds: [0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
+  cv_folds: 3
+  thresholds: [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85]
 
 outputs:
   dir: outputs/figshare_stroke_full
