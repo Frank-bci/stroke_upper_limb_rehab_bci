@@ -35,7 +35,7 @@ def load_physionet_eegmmi(config: dict) -> EpochDataset:
         for file in files:
             raw = mne.io.read_raw_edf(file, preload=True, verbose="ERROR")
             eegbci.standardize(raw)
-            raw.pick_types(eeg=True)
+            raw.pick("eeg")
             raw.resample(sfreq_target, verbose="ERROR")
             raws.append(raw)
         raw = mne.concatenate_raws(raws, verbose="ERROR")

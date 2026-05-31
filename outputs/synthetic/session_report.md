@@ -2,25 +2,25 @@
 
 ## Provenance
 
-- Dataset: physionet
-- Config: configs/physionet.yaml
-- Model: outputs/physionet/model.joblib
+- Dataset: synthetic
+- Config: configs/default.yaml
+- Model: outputs/synthetic/model.joblib
 
 ## Summary
 
-- Trials: 7
-- Motor intention trials: 4
-- Rest trials: 3
-- Effective trigger rate: 25.0%
-- False trigger rate: 33.3%
-- Mean trigger delay: 2.750 s
+- Trials: 90
+- Motor intention trials: 45
+- Rest trials: 45
+- Effective trigger rate: 57.8%
+- False trigger rate: 6.7%
+- Mean trigger delay: 1.654 s
 
 ## Decision Reasons
 
-- low_intention_probability: 70
-- refractory_period: 8
-- trigger_bu100_assist_open_hand: 2
-- waiting_for_confirmation: 11
+- low_intention_probability: 772
+- refractory_period: 159
+- trigger_bu100_assist_open_hand: 29
+- waiting_for_confirmation: 210
 
 ## Clinical Interpretation Draft
 

@@ -17,6 +17,7 @@ The default demo uses synthetic EEG-like data so the full pipeline can run witho
 ## Quick Start
 
 ```powershell
+pip install -r requirements.txt
 python scripts/train_baseline.py --config configs/default.yaml
 python scripts/simulate_online.py --config configs/default.yaml
 ```
@@ -48,12 +49,20 @@ For a more realistic cross-patient estimate, run leave-one-subject-out evaluatio
 python scripts/evaluate_subject_generalization.py --config configs/figshare_stroke.yaml
 ```
 
-Outputs are written to `outputs/`:
+Outputs are written by dataset. The default synthetic demo writes to `outputs/synthetic/`, PhysioNet writes to `outputs/physionet/`, and the Figshare stroke dataset writes to `outputs/figshare_stroke/`:
 
 - `model.joblib`: trained baseline decoder
 - `offline_metrics.json`: balanced accuracy, AUC, F1, confusion matrix
 - `session_report.json`: pseudo-online trigger metrics
 - `session_report.md`: clinician-facing summary draft
+
+Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
+
+Run the minimal test suite:
+
+```powershell
+pytest
+```
 
 ## MVP Scope
 

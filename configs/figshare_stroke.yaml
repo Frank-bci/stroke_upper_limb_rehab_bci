@@ -27,6 +27,7 @@ model:
     - [16, 24]
     - [24, 30]
   csp_components: 4
+  split_strategy: subject
   test_size: 0.25
 
 online:

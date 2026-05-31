@@ -17,6 +17,7 @@ EEG epoch 数据
 ## 快速开始
 
 ```powershell
+pip install -r requirements.txt
 python scripts/train_baseline.py --config configs/default.yaml
 python scripts/simulate_online.py --config configs/default.yaml
 ```
@@ -48,12 +49,20 @@ python scripts/simulate_online.py --config configs/figshare_stroke.yaml
 python scripts/evaluate_subject_generalization.py --config configs/figshare_stroke.yaml
 ```
 
-运行结果会写入 `outputs/`：
+运行结果会按数据集写入各自目录。默认合成数据会写入 `outputs/synthetic/`，PhysioNet 会写入 `outputs/physionet/`，Figshare 中风数据会写入 `outputs/figshare_stroke/`：
 
 - `model.joblib`：训练好的 baseline 解码模型
 - `offline_metrics.json`：balanced accuracy、AUC、F1、混淆矩阵等离线指标
 - `session_report.json`：伪在线触发指标
 - `session_report.md`：面向治疗师/临床使用场景的训练摘要草稿
+
+真实公开数据配置默认使用 subject-aware train/test split，避免同一受试者的数据同时进入训练集和测试集。默认合成数据仍使用随机分层划分，方便快速 smoke test。
+
+运行最小测试：
+
+```powershell
+pytest
+```
 
 ## MVP 范围
 

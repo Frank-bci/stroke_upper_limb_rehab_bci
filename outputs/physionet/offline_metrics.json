@@ -1,22 +1,27 @@
 {
   "dataset": "physionet",
+  "config_path": "configs/physionet.yaml",
   "n_epochs_total": 240,
   "n_epochs_valid": 146,
   "rejected_epochs": 94,
   "quality_reject_rate": 0.3916666666666667,
-  "train_epochs": 109,
-  "test_epochs": 37,
-  "balanced_accuracy": 0.6476608187134503,
-  "auc": 0.6900584795321637,
-  "f1": 0.6666666666666666,
+  "train_epochs": 139,
+  "test_epochs": 7,
+  "split_strategy": "subject",
+  "test_subject_ids": [
+    "S003"
+  ],
+  "balanced_accuracy": 0.5,
+  "auc": 0.75,
+  "f1": 0.0,
   "confusion_matrix": [
     [
-      11,
-      7
+      3,
+      0
     ],
     [
-      6,
-      13
+      4,
+      0
     ]
   ],
   "quality_score_mean": 81.125

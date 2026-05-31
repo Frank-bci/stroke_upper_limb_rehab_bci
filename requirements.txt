@@ -5,3 +5,4 @@ mne
 pyriemann
 PyYAML
 joblib
+pytest

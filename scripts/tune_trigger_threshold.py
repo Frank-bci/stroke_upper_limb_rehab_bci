@@ -7,13 +7,13 @@ import sys
 from pathlib import Path
 
 import joblib
-from sklearn.model_selection import train_test_split
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from stroke_bci_mvp.config import load_config
 from stroke_bci_mvp.datasets import load_dataset
+from stroke_bci_mvp.evaluation import make_train_test_split
 from stroke_bci_mvp.online import simulate_session
 from stroke_bci_mvp.signal import filter_valid_epochs, notch_epochs
 
@@ -28,15 +28,11 @@ def main() -> None:
     bundle = joblib.load(config["outputs"]["model_path"])
     dataset = load_dataset(config)
     X = notch_epochs(dataset.X, dataset.sfreq, config["preprocessing"].get("notch_hz"))
-    X_valid, y_valid, _ = filter_valid_epochs(X, dataset.y, dataset.sfreq, dataset.ch_names, config["quality"])
+    X_valid, y_valid, quality_results = filter_valid_epochs(X, dataset.y, dataset.sfreq, dataset.ch_names, config["quality"])
+    valid_subject_ids = dataset.subject_ids[[result.valid for result in quality_results]]
 
-    _, X_test, _, y_test = train_test_split(
-        X_valid,
-        y_valid,
-        test_size=float(config["model"].get("test_size", 0.25)),
-        random_state=int(config["dataset"].get("random_state", 7)),
-        stratify=y_valid,
-    )
+    split = make_train_test_split(y_valid, valid_subject_ids, config)
+    X_test, y_test = X_valid[split.test_idx], y_valid[split.test_idx]
 
     rows = []
     for threshold in args.thresholds:
@@ -57,4 +53,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

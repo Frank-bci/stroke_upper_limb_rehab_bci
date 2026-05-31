@@ -44,7 +44,7 @@ def load_figshare_stroke(config: dict) -> EpochDataset:
 
     for edf_path in edf_files:
         raw = mne.io.read_raw_edf(edf_path, preload=True, verbose="ERROR")
-        raw.pick_types(eeg=True)
+        raw.pick("eeg")
         raw.resample(sfreq_target, verbose="ERROR")
         if ch_names is None:
             ch_names = list(raw.ch_names)
