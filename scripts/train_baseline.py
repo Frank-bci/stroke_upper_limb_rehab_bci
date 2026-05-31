@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from stroke_bci_mvp.config import load_config
 from stroke_bci_mvp.datasets import load_dataset
-from stroke_bci_mvp.evaluation import make_train_test_split
+from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
 from stroke_bci_mvp.models import build_model
 from stroke_bci_mvp.signal import filter_valid_epochs, notch_epochs
 
@@ -69,8 +69,31 @@ def train(config_path: str) -> dict:
 
     # 按配置划分训练集和测试集；真实数据默认按 subject 划分，避免同一受试者泄漏到测试集。
     split = make_train_test_split(y_valid, valid_subject_ids, config)
-    X_train, X_test = X_valid[split.train_idx], X_valid[split.test_idx]
-    y_train, y_test = y_valid[split.train_idx], y_valid[split.test_idx]
+    training_mode = str(config["model"].get("training_mode", "epoch")).lower()
+    if training_mode == "online_windows":
+        train_data = make_online_windows(
+            X_valid[split.train_idx],
+            y_valid[split.train_idx],
+            dataset.sfreq,
+            config,
+            epoch_indices=split.train_idx,
+        )
+        test_data = make_online_windows(
+            X_valid[split.test_idx],
+            y_valid[split.test_idx],
+            dataset.sfreq,
+            config,
+            epoch_indices=split.test_idx,
+        )
+        X_train, y_train = train_data.X, train_data.y
+        X_test, y_test = test_data.X, test_data.y
+    elif training_mode == "epoch":
+        train_data = None
+        test_data = None
+        X_train, X_test = X_valid[split.train_idx], X_valid[split.test_idx]
+        y_train, y_test = y_valid[split.train_idx], y_valid[split.test_idx]
+    else:
+        raise ValueError(f"Unsupported training_mode: {training_mode}")
 
     # 构建模型并训练
     model = build_model(config, dataset.sfreq)
@@ -86,8 +109,11 @@ def train(config_path: str) -> dict:
         "n_epochs_valid": int(len(y_valid)),
         "rejected_epochs": int(len(dataset.y) - len(y_valid)),
         "quality_reject_rate": float(1.0 - len(y_valid) / max(1, len(dataset.y))),
-        "train_epochs": int(len(y_train)),
-        "test_epochs": int(len(y_test)),
+        "train_epochs": int(len(split.train_idx)),
+        "test_epochs": int(len(split.test_idx)),
+        "training_mode": training_mode,
+        "train_samples": int(len(y_train)),
+        "test_samples": int(len(y_test)),
         "split_strategy": split.strategy,
         "test_subject_ids": split.test_subject_ids,
         "balanced_accuracy": float(balanced_accuracy_score(y_test, y_pred)),
@@ -110,7 +136,15 @@ def train(config_path: str) -> dict:
             "test_idx": split.test_idx.tolist(),
             "test_subject_ids": split.test_subject_ids,
         },
+        "training_mode": training_mode,
     }
+    if train_data is not None and test_data is not None:
+        model_bundle["windowing"] = {
+            "train_windows": int(len(train_data.y)),
+            "test_windows": int(len(test_data.y)),
+            "train_source_epoch_idx": train_data.source_epoch_idx.tolist(),
+            "test_source_epoch_idx": test_data.source_epoch_idx.tolist(),
+        }
     joblib.dump(model_bundle, outputs["model_path"])
     Path(outputs["offline_metrics_path"]).write_text(
         json.dumps(metrics, indent=2, ensure_ascii=False),

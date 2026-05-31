@@ -1,7 +1,8 @@
 {
   "dataset": "figshare_stroke",
-  "config_path": "configs\\figshare_stroke.yaml",
+  "config_path": "configs/figshare_stroke.yaml",
   "split": "leave_one_subject_out",
+  "training_mode": "online_windows",
   "n_subjects": 6,
   "n_epochs_total": 480,
   "n_epochs_valid": 448,
@@ -9,50 +10,53 @@
   "quality_reject_rate": 0.06666666666666665,
   "quality_score_mean": 82.83333333333333,
   "valid_folds": 6,
-  "balanced_accuracy_mean": 0.5386627261627261,
-  "balanced_accuracy_std": 0.08128025212416093,
-  "auc_mean": 0.603524635087135,
-  "auc_std": 0.0973007932914638,
-  "f1_mean": 0.45033933245315366,
-  "f1_std": 0.27520141212040045,
-  "pooled_balanced_accuracy": 0.5496012759170654,
-  "pooled_auc": 0.5592703349282296,
-  "pooled_f1": 0.5570175438596491,
+  "balanced_accuracy_mean": 0.5314609002109002,
+  "balanced_accuracy_std": 0.05362185842719993,
+  "auc_mean": 0.6106565018315019,
+  "auc_std": 0.0810028608445694,
+  "f1_mean": 0.4456525239322897,
+  "f1_std": 0.24493394235062443,
+  "pooled_balanced_accuracy": 0.5412121212121213,
+  "pooled_auc": 0.563475279106858,
+  "pooled_f1": 0.5402504472271914,
   "pooled_confusion_matrix": [
     [
-      119,
-      109
+      608,
+      532
     ],
     [
-      93,
-      127
+      496,
+      604
     ]
   ],
-  "online_trigger_rate_mean": 0.2658119658119658,
-  "online_false_trigger_rate_mean": 0.2142857142857143,
-  "online_mean_trigger_delay_seconds": 1.0697244623655915,
+  "online_trigger_rate_mean": 0.31602564102564107,
+  "online_false_trigger_rate_mean": 0.21845238095238095,
+  "online_mean_trigger_delay_seconds": 1.0718025846702317,
   "folds": [
     {
       "fold": 1,
       "heldout_subject": "sub-01",
       "train_epochs": 368,
       "test_epochs": 80,
-      "balanced_accuracy": 0.45,
-      "auc": 0.51125,
-      "f1": 0.5925925925925926,
+      "training_mode": "online_windows",
+      "train_samples": 1840,
+      "test_samples": 400,
+      "balanced_accuracy": 0.515,
+      "auc": 0.6247250000000001,
+      "f1": 0.6631944444444444,
       "confusion_matrix": [
         [
-          4,
-          36
+          15,
+          185
         ],
         [
-          8,
-          32
+          9,
+          191
         ]
       ],
-      "online_trigger_rate": 0.6,
-      "online_false_trigger_rate": 0.525,
-      "online_mean_trigger_delay_seconds": 1.0208333333333333,
+      "online_trigger_rate": 0.85,
+      "online_false_trigger_rate": 0.7,
+      "online_mean_trigger_delay_seconds": 1.0220588235294117,
       "skipped": false
     },
     {
@@ -60,22 +64,25 @@
       "heldout_subject": "sub-02",
       "train_epochs": 369,
       "test_epochs": 79,
-      "balanced_accuracy": 0.5125,
-      "auc": 0.6961538461538462,
-      "f1": 0.6666666666666666,
+      "training_mode": "online_windows",
+      "train_samples": 1845,
+      "test_samples": 395,
+      "balanced_accuracy": 0.5274358974358975,
+      "auc": 0.6949487179487179,
+      "f1": 0.6724436741767764,
       "confusion_matrix": [
         [
-          1,
-          39
+          12,
+          188
         ],
         [
-          0,
-          39
+          1,
+          194
         ]
       ],
-      "online_trigger_rate": 0.7948717948717948,
-      "online_false_trigger_rate": 0.575,
-      "online_mean_trigger_delay_seconds": 1.0080645161290323,
+      "online_trigger_rate": 0.8461538461538461,
+      "online_false_trigger_rate": 0.55,
+      "online_mean_trigger_delay_seconds": 1.0151515151515151,
       "skipped": false
     },
     {
@@ -83,17 +90,20 @@
       "heldout_subject": "sub-03",
       "train_epochs": 369,
       "test_epochs": 79,
-      "balanced_accuracy": 0.5003205128205128,
-      "auc": 0.5435897435897437,
-      "f1": 0.04878048780487805,
+      "training_mode": "online_windows",
+      "train_samples": 1845,
+      "test_samples": 395,
+      "balanced_accuracy": 0.5001282051282051,
+      "auc": 0.5688974358974359,
+      "f1": 0.020100502512562814,
       "confusion_matrix": [
         [
-          39,
-          1
+          198,
+          2
         ],
         [
-          38,
-          1
+          193,
+          2
         ]
       ],
       "online_trigger_rate": 0.0,
@@ -106,21 +116,24 @@
       "heldout_subject": "sub-04",
       "train_epochs": 368,
       "test_epochs": 80,
-      "balanced_accuracy": 0.65,
-      "auc": 0.700625,
-      "f1": 0.6585365853658537,
+      "training_mode": "online_windows",
+      "train_samples": 1840,
+      "test_samples": 400,
+      "balanced_accuracy": 0.5925,
+      "auc": 0.6605499999999999,
+      "f1": 0.5484764542936288,
       "confusion_matrix": [
         [
-          25,
-          15
+          138,
+          62
         ],
         [
-          13,
-          27
+          101,
+          99
         ]
       ],
       "online_trigger_rate": 0.1,
-      "online_false_trigger_rate": 0.075,
+      "online_false_trigger_rate": 0.025,
       "online_mean_trigger_delay_seconds": 1.125,
       "skipped": false
     },
@@ -129,21 +142,24 @@
       "heldout_subject": "sub-05",
       "train_epochs": 368,
       "test_epochs": 80,
-      "balanced_accuracy": 0.65,
-      "auc": 0.69875,
-      "f1": 0.6585365853658537,
+      "training_mode": "online_windows",
+      "train_samples": 1840,
+      "test_samples": 400,
+      "balanced_accuracy": 0.605,
+      "auc": 0.6626750000000001,
+      "f1": 0.5611111111111111,
       "confusion_matrix": [
         [
-          25,
-          15
+          141,
+          59
         ],
         [
-          13,
-          27
+          99,
+          101
         ]
       ],
       "online_trigger_rate": 0.1,
-      "online_false_trigger_rate": 0.075,
+      "online_false_trigger_rate": 0.0,
       "online_mean_trigger_delay_seconds": 1.125,
       "skipped": false
     },
@@ -152,17 +168,20 @@
       "heldout_subject": "sub-06",
       "train_epochs": 398,
       "test_epochs": 50,
-      "balanced_accuracy": 0.46915584415584416,
-      "auc": 0.47077922077922074,
-      "f1": 0.07692307692307693,
+      "training_mode": "online_windows",
+      "train_samples": 1990,
+      "test_samples": 250,
+      "balanced_accuracy": 0.4487012987012987,
+      "auc": 0.4521428571428571,
+      "f1": 0.2085889570552147,
       "confusion_matrix": [
         [
-          25,
-          3
+          104,
+          36
         ],
         [
-          21,
-          1
+          93,
+          17
         ]
       ],
       "online_trigger_rate": 0.0,

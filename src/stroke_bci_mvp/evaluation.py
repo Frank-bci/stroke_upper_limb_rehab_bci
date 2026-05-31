@@ -14,6 +14,14 @@ class SplitResult:
     test_subject_ids: list[str]
 
 
+@dataclass(frozen=True)
+class WindowedEpochs:
+    X: np.ndarray
+    y: np.ndarray
+    source_epoch_idx: np.ndarray
+    window_center_seconds: np.ndarray
+
+
 def make_train_test_split(y: np.ndarray, subject_ids: np.ndarray, config: dict) -> SplitResult:
     """Create a reproducible train/test split for offline and pseudo-online evaluation."""
 
@@ -80,4 +88,55 @@ def _group_split(
     raise ValueError(
         "Subject-aware split produced a single-class train or test set. "
         f"Check label balance for held-out subjects: {sorted(map(str, np.unique(groups[test_idx])))}"
+    )
+
+
+def make_online_windows(
+    X: np.ndarray,
+    y: np.ndarray,
+    sfreq: float,
+    config: dict,
+    epoch_indices: np.ndarray | None = None,
+) -> WindowedEpochs:
+    """Convert epochs into online-style sliding windows for model training/evaluation."""
+
+    online_cfg = config["online"]
+    window_samples = int(round(float(online_cfg["window_seconds"]) * sfreq))
+    step_samples = int(round(float(online_cfg["step_seconds"]) * sfreq))
+    task_start_seconds = float(online_cfg["task_start_seconds"])
+    task_end_seconds = float(online_cfg["task_end_seconds"])
+
+    if window_samples <= 0 or step_samples <= 0:
+        raise ValueError("window_seconds and step_seconds must produce positive sample counts.")
+    if X.shape[-1] < window_samples:
+        raise ValueError("Epochs are shorter than the configured online window.")
+
+    if epoch_indices is None:
+        epoch_indices = np.arange(len(y))
+    epoch_indices = np.asarray(epoch_indices, dtype=int)
+
+    windows: list[np.ndarray] = []
+    labels: list[int] = []
+    source_epoch_idx: list[int] = []
+    centers: list[float] = []
+
+    for local_idx, (epoch, label) in enumerate(zip(X, y)):
+        for start in range(0, epoch.shape[-1] - window_samples + 1, step_samples):
+            stop = start + window_samples
+            center = (start + window_samples / 2) / sfreq
+            if not (task_start_seconds <= center <= task_end_seconds):
+                continue
+            windows.append(epoch[:, start:stop])
+            labels.append(int(label))
+            source_epoch_idx.append(int(epoch_indices[local_idx]))
+            centers.append(float(center))
+
+    if not windows:
+        raise RuntimeError("No online training windows were produced. Check online window/task timing config.")
+
+    return WindowedEpochs(
+        X=np.asarray(windows),
+        y=np.asarray(labels, dtype=int),
+        source_epoch_idx=np.asarray(source_epoch_idx, dtype=int),
+        window_center_seconds=np.asarray(centers, dtype=float),
     )

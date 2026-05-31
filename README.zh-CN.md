@@ -56,7 +56,7 @@ python scripts/evaluate_subject_generalization.py --config configs/figshare_stro
 - `session_report.json`：伪在线触发指标
 - `session_report.md`：面向治疗师/临床使用场景的训练摘要草稿
 
-真实公开数据配置默认使用 subject-aware train/test split，避免同一受试者的数据同时进入训练集和测试集。默认合成数据仍使用随机分层划分，方便快速 smoke test。
+训练脚本默认使用 `online_windows` 模式：训练样本会按在线控制相同的窗口长度、步长和任务时间窗生成，避免“完整 epoch 训练、1 秒窗口推理”的分布不一致。真实公开数据配置默认使用 subject-aware train/test split，避免同一受试者的数据同时进入训练集和测试集。默认合成数据仍使用随机分层划分，方便快速 smoke test。
 
 运行最小测试：
 

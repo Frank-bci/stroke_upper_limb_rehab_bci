@@ -3,25 +3,28 @@
 ## Provenance
 
 - Dataset: figshare_stroke
-- Config: configs\figshare_stroke.yaml
+- Config: configs/figshare_stroke.yaml
 - Model: outputs/figshare_stroke/model.joblib
+- Training mode: online_windows
+- Split strategy: subject
+- Test subjects: sub-04, sub-06
 
 ## Summary
 
-- Trials: 112
-- Motor intention trials: 55
-- Rest trials: 57
-- Effective trigger rate: 29.1%
-- False trigger rate: 12.3%
-- Mean trigger delay: 1.047 s
+- Trials: 130
+- Motor intention trials: 62
+- Rest trials: 68
+- Effective trigger rate: 6.5%
+- False trigger rate: 2.9%
+- Mean trigger delay: 1.062 s
 
 ## Decision Reasons
 
-- low_intention_probability: 380
-- low_signal_quality: 4
-- refractory_period: 20
-- trigger_bu100_assist_open_hand: 23
-- waiting_for_confirmation: 133
+- low_intention_probability: 586
+- low_signal_quality: 1
+- refractory_period: 5
+- trigger_bu100_assist_open_hand: 6
+- waiting_for_confirmation: 52
 
 ## Clinical Interpretation Draft
 

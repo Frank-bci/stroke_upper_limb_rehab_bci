@@ -7,6 +7,9 @@
   "quality_reject_rate": 0.0,
   "train_epochs": 270,
   "test_epochs": 90,
+  "training_mode": "online_windows",
+  "train_samples": 3510,
+  "test_samples": 1170,
   "split_strategy": "random",
   "test_subject_ids": [
     "S01",
@@ -16,17 +19,17 @@
     "S05",
     "S06"
   ],
-  "balanced_accuracy": 0.711111111111111,
-  "auc": 0.8212345679012345,
-  "f1": 0.717391304347826,
+  "balanced_accuracy": 0.735897435897436,
+  "auc": 0.8108320549346192,
+  "f1": 0.7448389760528489,
   "confusion_matrix": [
     [
-      31,
-      14
+      410,
+      175
     ],
     [
-      12,
-      33
+      134,
+      451
     ]
   ],
   "quality_score_mean": 98.80555555555556

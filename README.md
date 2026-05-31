@@ -56,7 +56,7 @@ Outputs are written by dataset. The default synthetic demo writes to `outputs/sy
 - `session_report.json`: pseudo-online trigger metrics
 - `session_report.md`: clinician-facing summary draft
 
-Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
+Training uses `online_windows` mode by default: training samples are generated with the same window length, step, and task timing used by the pseudo-online controller, avoiding a mismatch between full-epoch training and 1-second window inference. Public real-data configs use subject-aware train/test splits by default so the same subject does not appear in both train and test sets. The default synthetic demo keeps a random stratified split for fast smoke testing.
 
 Run the minimal test suite:
 

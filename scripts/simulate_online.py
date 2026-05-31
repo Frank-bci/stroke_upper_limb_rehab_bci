@@ -51,6 +51,7 @@ def simulate(config_path: str) -> dict:
         "config_path": str(Path(config_path)),
         "model_path": outputs["model_path"],
         "label_mapping": bundle.get("label_names", {}),
+        "training_mode": bundle.get("training_mode", config["model"].get("training_mode", "epoch")),
         "split_strategy": split.strategy,
         "test_subject_ids": split.test_subject_ids,
     }

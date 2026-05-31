@@ -3,7 +3,7 @@ from __future__ import annotations
 import numpy as np
 
 from stroke_bci_mvp.datasets.synthetic import make_synthetic_dataset
-from stroke_bci_mvp.evaluation import make_train_test_split
+from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
 from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParams
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
 
@@ -65,6 +65,25 @@ def test_subject_split_has_no_subject_overlap() -> None:
     assert split.strategy == "subject"
     assert train_subjects.isdisjoint(test_subjects)
     assert test_subjects == set(split.test_subject_ids)
+
+
+def test_online_windows_follow_task_timing() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "online": {
+            "window_seconds": 0.5,
+            "step_seconds": 0.25,
+            "task_start_seconds": 0.5,
+            "task_end_seconds": 1.5,
+        }
+    }
+
+    windows = make_online_windows(dataset.X[:2], dataset.y[:2], dataset.sfreq, config, epoch_indices=np.array([4, 5]))
+
+    assert windows.X.shape[1:] == (3, 40)
+    assert set(windows.source_epoch_idx.tolist()) == {4, 5}
+    assert windows.window_center_seconds.min() >= 0.5
+    assert windows.window_center_seconds.max() <= 1.5
 
 
 def test_trigger_decision_requires_consecutive_windows() -> None:

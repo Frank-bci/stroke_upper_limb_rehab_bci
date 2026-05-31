@@ -27,13 +27,14 @@ model:
     - [16, 24]
     - [24, 30]
   csp_components: 4
+  training_mode: online_windows
   split_strategy: subject
   test_size: 0.25
 
 online:
   window_seconds: 1.0
   step_seconds: 0.25
-  trigger_threshold: 0.9
+  trigger_threshold: 0.65
   consecutive_windows: 4
   refractory_seconds: 3.0
   task_start_seconds: 0.5

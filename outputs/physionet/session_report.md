@@ -5,22 +5,25 @@
 - Dataset: physionet
 - Config: configs/physionet.yaml
 - Model: outputs/physionet/model.joblib
+- Training mode: online_windows
+- Split strategy: subject
+- Test subjects: S003
 
 ## Summary
 
 - Trials: 7
 - Motor intention trials: 4
 - Rest trials: 3
-- Effective trigger rate: 25.0%
-- False trigger rate: 33.3%
-- Mean trigger delay: 2.750 s
+- Effective trigger rate: 50.0%
+- False trigger rate: 0.0%
+- Mean trigger delay: 2.000 s
 
 ## Decision Reasons
 
-- low_intention_probability: 70
+- low_intention_probability: 55
 - refractory_period: 8
 - trigger_bu100_assist_open_hand: 2
-- waiting_for_confirmation: 11
+- waiting_for_confirmation: 26
 
 ## Clinical Interpretation Draft
 

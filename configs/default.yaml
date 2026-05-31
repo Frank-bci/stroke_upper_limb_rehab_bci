@@ -69,6 +69,8 @@ model:
     - [24, 30]   # beta节律高频段
   # CSP算法提取的特征成分数量
   csp_components: 4
+  # 训练样本构造方式：online_windows 表示训练时使用与在线推理一致的滑动窗口
+  training_mode: online_windows
   # 数据划分策略：synthetic 默认使用随机分层划分
   split_strategy: random
   # 测试集占比（25%的数据用于最终评估）
@@ -82,8 +84,8 @@ online:
   window_seconds: 1.0
   # 滑动步长（秒），每0.25秒进行一次预测
   step_seconds: 0.25
-  # 触发阈值：分类概率超过0.9时认为检测到意图
-  trigger_threshold: 0.9
+  # 触发阈值：分类概率超过0.7时认为检测到意图
+  trigger_threshold: 0.7
   # 连续窗口数：需要连续4个窗口都超过阈值才触发，提高稳定性
   consecutive_windows: 4
   # 不应期（秒）：触发后3秒内不再响应，避免重复触发

@@ -23,6 +23,9 @@ def write_session_report(report: dict[str, Any], json_path: str | Path, md_path:
 - Dataset: {metadata.get("dataset", "unknown")}
 - Config: {metadata.get("config_path", "unknown")}
 - Model: {metadata.get("model_path", "unknown")}
+- Training mode: {metadata.get("training_mode", "unknown")}
+- Split strategy: {metadata.get("split_strategy", "unknown")}
+- Test subjects: {", ".join(map(str, metadata.get("test_subject_ids", []))) or "unknown"}
 
 ## Summary
 

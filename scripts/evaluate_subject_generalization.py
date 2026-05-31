@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from stroke_bci_mvp.config import load_config
 from stroke_bci_mvp.datasets import load_dataset
+from stroke_bci_mvp.evaluation import make_online_windows
 from stroke_bci_mvp.models import build_model
 from stroke_bci_mvp.online import simulate_session
 from stroke_bci_mvp.signal import assess_epoch_quality, notch_epochs
@@ -55,10 +56,22 @@ def evaluate(config_path: str) -> dict:
             )
             continue
 
+        training_mode = str(config["model"].get("training_mode", "epoch")).lower()
+        if training_mode == "online_windows":
+            train_data = make_online_windows(X[train_idx], y[train_idx], dataset.sfreq, config, epoch_indices=train_idx)
+            test_data = make_online_windows(X[test_idx], y[test_idx], dataset.sfreq, config, epoch_indices=test_idx)
+            X_train_model, y_train_model = train_data.X, train_data.y
+            X_test_model, y_test_model = test_data.X, test_data.y
+        elif training_mode == "epoch":
+            X_train_model, y_train_model = X[train_idx], y[train_idx]
+            X_test_model, y_test_model = X[test_idx], y[test_idx]
+        else:
+            raise ValueError(f"Unsupported training_mode: {training_mode}")
+
         model = build_model(config, dataset.sfreq)
-        model.fit(X[train_idx], y[train_idx])
-        y_pred = model.predict(X[test_idx])
-        y_score = model.predict_proba(X[test_idx])[:, 1]
+        model.fit(X_train_model, y_train_model)
+        y_pred = model.predict(X_test_model)
+        y_score = model.predict_proba(X_test_model)[:, 1]
         online_report = simulate_session(
             model=model,
             X=X[test_idx],
@@ -73,17 +86,20 @@ def evaluate(config_path: str) -> dict:
             "heldout_subject": heldout_subject,
             "train_epochs": int(len(train_idx)),
             "test_epochs": int(len(test_idx)),
-            "balanced_accuracy": float(balanced_accuracy_score(y[test_idx], y_pred)),
-            "auc": float(roc_auc_score(y[test_idx], y_score)),
-            "f1": float(f1_score(y[test_idx], y_pred)),
-            "confusion_matrix": confusion_matrix(y[test_idx], y_pred).tolist(),
+            "training_mode": training_mode,
+            "train_samples": int(len(y_train_model)),
+            "test_samples": int(len(y_test_model)),
+            "balanced_accuracy": float(balanced_accuracy_score(y_test_model, y_pred)),
+            "auc": float(roc_auc_score(y_test_model, y_score)),
+            "f1": float(f1_score(y_test_model, y_pred)),
+            "confusion_matrix": confusion_matrix(y_test_model, y_pred).tolist(),
             "online_trigger_rate": float(online_report["trigger_rate"]),
             "online_false_trigger_rate": float(online_report["false_trigger_rate"]),
             "online_mean_trigger_delay_seconds": online_report["mean_trigger_delay_seconds"],
             "skipped": False,
         }
         fold_reports.append(fold)
-        y_true_all.extend(y[test_idx].tolist())
+        y_true_all.extend(y_test_model.tolist())
         y_pred_all.extend(y_pred.tolist())
         y_score_all.extend(y_score.tolist())
         online_trigger_rates.append(float(online_report["trigger_rate"]))
@@ -99,6 +115,7 @@ def evaluate(config_path: str) -> dict:
         "dataset": config["dataset"]["name"],
         "config_path": str(Path(config_path)),
         "split": "leave_one_subject_out",
+        "training_mode": str(config["model"].get("training_mode", "epoch")).lower(),
         "n_subjects": int(len(np.unique(groups))),
         "n_epochs_total": int(len(dataset.y)),
         "n_epochs_valid": int(len(y)),
@@ -141,4 +158,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
