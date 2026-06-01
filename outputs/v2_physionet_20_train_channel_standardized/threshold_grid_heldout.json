@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "dataset": "physionet",
+    "config_path": "configs/v2/physionet_20_train_channel_standardized.yaml",
+    "model_path": "outputs/v2_physionet_20_train_channel_standardized/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "S006",
+      "S010",
+      "S014",
+      "S016",
+      "S019"
+    ]
+  },
+  "selected_threshold": 0.8,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 208,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 1.0,
+      "mean_trigger_delay_seconds": 0.75,
+      "triggered_intention_trials": 126,
+      "triggered_rest_trials": 82
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 208,
+      "trigger_rate": 1.0,
+      "false_trigger_rate": 1.0,
+      "mean_trigger_delay_seconds": 0.8095238095238095,
+      "triggered_intention_trials": 126,
+      "triggered_rest_trials": 82
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 208,
+      "trigger_rate": 0.8571428571428571,
+      "false_trigger_rate": 0.9390243902439024,
+      "mean_trigger_delay_seconds": 1.0856481481481481,
+      "triggered_intention_trials": 108,
+      "triggered_rest_trials": 77
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 208,
+      "trigger_rate": 0.19047619047619047,
+      "false_trigger_rate": 0.2073170731707317,
+      "mean_trigger_delay_seconds": 1.7291666666666667,
+      "triggered_intention_trials": 24,
+      "triggered_rest_trials": 17
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 208,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.75,
+      "n_trials": 208,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    },
+    {
+      "threshold": 0.8,
+      "n_trials": 208,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    }
+  ]
+}

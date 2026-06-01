@@ -1,0 +1,608 @@
+{
+  "metadata": {
+    "dataset": "physionet",
+    "config_path": "configs/v2/physionet_20_train_channel_standardized_relaxed_quality.yaml",
+    "model_path": "outputs/v2_physionet_20_train_channel_standardized_relaxed_quality/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "S002",
+      "S003",
+      "S006",
+      "S012",
+      "S018"
+    ],
+    "thresholds": [
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8
+    ],
+    "max_false_trigger_rate": 0.1,
+    "min_trigger_rate": 0.05,
+    "min_auc": 0.6
+  },
+  "aggregate_personalized_metrics": {
+    "true_intention_trials": 225,
+    "rest_trials": 224,
+    "triggered_intention_trials": 0,
+    "triggered_rest_trials": 0,
+    "trigger_rate": 0.0,
+    "false_trigger_rate": 0.0,
+    "mean_trigger_delay_seconds": null
+  },
+  "status_counts": {
+    "monitor_only_low_trigger": 1,
+    "not_ready_low_auc": 4
+  },
+  "subjects": [
+    {
+      "subject_id": "S002",
+      "status": "monitor_only_low_trigger",
+      "selected_threshold": 0.8,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "n_trials": 90,
+        "true_intention_trials": 45,
+        "rest_trials": 45,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 1170,
+        "balanced_accuracy": 0.5623931623931624,
+        "auc": 0.6042369785959529,
+        "f1": 0.49606299212598426
+      },
+      "candidates": [
+        {
+          "threshold": 0.45,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 45,
+          "triggered_rest_trials": 42,
+          "trigger_rate": 1.0,
+          "false_trigger_rate": 0.9333333333333333,
+          "mean_trigger_delay_seconds": 1.0777777777777777
+        },
+        {
+          "threshold": 0.5,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 25,
+          "triggered_rest_trials": 17,
+          "trigger_rate": 0.5555555555555556,
+          "false_trigger_rate": 0.37777777777777777,
+          "mean_trigger_delay_seconds": 1.52
+        },
+        {
+          "threshold": 0.55,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 1,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.022222222222222223,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.6,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.65,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.7,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.75,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.8,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        }
+      ]
+    },
+    {
+      "subject_id": "S003",
+      "status": "not_ready_low_auc",
+      "selected_threshold": 0.8,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "n_trials": 89,
+        "true_intention_trials": 45,
+        "rest_trials": 44,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 1157,
+        "balanced_accuracy": 0.5158313908313908,
+        "auc": 0.5001135616520233,
+        "f1": 0.3155339805825243
+      },
+      "candidates": [
+        {
+          "threshold": 0.45,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 39,
+          "triggered_rest_trials": 38,
+          "trigger_rate": 0.8666666666666667,
+          "false_trigger_rate": 0.8636363636363636,
+          "mean_trigger_delay_seconds": 1.4102564102564104
+        },
+        {
+          "threshold": 0.5,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 11,
+          "triggered_rest_trials": 10,
+          "trigger_rate": 0.24444444444444444,
+          "false_trigger_rate": 0.22727272727272727,
+          "mean_trigger_delay_seconds": 2.0454545454545454
+        },
+        {
+          "threshold": 0.55,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.6,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.65,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.7,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.75,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.8,
+          "n_trials": 89,
+          "true_intention_trials": 45,
+          "rest_trials": 44,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        }
+      ]
+    },
+    {
+      "subject_id": "S006",
+      "status": "not_ready_low_auc",
+      "selected_threshold": 0.8,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "n_trials": 90,
+        "true_intention_trials": 45,
+        "rest_trials": 45,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 1170,
+        "balanced_accuracy": 0.505982905982906,
+        "auc": 0.5216772591131565,
+        "f1": 0.667816091954023
+      },
+      "candidates": [
+        {
+          "threshold": 0.45,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 45,
+          "triggered_rest_trials": 45,
+          "trigger_rate": 1.0,
+          "false_trigger_rate": 1.0,
+          "mean_trigger_delay_seconds": 0.75
+        },
+        {
+          "threshold": 0.5,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 45,
+          "triggered_rest_trials": 45,
+          "trigger_rate": 1.0,
+          "false_trigger_rate": 1.0,
+          "mean_trigger_delay_seconds": 0.7611111111111111
+        },
+        {
+          "threshold": 0.55,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 42,
+          "triggered_rest_trials": 40,
+          "trigger_rate": 0.9333333333333333,
+          "false_trigger_rate": 0.8888888888888888,
+          "mean_trigger_delay_seconds": 1.1130952380952381
+        },
+        {
+          "threshold": 0.6,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 13,
+          "triggered_rest_trials": 9,
+          "trigger_rate": 0.28888888888888886,
+          "false_trigger_rate": 0.2,
+          "mean_trigger_delay_seconds": 1.3269230769230769
+        },
+        {
+          "threshold": 0.65,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.7,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.75,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.8,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        }
+      ]
+    },
+    {
+      "subject_id": "S012",
+      "status": "not_ready_low_auc",
+      "selected_threshold": 0.8,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "n_trials": 90,
+        "true_intention_trials": 45,
+        "rest_trials": 45,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 1170,
+        "balanced_accuracy": 0.47863247863247865,
+        "auc": 0.49568266491343416,
+        "f1": 0.5775623268698061
+      },
+      "candidates": [
+        {
+          "threshold": 0.45,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 45,
+          "triggered_rest_trials": 45,
+          "trigger_rate": 1.0,
+          "false_trigger_rate": 1.0,
+          "mean_trigger_delay_seconds": 0.7777777777777778
+        },
+        {
+          "threshold": 0.5,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 35,
+          "triggered_rest_trials": 41,
+          "trigger_rate": 0.7777777777777778,
+          "false_trigger_rate": 0.9111111111111111,
+          "mean_trigger_delay_seconds": 1.1642857142857144
+        },
+        {
+          "threshold": 0.55,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 5,
+          "triggered_rest_trials": 9,
+          "trigger_rate": 0.1111111111111111,
+          "false_trigger_rate": 0.2,
+          "mean_trigger_delay_seconds": 1.8
+        },
+        {
+          "threshold": 0.6,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 1,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.022222222222222223,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.65,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.7,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.75,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.8,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        }
+      ]
+    },
+    {
+      "subject_id": "S018",
+      "status": "not_ready_low_auc",
+      "selected_threshold": 0.8,
+      "selected_metrics": {
+        "threshold": 0.8,
+        "n_trials": 90,
+        "true_intention_trials": 45,
+        "rest_trials": 45,
+        "triggered_intention_trials": 0,
+        "triggered_rest_trials": 0,
+        "trigger_rate": 0.0,
+        "false_trigger_rate": 0.0,
+        "mean_trigger_delay_seconds": null
+      },
+      "offline": {
+        "skipped": false,
+        "n_samples": 1170,
+        "balanced_accuracy": 0.5264957264957265,
+        "auc": 0.579364453210607,
+        "f1": 0.6411917098445595
+      },
+      "candidates": [
+        {
+          "threshold": 0.45,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 45,
+          "triggered_rest_trials": 45,
+          "trigger_rate": 1.0,
+          "false_trigger_rate": 1.0,
+          "mean_trigger_delay_seconds": 0.75
+        },
+        {
+          "threshold": 0.5,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 43,
+          "triggered_rest_trials": 41,
+          "trigger_rate": 0.9555555555555556,
+          "false_trigger_rate": 0.9111111111111111,
+          "mean_trigger_delay_seconds": 1.0872093023255813
+        },
+        {
+          "threshold": 0.55,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 15,
+          "triggered_rest_trials": 7,
+          "trigger_rate": 0.3333333333333333,
+          "false_trigger_rate": 0.15555555555555556,
+          "mean_trigger_delay_seconds": 1.45
+        },
+        {
+          "threshold": 0.6,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.65,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.7,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.75,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        },
+        {
+          "threshold": 0.8,
+          "n_trials": 90,
+          "true_intention_trials": 45,
+          "rest_trials": 45,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null
+        }
+      ]
+    }
+  ]
+}

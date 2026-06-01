@@ -1,0 +1,35 @@
+{
+  "dataset": "physionet",
+  "config_path": "configs/v2/physionet_20_train_channel_standardized_relaxed_quality.yaml",
+  "n_epochs_total": 1800,
+  "n_epochs_valid": 1798,
+  "rejected_epochs": 2,
+  "quality_reject_rate": 0.0011111111111110628,
+  "train_epochs": 1349,
+  "test_epochs": 449,
+  "training_mode": "online_windows",
+  "train_samples": 17537,
+  "test_samples": 5837,
+  "split_strategy": "subject",
+  "test_subject_ids": [
+    "S002",
+    "S003",
+    "S006",
+    "S012",
+    "S018"
+  ],
+  "balanced_accuracy": 0.516941391941392,
+  "auc": 0.5266431858739551,
+  "f1": 0.5709500609013398,
+  "confusion_matrix": [
+    [
+      1144,
+      1768
+    ],
+    [
+      1050,
+      1875
+    ]
+  ],
+  "quality_score_mean": 91.87222222222222
+}
