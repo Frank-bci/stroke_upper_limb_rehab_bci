@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "dataset": "physionet",
+    "task": "left_vs_right_mi",
+    "config_path": "configs/v2/physionet_20_left_right_mi_train_channel_standardized.yaml",
+    "seeds": [
+      7,
+      17,
+      27,
+      37,
+      47
+    ],
+    "split_strategy": "subject",
+    "training_mode": "epoch",
+    "n_epochs_total": 900,
+    "n_epochs_valid": 899,
+    "quality_reject_rate": 0.0011111111111110628,
+    "label_names": {
+      "0": "left_hand_mi",
+      "1": "right_hand_mi"
+    }
+  },
+  "summary": {
+    "offline_balanced_accuracy": {
+      "mean": 0.5839762421111017,
+      "std": 0.0648887424169482,
+      "min": 0.4968379446640316,
+      "max": 0.6968379446640316
+    },
+    "offline_auc": {
+      "mean": 0.6250846304522718,
+      "std": 0.056742502927002676,
+      "min": 0.567114624505929,
+      "max": 0.7324901185770751
+    },
+    "offline_f1": {
+      "mean": 0.4890513319621167,
+      "std": 0.16798640548142119,
+      "min": 0.21768707482993196,
+      "max": 0.6792452830188679
+    }
+  },
+  "runs": [
+    {
+      "seed": 7,
+      "test_subject_ids": [
+        "S002",
+        "S003",
+        "S006",
+        "S012",
+        "S018"
+      ],
+      "train_epochs": 674,
+      "test_epochs": 225,
+      "train_samples": 674,
+      "test_samples": 225,
+      "offline": {
+        "balanced_accuracy": 0.5764064475347661,
+        "auc": 0.6132269279393173,
+        "f1": 0.3870967741935484,
+        "confusion_matrix": [
+          [
+            100,
+            13
+          ],
+          [
+            82,
+            30
+          ]
+        ]
+      }
+    },
+    {
+      "seed": 17,
+      "test_subject_ids": [
+        "S003",
+        "S004",
+        "S006",
+        "S014",
+        "S015"
+      ],
+      "train_epochs": 674,
+      "test_epochs": 225,
+      "train_samples": 674,
+      "test_samples": 225,
+      "offline": {
+        "balanced_accuracy": 0.5590909090909091,
+        "auc": 0.5929644268774703,
+        "f1": 0.5352112676056338,
+        "confusion_matrix": [
+          [
+            69,
+            46
+          ],
+          [
+            53,
+            57
+          ]
+        ]
+      }
+    },
+    {
+      "seed": 27,
+      "test_subject_ids": [
+        "S001",
+        "S008",
+        "S012",
+        "S016",
+        "S018"
+      ],
+      "train_epochs": 674,
+      "test_epochs": 225,
+      "train_samples": 674,
+      "test_samples": 225,
+      "offline": {
+        "balanced_accuracy": 0.4968379446640316,
+        "auc": 0.567114624505929,
+        "f1": 0.21768707482993196,
+        "confusion_matrix": [
+          [
+            94,
+            16
+          ],
+          [
+            99,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "seed": 37,
+      "test_subject_ids": [
+        "S001",
+        "S002",
+        "S007",
+        "S015",
+        "S019"
+      ],
+      "train_epochs": 674,
+      "test_epochs": 225,
+      "train_samples": 674,
+      "test_samples": 225,
+      "offline": {
+        "balanced_accuracy": 0.6968379446640316,
+        "auc": 0.7324901185770751,
+        "f1": 0.6792452830188679,
+        "confusion_matrix": [
+          [
+            85,
+            30
+          ],
+          [
+            38,
+            72
+          ]
+        ]
+      }
+    },
+    {
+      "seed": 47,
+      "test_subject_ids": [
+        "S005",
+        "S011",
+        "S015",
+        "S016",
+        "S019"
+      ],
+      "train_epochs": 674,
+      "test_epochs": 225,
+      "train_samples": 674,
+      "test_samples": 225,
+      "offline": {
+        "balanced_accuracy": 0.5907079646017699,
+        "auc": 0.6196270543615676,
+        "f1": 0.6260162601626016,
+        "confusion_matrix": [
+          [
+            56,
+            56
+          ],
+          [
+            36,
+            77
+          ]
+        ]
+      }
+    }
+  ]
+}

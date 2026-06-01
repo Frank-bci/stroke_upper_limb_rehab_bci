@@ -1,0 +1,50 @@
+{
+  "dataset": "physionet",
+  "config_path": "configs/v2/physionet_20_left_right_mi_train_channel_standardized_random_split.yaml",
+  "n_epochs_total": 900,
+  "n_epochs_valid": 899,
+  "rejected_epochs": 1,
+  "quality_reject_rate": 0.0011111111111110628,
+  "train_epochs": 674,
+  "test_epochs": 225,
+  "training_mode": "epoch",
+  "train_samples": 674,
+  "test_samples": 225,
+  "split_strategy": "random",
+  "test_subject_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020"
+  ],
+  "balanced_accuracy": 0.5731389284020862,
+  "auc": 0.6043938675517623,
+  "f1": 0.5636363636363636,
+  "confusion_matrix": [
+    [
+      67,
+      47
+    ],
+    [
+      49,
+      62
+    ]
+  ],
+  "quality_score_mean": 93.45555555555555
+}

@@ -1,0 +1,84 @@
+dataset:
+  name: physionet
+  task: left_vs_right_mi
+  path: data/raw/physionet
+  subjects:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  runs:
+  - 4
+  - 8
+  - 12
+  sfreq: 160
+  epoch_seconds: 4.0
+  random_state: 7
+preprocessing:
+  notch_hz: 50
+  bandpass_hz:
+  - 8
+  - 30
+quality:
+  min_score: 50
+  max_abs_uv: 500
+  min_channel_std_uv: 0.05
+  max_bad_channel_ratio: 0.6
+  max_line_noise_ratio: 0.35
+model:
+  type: riemannian_logreg
+  covariance_estimator: oas
+  riemannian_metric: riemann
+  normalization: train_channel_standardize
+  class_weight: balanced
+  max_iter: 1000
+  training_mode: epoch
+  split_strategy: random
+  test_size: 0.25
+  probability_calibration:
+    enabled: true
+    method: sigmoid
+    cv: 3
+online:
+  window_seconds: 1.0
+  step_seconds: 0.25
+  trigger_threshold: 0.6
+  consecutive_windows: 4
+  refractory_seconds: 3.0
+  task_start_seconds: 0.5
+  task_end_seconds: 3.5
+calibration:
+  max_false_trigger_rate: 0.1
+  cv_folds: 3
+  thresholds:
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+outputs:
+  dir: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split
+  model_path: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split/model.joblib
+  offline_metrics_path: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split/offline_metrics.json
+  session_report_json: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split/session_report.json
+  session_report_md: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split/session_report.md
+  threshold_calibration_json: outputs/v2_physionet_20_left_right_mi_train_channel_standardized_random_split/threshold_calibration.json

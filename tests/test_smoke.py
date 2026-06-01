@@ -3,6 +3,7 @@ from __future__ import annotations
 import numpy as np
 
 from stroke_bci_mvp.datasets.synthetic import make_synthetic_dataset
+from stroke_bci_mvp.datasets.physionet import _label_for_annotation, _label_names
 from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
 from stroke_bci_mvp.models import build_model
 from stroke_bci_mvp.online.calibration import calibrate_trigger_threshold
@@ -27,6 +28,16 @@ def test_synthetic_dataset_shape_and_labels() -> None:
     assert dataset.X.shape == (12, 3, 160)
     assert set(dataset.y.tolist()) == {0, 1}
     assert len(np.unique(dataset.subject_ids)) == 3
+
+
+def test_physionet_task_label_mapping_supports_left_vs_right_mi() -> None:
+    assert _label_for_annotation("T0", "rest_vs_mi") == 0
+    assert _label_for_annotation("T1", "rest_vs_mi") == 1
+    assert _label_for_annotation("T2", "rest_vs_mi") == 1
+    assert _label_for_annotation("T0", "left_vs_right_mi") is None
+    assert _label_for_annotation("T1", "left_vs_right_mi") == 0
+    assert _label_for_annotation("T2", "left_vs_right_mi") == 1
+    assert _label_names("left_vs_right_mi") == {0: "left_hand_mi", 1: "right_hand_mi"}
 
 
 def test_quality_gate_keeps_clean_synthetic_epochs() -> None:

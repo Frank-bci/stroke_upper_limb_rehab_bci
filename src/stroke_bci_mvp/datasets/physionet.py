@@ -11,8 +11,10 @@ from stroke_bci_mvp.types import EpochDataset
 def load_physionet_eegmmi(config: dict) -> EpochDataset:
     """Load PhysioNet EEG Motor Movement/Imagery runs through MNE.
 
-    The loader maps T1/T2 motor-imagery annotations to label 1 and T0 rest
-    annotations to label 0, matching the MVP's Rest vs Motor Intention target.
+    By default, the loader maps T1/T2 motor-imagery annotations to label 1 and
+    T0 rest annotations to label 0, matching the MVP's Rest vs Motor Intention
+    target. Set dataset.task to "left_vs_right_mi" to use only T1/T2 imagery
+    cues as a left-hand vs right-hand PhysioNet baseline.
     """
 
     subjects_cfg = config.get("subjects", [1])
@@ -25,6 +27,7 @@ def load_physionet_eegmmi(config: dict) -> EpochDataset:
     epoch_seconds = float(config.get("epoch_seconds", 4.0))
     sfreq_target = float(config.get("sfreq", 160))
     max_epochs = config.get("max_epochs")
+    task = str(config.get("task", "rest_vs_mi")).lower()
 
     from mne.datasets import eegbci
 
@@ -48,14 +51,14 @@ def load_physionet_eegmmi(config: dict) -> EpochDataset:
 
         n_samples = int(round(epoch_seconds * raw.info["sfreq"]))
         for annotation in raw.annotations:
-            if annotation["description"] not in {"T0", "T1", "T2"}:
+            label = _label_for_annotation(str(annotation["description"]), task)
+            if label is None:
                 continue
             start = raw.time_as_index(float(annotation["onset"]))[0]
             stop = start + n_samples
             if stop > raw.n_times:
                 continue
             epoch = raw.get_data(start=start, stop=stop) * 1e6
-            label = 0 if annotation["description"] == "T0" else 1
             all_epochs.append(epoch)
             all_labels.append(label)
             all_subject_ids.append(f"S{subject:03d}")
@@ -73,5 +76,35 @@ def load_physionet_eegmmi(config: dict) -> EpochDataset:
         sfreq=float(sfreq_target),
         ch_names=ch_names or [],
         subject_ids=np.asarray(all_subject_ids),
-        label_names={0: "rest", 1: "motor_intention"},
+        label_names=_label_names(task),
     )
+
+
+def _label_for_annotation(description: str, task: str) -> int | None:
+    description = description.strip()
+    task = task.lower()
+
+    if task in {"rest_vs_mi", "rest_vs_motor_intention", "trigger"}:
+        if description == "T0":
+            return 0
+        if description in {"T1", "T2"}:
+            return 1
+        return None
+
+    if task in {"left_vs_right_mi", "left_right_mi", "hand_mi"}:
+        if description == "T1":
+            return 0
+        if description == "T2":
+            return 1
+        return None
+
+    raise ValueError(f"Unsupported PhysioNet task: {task}")
+
+
+def _label_names(task: str) -> dict[int, str]:
+    task = task.lower()
+    if task in {"rest_vs_mi", "rest_vs_motor_intention", "trigger"}:
+        return {0: "rest", 1: "motor_intention"}
+    if task in {"left_vs_right_mi", "left_right_mi", "hand_mi"}:
+        return {0: "left_hand_mi", 1: "right_hand_mi"}
+    raise ValueError(f"Unsupported PhysioNet task: {task}")
