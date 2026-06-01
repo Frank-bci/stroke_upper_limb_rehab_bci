@@ -26,5 +26,9 @@ data/raw/
 *.edf
 *.zip
 
+# Trained model binaries are reproducible from configs and can grow quickly.
+# Keep metrics/configs/docs in Git; keep model.joblib files local or in LFS.
+outputs/**/model.joblib
+
 # Local logs
 *.log
