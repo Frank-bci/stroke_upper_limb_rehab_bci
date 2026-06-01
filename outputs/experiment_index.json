@@ -154,6 +154,22 @@
       "recommendation": "v2.1 candidate; higher trigger, audit artifact risk"
     },
     {
+      "name": "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24_no_eog",
+      "dataset": "figshare_stroke",
+      "task": "rest_vs_motor_intention",
+      "config": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_top24_no_eog.yaml",
+      "split": "subject",
+      "ba": 0.6263957816377171,
+      "auc": 0.668164288668321,
+      "f1": 0.6250779787897692,
+      "repeated_ba": "0.6297 ± 0.0028",
+      "repeated_auc": "0.6757 ± 0.0063",
+      "repeated_f1": "0.6176 ± 0.0120",
+      "trigger_rate": 0.29273504273504275,
+      "false_trigger_rate": 0.038306451612903226,
+      "recommendation": "artifact-risk control; lower trigger/AUC"
+    },
+    {
       "name": "v2_figshare_stroke_riemannian",
       "dataset": "figshare_stroke",
       "task": "rest_vs_motor_intention",

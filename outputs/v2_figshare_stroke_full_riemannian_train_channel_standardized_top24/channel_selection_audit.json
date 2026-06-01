@@ -1,0 +1,586 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_top24.yaml",
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "risk_channels": [
+      "",
+      "HEOL",
+      "HEOR"
+    ],
+    "n_total_channels": 33,
+    "ch_names": [
+      "FP1",
+      "FP2",
+      "Fz",
+      "F3",
+      "F4",
+      "F7",
+      "F8",
+      "FCz",
+      "FC3",
+      "FC4",
+      "FT7",
+      "FT8",
+      "Cz",
+      "C3",
+      "C4",
+      "T3",
+      "T4",
+      "CPz",
+      "CP3",
+      "CP4",
+      "TP7",
+      "TP8",
+      "Pz",
+      "P3",
+      "P4",
+      "T5",
+      "T6",
+      "Oz",
+      "O1",
+      "O2",
+      "HEOL",
+      "HEOR",
+      ""
+    ],
+    "n_epochs_total": 4000,
+    "n_epochs_valid": 3749,
+    "quality_reject_rate": 0.06274999999999997
+  },
+  "summary": {
+    "total_selectors": 9,
+    "total_selected_slots": 216,
+    "risk_channel_selected_slots": 27,
+    "risk_channel_selected_slot_rate": 0.125,
+    "risk_channel_counts": {
+      "": 9,
+      "HEOL": 9,
+      "HEOR": 9
+    },
+    "top_selected_channels": [
+      {
+        "channel": "FP2",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "FP1",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "HEOR",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "F3",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "Fz",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "F4",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "FCz",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "F8",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "FC3",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "HEOL",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "FC4",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "F7",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "C3",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "P4",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "O2",
+        "count": 9,
+        "selector_rate": 1.0
+      },
+      {
+        "channel": "Oz",
+        "count": 8,
+        "selector_rate": 0.8888888888888888
+      },
+      {
+        "channel": "C4",
+        "count": 8,
+        "selector_rate": 0.8888888888888888
+      },
+      {
+        "channel": "FT7",
+        "count": 8,
+        "selector_rate": 0.8888888888888888
+      },
+      {
+        "channel": "T5",
+        "count": 7,
+        "selector_rate": 0.7777777777777778
+      },
+      {
+        "channel": "CP3",
+        "count": 7,
+        "selector_rate": 0.7777777777777778
+      },
+      {
+        "channel": "Cz",
+        "count": 6,
+        "selector_rate": 0.6666666666666666
+      },
+      {
+        "channel": "FT8",
+        "count": 6,
+        "selector_rate": 0.6666666666666666
+      },
+      {
+        "channel": "Pz",
+        "count": 6,
+        "selector_rate": 0.6666666666666666
+      },
+      {
+        "channel": "T6",
+        "count": 5,
+        "selector_rate": 0.5555555555555556
+      },
+      {
+        "channel": "P3",
+        "count": 4,
+        "selector_rate": 0.4444444444444444
+      },
+      {
+        "channel": "T4",
+        "count": 2,
+        "selector_rate": 0.2222222222222222
+      },
+      {
+        "channel": "T3",
+        "count": 2,
+        "selector_rate": 0.2222222222222222
+      },
+      {
+        "channel": "O1",
+        "count": 2,
+        "selector_rate": 0.2222222222222222
+      },
+      {
+        "channel": "TP8",
+        "count": 1,
+        "selector_rate": 0.1111111111111111
+      }
+    ]
+  },
+  "runs": [
+    {
+      "seed": 7,
+      "test_subject_ids": [
+        "sub-02",
+        "sub-11",
+        "sub-14",
+        "sub-16",
+        "sub-21",
+        "sub-23",
+        "sub-28",
+        "sub-31",
+        "sub-33",
+        "sub-35",
+        "sub-37",
+        "sub-43",
+        "sub-47"
+      ],
+      "selectors": [
+        {
+          "selector_idx": 1,
+          "selected_channels": [
+            "FP2",
+            "FP1",
+            "",
+            "HEOR",
+            "F3",
+            "Fz",
+            "F4",
+            "FCz",
+            "F8",
+            "FC3",
+            "HEOL",
+            "FC4",
+            "F7",
+            "C3",
+            "Oz",
+            "C4",
+            "P4",
+            "O2",
+            "Cz",
+            "FT8",
+            "T5",
+            "FT7",
+            "T4",
+            "T3"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 2,
+          "selected_channels": [
+            "FP1",
+            "FP2",
+            "HEOR",
+            "F3",
+            "",
+            "Fz",
+            "F4",
+            "FCz",
+            "HEOL",
+            "F8",
+            "C3",
+            "FC3",
+            "FC4",
+            "CP3",
+            "F7",
+            "C4",
+            "P4",
+            "FT7",
+            "T6",
+            "FT8",
+            "Cz",
+            "Oz",
+            "O2",
+            "TP8"
+          ],
+          "risk_channels": [
+            "HEOR",
+            "",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 3,
+          "selected_channels": [
+            "FP1",
+            "FP2",
+            "",
+            "F3",
+            "Fz",
+            "F4",
+            "HEOR",
+            "FCz",
+            "FC3",
+            "HEOL",
+            "FC4",
+            "F8",
+            "C3",
+            "CP3",
+            "P4",
+            "F7",
+            "Cz",
+            "Oz",
+            "P3",
+            "O2",
+            "FT7",
+            "T5",
+            "Pz",
+            "FT8"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "test_subject_ids": [
+        "sub-17",
+        "sub-19",
+        "sub-20",
+        "sub-22",
+        "sub-24",
+        "sub-27",
+        "sub-30",
+        "sub-36",
+        "sub-39",
+        "sub-42",
+        "sub-43",
+        "sub-45",
+        "sub-49"
+      ],
+      "selectors": [
+        {
+          "selector_idx": 1,
+          "selected_channels": [
+            "",
+            "FP2",
+            "FP1",
+            "HEOR",
+            "F3",
+            "Fz",
+            "F4",
+            "F8",
+            "FC3",
+            "HEOL",
+            "F7",
+            "C3",
+            "FCz",
+            "FC4",
+            "CP3",
+            "C4",
+            "FT7",
+            "FT8",
+            "T5",
+            "Pz",
+            "P3",
+            "T3",
+            "P4",
+            "O2"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 2,
+          "selected_channels": [
+            "FP1",
+            "",
+            "FP2",
+            "HEOR",
+            "F3",
+            "CP3",
+            "F4",
+            "Fz",
+            "FCz",
+            "C3",
+            "FC3",
+            "HEOL",
+            "F8",
+            "FC4",
+            "F7",
+            "P4",
+            "FT7",
+            "Oz",
+            "C4",
+            "T6",
+            "O2",
+            "O1",
+            "FT8",
+            "Pz"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 3,
+          "selected_channels": [
+            "",
+            "FP1",
+            "FP2",
+            "HEOR",
+            "F3",
+            "Fz",
+            "HEOL",
+            "F4",
+            "F8",
+            "CP3",
+            "FC3",
+            "FCz",
+            "C3",
+            "FC4",
+            "F7",
+            "FT7",
+            "FT8",
+            "T5",
+            "P4",
+            "Oz",
+            "T6",
+            "O2",
+            "C4",
+            "P3"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "test_subject_ids": [
+        "sub-01",
+        "sub-07",
+        "sub-10",
+        "sub-12",
+        "sub-15",
+        "sub-21",
+        "sub-24",
+        "sub-28",
+        "sub-29",
+        "sub-40",
+        "sub-44",
+        "sub-46",
+        "sub-47"
+      ],
+      "selectors": [
+        {
+          "selector_idx": 1,
+          "selected_channels": [
+            "FP1",
+            "",
+            "FP2",
+            "HEOR",
+            "Fz",
+            "F4",
+            "F3",
+            "HEOL",
+            "FCz",
+            "F8",
+            "FC3",
+            "FC4",
+            "F7",
+            "Oz",
+            "P4",
+            "C3",
+            "O2",
+            "C4",
+            "Pz",
+            "O1",
+            "T4",
+            "Cz",
+            "T6",
+            "T5"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 2,
+          "selected_channels": [
+            "FP1",
+            "HEOR",
+            "FP2",
+            "",
+            "F3",
+            "Fz",
+            "HEOL",
+            "F4",
+            "FCz",
+            "C3",
+            "FC3",
+            "CP3",
+            "F8",
+            "F7",
+            "FC4",
+            "FT7",
+            "Oz",
+            "C4",
+            "P4",
+            "O2",
+            "Pz",
+            "T6",
+            "T5",
+            "Cz"
+          ],
+          "risk_channels": [
+            "HEOR",
+            "",
+            "HEOL"
+          ]
+        },
+        {
+          "selector_idx": 3,
+          "selected_channels": [
+            "FP1",
+            "FP2",
+            "",
+            "HEOR",
+            "F3",
+            "Fz",
+            "F4",
+            "HEOL",
+            "FCz",
+            "FC3",
+            "F8",
+            "FC4",
+            "F7",
+            "CP3",
+            "C3",
+            "Oz",
+            "P4",
+            "FT7",
+            "O2",
+            "Cz",
+            "Pz",
+            "T5",
+            "C4",
+            "P3"
+          ],
+          "risk_channels": [
+            "",
+            "HEOR",
+            "HEOL"
+          ]
+        }
+      ]
+    }
+  ]
+}

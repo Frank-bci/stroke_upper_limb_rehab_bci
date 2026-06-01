@@ -180,6 +180,8 @@ def _recommendation(name: str) -> str:
         return "recommended Figshare v2 trigger baseline"
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24":
         return "v2.1 candidate; higher trigger, audit artifact risk"
+    if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24_no_eog":
+        return "artifact-risk control; lower trigger/AUC"
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_eeg_only":
         return "negative control; lower than full-channel baseline"
     if name == "v2_physionet_20_left_right_mi_train_channel_standardized":
