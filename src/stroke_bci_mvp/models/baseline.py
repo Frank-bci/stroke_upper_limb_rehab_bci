@@ -124,6 +124,7 @@ def _channel_selection_steps(model_cfg: dict, ch_names: list[str] | None) -> lis
     if ch_names is None:
         raise ValueError("model.channel_selection requires dataset channel names.")
 
+    method = str(selection_cfg.get("method", "fixed")).lower()
     include_channels = selection_cfg.get("include_channels")
     exclude_channels = set(map(str, selection_cfg.get("exclude_channels", [])))
     if include_channels:
@@ -137,7 +138,19 @@ def _channel_selection_steps(model_cfg: dict, ch_names: list[str] | None) -> lis
         raise ValueError(
             f"Channel selection kept {len(selected)} channels, fewer than min_channels={min_channels}."
         )
-    return [("channel_selector", ChannelSelector(indices=selected))]
+
+    if method in {"fixed", "manual"}:
+        return [("channel_selector", ChannelSelector(indices=selected))]
+
+    if method in {"supervised_top_k", "data_driven_top_k", "top_k"}:
+        top_k = int(selection_cfg.get("top_k", len(selected)))
+        if top_k < min_channels:
+            raise ValueError(f"top_k={top_k} is fewer than min_channels={min_channels}.")
+        if top_k > len(selected):
+            raise ValueError(f"top_k={top_k} exceeds available candidate channels={len(selected)}.")
+        return [("channel_selector", SupervisedTopKChannelSelector(candidate_indices=selected, top_k=top_k))]
+
+    raise ValueError(f"Unsupported channel_selection method: {method}")
 
 
 def _normalization_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
@@ -195,6 +208,46 @@ class ChannelSelector(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         return X[:, self.indices, :]
+
+
+class SupervisedTopKChannelSelector(BaseEstimator, TransformerMixin):
+    """Select channels by training-set class separation in log-variance space."""
+
+    def __init__(self, candidate_indices: list[int], top_k: int, eps: float = 1e-12):
+        self.candidate_indices = candidate_indices
+        self.top_k = top_k
+        self.eps = eps
+
+    def fit(self, X, y):
+        if y is None:
+            raise ValueError("SupervisedTopKChannelSelector requires labels.")
+        if not self.candidate_indices:
+            raise ValueError("SupervisedTopKChannelSelector requires candidate channel indices.")
+        if self.top_k <= 0:
+            raise ValueError("top_k must be positive.")
+        max_idx = max(self.candidate_indices)
+        if X.shape[1] <= max_idx:
+            raise ValueError(f"Channel index {max_idx} is out of bounds for {X.shape[1]} channels.")
+
+        y = np.asarray(y)
+        classes = np.unique(y)
+        if len(classes) != 2:
+            raise ValueError("SupervisedTopKChannelSelector currently supports binary labels only.")
+
+        X_candidates = X[:, self.candidate_indices, :]
+        log_variance = np.log(np.var(X_candidates, axis=-1) + self.eps)
+        class0 = log_variance[y == classes[0]]
+        class1 = log_variance[y == classes[1]]
+        pooled_std = np.sqrt((np.var(class0, axis=0) + np.var(class1, axis=0)) / 2.0)
+        scores = np.abs(np.mean(class1, axis=0) - np.mean(class0, axis=0)) / np.maximum(pooled_std, self.eps)
+
+        order = np.argsort(scores)[::-1][: self.top_k]
+        self.selected_indices_ = [int(self.candidate_indices[idx]) for idx in order]
+        self.scores_ = scores
+        return self
+
+    def transform(self, X):
+        return X[:, self.selected_indices_, :]
 
 
 class EpochStandardizer(BaseEstimator, TransformerMixin):

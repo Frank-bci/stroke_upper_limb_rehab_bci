@@ -214,6 +214,31 @@ def test_model_supports_channel_selection_by_name() -> None:
     assert model.predict_proba(dataset.X[:4]).shape == (4, 2)
 
 
+def test_model_supports_supervised_top_k_channel_selection() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "model": {
+            "type": "riemannian_logreg",
+            "covariance_estimator": "oas",
+            "riemannian_metric": "riemann",
+            "normalization": "train_channel_standardize",
+            "channel_selection": {
+                "enabled": True,
+                "method": "supervised_top_k",
+                "top_k": 2,
+                "min_channels": 2,
+            },
+        }
+    }
+
+    model = build_model(config, dataset.sfreq, ch_names=dataset.ch_names)
+    model.fit(dataset.X, dataset.y)
+
+    selector = model.named_steps["channel_selector"]
+    assert len(selector.selected_indices_) == 2
+    assert model.predict_proba(dataset.X[:4]).shape == (4, 2)
+
+
 def test_trigger_decision_requires_consecutive_windows() -> None:
     decision = TriggerDecision(
         TriggerParams(

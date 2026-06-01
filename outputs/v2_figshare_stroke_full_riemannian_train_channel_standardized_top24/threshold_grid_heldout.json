@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_top24.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized_top24/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "selected_threshold": 0.6,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 964,
+      "trigger_rate": 0.6153846153846154,
+      "false_trigger_rate": 0.2842741935483871,
+      "mean_trigger_delay_seconds": 1.0451388888888888,
+      "triggered_intention_trials": 288,
+      "triggered_rest_trials": 141
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 964,
+      "trigger_rate": 0.4252136752136752,
+      "false_trigger_rate": 0.16129032258064516,
+      "mean_trigger_delay_seconds": 1.0628140703517588,
+      "triggered_intention_trials": 199,
+      "triggered_rest_trials": 80
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 964,
+      "trigger_rate": 0.2264957264957265,
+      "false_trigger_rate": 0.07459677419354839,
+      "mean_trigger_delay_seconds": 1.096698113207547,
+      "triggered_intention_trials": 106,
+      "triggered_rest_trials": 37
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 964,
+      "trigger_rate": 0.10683760683760683,
+      "false_trigger_rate": 0.02620967741935484,
+      "mean_trigger_delay_seconds": 1.1,
+      "triggered_intention_trials": 50,
+      "triggered_rest_trials": 13
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 964,
+      "trigger_rate": 0.042735042735042736,
+      "false_trigger_rate": 0.006048387096774193,
+      "mean_trigger_delay_seconds": 1.1375,
+      "triggered_intention_trials": 20,
+      "triggered_rest_trials": 3
+    }
+  ]
+}

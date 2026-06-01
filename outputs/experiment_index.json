@@ -138,6 +138,22 @@
       "recommendation": "negative control; lower than full-channel baseline"
     },
     {
+      "name": "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24",
+      "dataset": "figshare_stroke",
+      "task": "rest_vs_motor_intention",
+      "config": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_top24.yaml",
+      "split": "subject",
+      "ba": 0.6421732837055417,
+      "auc": 0.6895879859387923,
+      "f1": 0.6544366899302094,
+      "repeated_ba": "0.6358 ± 0.0048",
+      "repeated_auc": "0.6864 ± 0.0065",
+      "repeated_f1": "0.6240 ± 0.0232",
+      "trigger_rate": 0.36538461538461536,
+      "false_trigger_rate": 0.05040322580645161,
+      "recommendation": "v2.1 candidate; higher trigger, audit artifact risk"
+    },
+    {
       "name": "v2_figshare_stroke_riemannian",
       "dataset": "figshare_stroke",
       "task": "rest_vs_motor_intention",
