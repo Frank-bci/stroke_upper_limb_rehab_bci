@@ -8,6 +8,7 @@ from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
 from stroke_bci_mvp.models import build_model
 from stroke_bci_mvp.online.calibration import calibrate_trigger_threshold
 from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParams
+from stroke_bci_mvp.signal import apply_subject_normalization
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
 
 
@@ -190,6 +191,27 @@ def test_fbcsp_model_supports_train_channel_standardization() -> None:
     model.fit(dataset.X, dataset.y)
 
     assert model.predict(dataset.X[:4]).shape == (4,)
+
+
+def test_subject_normalization_standardizes_each_subject_channel() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    X = dataset.X.copy()
+    X[dataset.subject_ids == "S01"] += 10.0
+    config = {
+        "preprocessing": {
+            "subject_normalization": {
+                "enabled": True,
+                "method": "per_subject_channel_standardize",
+            }
+        }
+    }
+
+    normalized = apply_subject_normalization(X, dataset.subject_ids, config)
+
+    for subject_id in np.unique(dataset.subject_ids):
+        subject_X = normalized[dataset.subject_ids == subject_id]
+        assert np.allclose(subject_X.mean(axis=(0, 2)), 0.0, atol=1e-6)
+        assert np.allclose(subject_X.std(axis=(0, 2)), 1.0, atol=1e-6)
 
 
 def test_model_supports_channel_selection_by_name() -> None:

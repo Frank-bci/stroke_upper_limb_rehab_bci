@@ -106,6 +106,22 @@
       "recommendation": ""
     },
     {
+      "name": "v2_figshare_stroke_full_riemannian_subject_channel_standardized",
+      "dataset": "figshare_stroke",
+      "task": "rest_vs_motor_intention",
+      "config": "configs/v2/figshare_stroke_full_riemannian_subject_channel_standardized.yaml",
+      "split": "subject",
+      "ba": 0.5844137717121588,
+      "auc": 0.6140882616487455,
+      "f1": 0.5492766726943942,
+      "repeated_ba": null,
+      "repeated_auc": null,
+      "repeated_f1": null,
+      "trigger_rate": 0.17735042735042736,
+      "false_trigger_rate": 0.020161290322580645,
+      "recommendation": "diagnostic control; lower AUC/trigger"
+    },
+    {
       "name": "v2_figshare_stroke_full_riemannian_train_channel_standardized",
       "dataset": "figshare_stroke",
       "task": "rest_vs_motor_intention",

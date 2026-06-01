@@ -15,7 +15,7 @@ from stroke_bci_mvp.config import load_config
 from stroke_bci_mvp.datasets import load_dataset
 from stroke_bci_mvp.evaluation import make_train_test_split
 from stroke_bci_mvp.online import simulate_session
-from stroke_bci_mvp.signal import filter_valid_epochs, notch_epochs
+from stroke_bci_mvp.signal import apply_subject_normalization, filter_valid_epochs, notch_epochs
 
 
 def evaluate_threshold_grid(config_path: str, thresholds: list[float], output_path: str | None = None) -> dict:
@@ -33,6 +33,7 @@ def evaluate_threshold_grid(config_path: str, thresholds: list[float], output_pa
         config["quality"],
     )
     valid_subject_ids = dataset.subject_ids[np.asarray([result.valid for result in quality_results], dtype=bool)]
+    X_valid = apply_subject_normalization(X_valid, valid_subject_ids, config)
     split = make_train_test_split(y_valid, valid_subject_ids, config)
     X_test = X_valid[split.test_idx]
     y_test = y_valid[split.test_idx]

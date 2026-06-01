@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_subject_channel_standardized.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_subject_channel_standardized/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "selected_threshold": 0.6,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 964,
+      "trigger_rate": 0.42948717948717946,
+      "false_trigger_rate": 0.2782258064516129,
+      "mean_trigger_delay_seconds": 1.0298507462686568,
+      "triggered_intention_trials": 201,
+      "triggered_rest_trials": 138
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 964,
+      "trigger_rate": 0.20085470085470086,
+      "false_trigger_rate": 0.1431451612903226,
+      "mean_trigger_delay_seconds": 1.0372340425531914,
+      "triggered_intention_trials": 94,
+      "triggered_rest_trials": 71
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 964,
+      "trigger_rate": 0.0876068376068376,
+      "false_trigger_rate": 0.05040322580645161,
+      "mean_trigger_delay_seconds": 1.0853658536585367,
+      "triggered_intention_trials": 41,
+      "triggered_rest_trials": 25
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 964,
+      "trigger_rate": 0.008547008547008548,
+      "false_trigger_rate": 0.0020161290322580645,
+      "mean_trigger_delay_seconds": 1.125,
+      "triggered_intention_trials": 4,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 964,
+      "trigger_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": null,
+      "triggered_intention_trials": 0,
+      "triggered_rest_trials": 0
+    }
+  ]
+}

@@ -16,7 +16,7 @@ from stroke_bci_mvp.config import load_config
 from stroke_bci_mvp.datasets import load_dataset
 from stroke_bci_mvp.evaluation import make_online_windows, make_train_test_split
 from stroke_bci_mvp.online import simulate_session
-from stroke_bci_mvp.signal import filter_valid_epochs, notch_epochs
+from stroke_bci_mvp.signal import apply_subject_normalization, filter_valid_epochs, notch_epochs
 
 
 def tune_subject_thresholds(
@@ -47,6 +47,7 @@ def tune_subject_thresholds(
         config["quality"],
     )
     valid_subject_ids = dataset.subject_ids[np.asarray([result.valid for result in quality_results], dtype=bool)]
+    X_valid = apply_subject_normalization(X_valid, valid_subject_ids, config)
     split = make_train_test_split(y_valid, valid_subject_ids, config)
 
     subject_rows = []
