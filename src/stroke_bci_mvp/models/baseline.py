@@ -20,7 +20,8 @@ def build_model(config: dict, sfreq: float):
     if model_type == "fbcsp_lda":
         return _maybe_calibrate(
             Pipeline(
-                steps=[
+                steps=_normalization_steps(model_cfg)
+                + [
                     (
                         "fbcsp",
                         FBCSPTransformer(
@@ -39,7 +40,8 @@ def build_model(config: dict, sfreq: float):
     if model_type == "fbcsp_logreg":
         return _maybe_calibrate(
             Pipeline(
-                steps=[
+                steps=_normalization_steps(model_cfg)
+                + [
                     (
                         "fbcsp",
                         FBCSPTransformer(

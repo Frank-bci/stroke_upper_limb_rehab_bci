@@ -175,6 +175,23 @@ def test_riemannian_model_supports_train_channel_standardization() -> None:
     assert model.predict_proba(windows.X[:4]).shape == (4, 2)
 
 
+def test_fbcsp_model_supports_train_channel_standardization() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "model": {
+            "type": "fbcsp_lda",
+            "normalization": "train_channel_standardize",
+            "bands": [(8, 12), (12, 20)],
+            "csp_components": 1,
+        }
+    }
+
+    model = build_model(config, dataset.sfreq)
+    model.fit(dataset.X, dataset.y)
+
+    assert model.predict(dataset.X[:4]).shape == (4,)
+
+
 def test_trigger_decision_requires_consecutive_windows() -> None:
     decision = TriggerDecision(
         TriggerParams(
