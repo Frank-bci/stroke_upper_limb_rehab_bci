@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_eeg_only.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized_eeg_only/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "selected_threshold": 0.55,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 964,
+      "trigger_rate": 0.4636752136752137,
+      "false_trigger_rate": 0.19556451612903225,
+      "mean_trigger_delay_seconds": 1.0299539170506913,
+      "triggered_intention_trials": 217,
+      "triggered_rest_trials": 97
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 964,
+      "trigger_rate": 0.26495726495726496,
+      "false_trigger_rate": 0.07056451612903226,
+      "mean_trigger_delay_seconds": 1.0443548387096775,
+      "triggered_intention_trials": 124,
+      "triggered_rest_trials": 35
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 964,
+      "trigger_rate": 0.09829059829059829,
+      "false_trigger_rate": 0.018145161290322582,
+      "mean_trigger_delay_seconds": 1.0815217391304348,
+      "triggered_intention_trials": 46,
+      "triggered_rest_trials": 9
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 964,
+      "trigger_rate": 0.027777777777777776,
+      "false_trigger_rate": 0.0020161290322580645,
+      "mean_trigger_delay_seconds": 1.0961538461538463,
+      "triggered_intention_trials": 13,
+      "triggered_rest_trials": 1
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 964,
+      "trigger_rate": 0.002136752136752137,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.25,
+      "triggered_intention_trials": 1,
+      "triggered_rest_trials": 0
+    }
+  ]
+}

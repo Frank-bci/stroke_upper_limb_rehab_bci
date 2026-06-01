@@ -96,7 +96,7 @@ def train(config_path: str) -> dict:
         raise ValueError(f"Unsupported training_mode: {training_mode}")
 
     # 构建模型并训练
-    model = build_model(config, dataset.sfreq)
+    model = build_model(config, dataset.sfreq, ch_names=dataset.ch_names)
     model.fit(X_train, y_train)
 
     # 在测试集上进行预测并计算多维度评估指标

@@ -68,7 +68,7 @@ def evaluate(config_path: str) -> dict:
         else:
             raise ValueError(f"Unsupported training_mode: {training_mode}")
 
-        model = build_model(config, dataset.sfreq)
+        model = build_model(config, dataset.sfreq, ch_names=dataset.ch_names)
         model.fit(X_train_model, y_train_model)
         y_pred = model.predict(X_test_model)
         y_score = model.predict_proba(X_test_model)[:, 1]

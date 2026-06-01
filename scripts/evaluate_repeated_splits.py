@@ -56,7 +56,7 @@ def evaluate_repeated_splits(
         train_data = _training_samples(X_valid[split.train_idx], y_valid[split.train_idx], dataset.sfreq, config)
         test_data = _training_samples(X_valid[split.test_idx], y_valid[split.test_idx], dataset.sfreq, config)
 
-        model = build_model(config, dataset.sfreq)
+        model = build_model(config, dataset.sfreq, ch_names=dataset.ch_names)
         model.fit(train_data["X"], train_data["y"])
 
         offline = _offline_metrics(model, test_data["X"], test_data["y"])

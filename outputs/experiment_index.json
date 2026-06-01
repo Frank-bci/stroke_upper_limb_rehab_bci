@@ -122,6 +122,22 @@
       "recommendation": "recommended Figshare v2 trigger baseline"
     },
     {
+      "name": "v2_figshare_stroke_full_riemannian_train_channel_standardized_eeg_only",
+      "dataset": "figshare_stroke",
+      "task": "rest_vs_motor_intention",
+      "config": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_eeg_only.yaml",
+      "split": "subject",
+      "ba": 0.6345878136200718,
+      "auc": 0.6855972566859664,
+      "f1": 0.6193157210913816,
+      "repeated_ba": "0.6347 ± 0.0059",
+      "repeated_auc": "0.6833 ± 0.0057",
+      "repeated_f1": "0.6172 ± 0.0026",
+      "trigger_rate": 0.2692307692307692,
+      "false_trigger_rate": 0.034274193548387094,
+      "recommendation": "negative control; lower than full-channel baseline"
+    },
+    {
       "name": "v2_figshare_stroke_riemannian",
       "dataset": "figshare_stroke",
       "task": "rest_vs_motor_intention",

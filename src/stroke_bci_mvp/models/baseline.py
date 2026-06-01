@@ -12,7 +12,7 @@ from scipy import signal
 from stroke_bci_mvp.features import BandpowerTransformer, FBCSPTransformer
 
 
-def build_model(config: dict, sfreq: float):
+def build_model(config: dict, sfreq: float, ch_names: list[str] | None = None):
     model_cfg = config["model"]
     model_type = model_cfg.get("type", "fbcsp_lda")
     bands = [tuple(map(float, band)) for band in model_cfg.get("bands", [(8, 12), (12, 16), (16, 24), (24, 30)])]
@@ -20,7 +20,8 @@ def build_model(config: dict, sfreq: float):
     if model_type == "fbcsp_lda":
         return _maybe_calibrate(
             Pipeline(
-                steps=_normalization_steps(model_cfg)
+                steps=_channel_selection_steps(model_cfg, ch_names)
+                + _normalization_steps(model_cfg)
                 + [
                     (
                         "fbcsp",
@@ -40,7 +41,8 @@ def build_model(config: dict, sfreq: float):
     if model_type == "fbcsp_logreg":
         return _maybe_calibrate(
             Pipeline(
-                steps=_normalization_steps(model_cfg)
+                steps=_channel_selection_steps(model_cfg, ch_names)
+                + _normalization_steps(model_cfg)
                 + [
                     (
                         "fbcsp",
@@ -64,12 +66,14 @@ def build_model(config: dict, sfreq: float):
         )
 
     if model_type in {"riemannian_logreg", "riemannian_lda"}:
-        return _maybe_calibrate(_build_riemannian_model(config, sfreq), model_cfg)
+        return _maybe_calibrate(_build_riemannian_model(config, sfreq, ch_names), model_cfg)
 
     if model_type == "bandpower_logreg":
         return _maybe_calibrate(
             Pipeline(
-                steps=[
+                steps=_channel_selection_steps(model_cfg, ch_names)
+                + _normalization_steps(model_cfg)
+                + [
                     ("bandpower", BandpowerTransformer(sfreq=sfreq, bands=bands)),
                     ("scaler", StandardScaler()),
                     ("clf", LogisticRegression(max_iter=1000, class_weight="balanced")),
@@ -81,7 +85,7 @@ def build_model(config: dict, sfreq: float):
     raise ValueError(f"Unsupported model type: {model_type}")
 
 
-def _build_riemannian_model(config: dict, sfreq: float) -> Pipeline:
+def _build_riemannian_model(config: dict, sfreq: float, ch_names: list[str] | None = None) -> Pipeline:
     from pyriemann.estimation import Covariances
     from pyriemann.tangentspace import TangentSpace
 
@@ -100,7 +104,8 @@ def _build_riemannian_model(config: dict, sfreq: float) -> Pipeline:
         )
 
     return Pipeline(
-        steps=_normalization_steps(model_cfg)
+        steps=_channel_selection_steps(model_cfg, ch_names)
+        + _normalization_steps(model_cfg)
         + [
             ("bandpass", BandpassTransformer(sfreq=sfreq, band=tuple(map(float, bandpass_hz)))),
             ("covariances", Covariances(estimator=covariance_estimator)),
@@ -109,6 +114,30 @@ def _build_riemannian_model(config: dict, sfreq: float) -> Pipeline:
             ("clf", classifier),
         ]
     )
+
+
+def _channel_selection_steps(model_cfg: dict, ch_names: list[str] | None) -> list[tuple[str, BaseEstimator]]:
+    selection_cfg = model_cfg.get("channel_selection", {})
+    if not selection_cfg or not bool(selection_cfg.get("enabled", False)):
+        return []
+
+    if ch_names is None:
+        raise ValueError("model.channel_selection requires dataset channel names.")
+
+    include_channels = selection_cfg.get("include_channels")
+    exclude_channels = set(map(str, selection_cfg.get("exclude_channels", [])))
+    if include_channels:
+        include_set = set(map(str, include_channels))
+        selected = [idx for idx, name in enumerate(ch_names) if name in include_set and name not in exclude_channels]
+    else:
+        selected = [idx for idx, name in enumerate(ch_names) if name not in exclude_channels]
+
+    min_channels = int(selection_cfg.get("min_channels", 2))
+    if len(selected) < min_channels:
+        raise ValueError(
+            f"Channel selection kept {len(selected)} channels, fewer than min_channels={min_channels}."
+        )
+    return [("channel_selector", ChannelSelector(indices=selected))]
 
 
 def _normalization_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
@@ -148,6 +177,24 @@ class BandpassTransformer(BaseEstimator, TransformerMixin):
         low, high = self.band
         sos = signal.butter(4, [low, high], btype="bandpass", fs=self.sfreq, output="sos")
         return signal.sosfiltfilt(sos, X, axis=-1)
+
+
+class ChannelSelector(BaseEstimator, TransformerMixin):
+    """Keep a stable channel subset before downstream EEG feature extraction."""
+
+    def __init__(self, indices: list[int]):
+        self.indices = indices
+
+    def fit(self, X, y=None):
+        if not self.indices:
+            raise ValueError("ChannelSelector requires at least one channel index.")
+        max_idx = max(self.indices)
+        if X.shape[1] <= max_idx:
+            raise ValueError(f"Channel index {max_idx} is out of bounds for {X.shape[1]} channels.")
+        return self
+
+    def transform(self, X):
+        return X[:, self.indices, :]
 
 
 class EpochStandardizer(BaseEstimator, TransformerMixin):

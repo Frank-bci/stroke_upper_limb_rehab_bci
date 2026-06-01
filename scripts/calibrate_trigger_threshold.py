@@ -159,7 +159,7 @@ def _cross_validated_calibration(
             continue
 
         X_train_model, y_train_model = _model_training_samples(X[train_idx], y[train_idx], sfreq, config)
-        model = build_model(config, sfreq)
+        model = build_model(config, sfreq, ch_names=ch_names)
         model.fit(X_train_model, y_train_model)
 
         fold_rows = []

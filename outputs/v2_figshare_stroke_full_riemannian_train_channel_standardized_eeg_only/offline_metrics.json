@@ -1,0 +1,43 @@
+{
+  "dataset": "figshare_stroke",
+  "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized_eeg_only.yaml",
+  "n_epochs_total": 4000,
+  "n_epochs_valid": 3749,
+  "rejected_epochs": 251,
+  "quality_reject_rate": 0.06274999999999997,
+  "train_epochs": 2785,
+  "test_epochs": 964,
+  "training_mode": "online_windows",
+  "train_samples": 13925,
+  "test_samples": 4820,
+  "split_strategy": "subject",
+  "test_subject_ids": [
+    "sub-02",
+    "sub-11",
+    "sub-14",
+    "sub-16",
+    "sub-21",
+    "sub-23",
+    "sub-28",
+    "sub-31",
+    "sub-33",
+    "sub-35",
+    "sub-37",
+    "sub-43",
+    "sub-47"
+  ],
+  "balanced_accuracy": 0.6345878136200718,
+  "auc": 0.6855972566859664,
+  "f1": 0.6193157210913816,
+  "confusion_matrix": [
+    [
+      1632,
+      848
+    ],
+    [
+      910,
+      1430
+    ]
+  ],
+  "quality_score_mean": 82.5225
+}

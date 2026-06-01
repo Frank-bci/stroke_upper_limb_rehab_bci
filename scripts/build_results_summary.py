@@ -178,6 +178,8 @@ def _format_repeated(summary: dict[str, Any], key: str) -> str | None:
 def _recommendation(name: str) -> str:
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized":
         return "recommended Figshare v2 trigger baseline"
+    if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_eeg_only":
+        return "negative control; lower than full-channel baseline"
     if name == "v2_physionet_20_left_right_mi_train_channel_standardized":
         return "recommended PhysioNet sanity-check baseline"
     if "physionet_20_train_channel_standardized" in name:
