@@ -11,6 +11,8 @@ from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParam
 from stroke_bci_mvp.signal import apply_subject_normalization
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
 
+from scripts.evaluate_calibration_window_adaptation import _split_subject_calibration
+
 
 def _small_config() -> dict:
     return {
@@ -79,6 +81,22 @@ def test_subject_split_has_no_subject_overlap() -> None:
     assert split.strategy == "subject"
     assert train_subjects.isdisjoint(test_subjects)
     assert test_subjects == set(split.test_subject_ids)
+
+
+def test_calibration_window_split_keeps_balanced_prefix_per_class() -> None:
+    subject_epoch_idx = np.arange(8)
+    y = np.asarray([0, 1, 0, 1, 0, 1, 0, 1])
+
+    calibration_idx, evaluation_idx = _split_subject_calibration(
+        subject_epoch_idx,
+        y,
+        calibration_trials_per_class=2,
+    )
+
+    assert calibration_idx.tolist() == [0, 1, 2, 3]
+    assert evaluation_idx.tolist() == [4, 5, 6, 7]
+    assert y[calibration_idx].tolist().count(0) == 2
+    assert y[calibration_idx].tolist().count(1) == 2
 
 
 def test_online_windows_follow_task_timing() -> None:
