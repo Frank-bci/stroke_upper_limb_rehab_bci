@@ -25,6 +25,8 @@ def evaluate_calibration_window_adaptation(
     thresholds: list[float],
     calibration_trials_per_class: int = 5,
     output_path: str | None = None,
+    save_output: bool = True,
+    random_state: int | None = None,
     max_false_trigger_rate: float | None = None,
     false_trigger_margin: float = 0.0,
     threshold_safety_steps: int = 0,
@@ -32,6 +34,8 @@ def evaluate_calibration_window_adaptation(
     min_auc: float = 0.60,
 ) -> dict:
     config = load_config(config_path)
+    if random_state is not None:
+        config["dataset"]["random_state"] = int(random_state)
     outputs = config["outputs"]
     max_false_trigger_rate = (
         float(config.get("calibration", {}).get("max_false_trigger_rate", 0.1))
@@ -122,6 +126,7 @@ def evaluate_calibration_window_adaptation(
         "metadata": {
             "dataset": config["dataset"]["name"],
             "config_path": str(Path(config_path)),
+            "random_state": int(config.get("dataset", {}).get("random_state", 7)),
             "split_strategy": split.strategy,
             "test_subject_ids": split.test_subject_ids,
             "thresholds": thresholds,
@@ -140,11 +145,12 @@ def evaluate_calibration_window_adaptation(
         "subjects": subject_rows,
     }
 
-    if output_path is None:
-        output_path = str(Path(outputs["dir"]) / "calibration_window_thresholds.json")
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    if save_output:
+        if output_path is None:
+            output_path = str(Path(outputs["dir"]) / "calibration_window_thresholds.json")
+        path = Path(output_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     return result
 
 
