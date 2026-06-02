@@ -1,0 +1,937 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_train_channel_standardized.yaml",
+    "repeated_json": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized/calibration_window_repeated_splits_gated.json",
+    "min_evaluation_false_trigger_rate": 0.1
+  },
+  "summary": {
+    "high_false_subject_count": {
+      "mean": 3.6666666666666665,
+      "std": 1.699673171197595,
+      "min": 2.0,
+      "max": 6.0
+    },
+    "rest_p95_delta": {
+      "mean": 0.05398348298785252,
+      "std": 0.038232483228457056,
+      "min": -0.01335838351599361,
+      "max": 0.13915942057977193
+    },
+    "rest_windows_over_threshold_rate_delta": {
+      "mean": 0.13445739866194414,
+      "std": 0.11757535050131326,
+      "min": -0.023030303030303012,
+      "max": 0.44
+    }
+  },
+  "runs": [
+    {
+      "seed": 7,
+      "test_subject_ids": [
+        "sub-02",
+        "sub-11",
+        "sub-14",
+        "sub-16",
+        "sub-21",
+        "sub-23",
+        "sub-28",
+        "sub-31",
+        "sub-33",
+        "sub-35",
+        "sub-37",
+        "sub-43",
+        "sub-47"
+      ],
+      "high_false_subjects": [
+        {
+          "subject_id": "sub-02",
+          "selected_threshold": 0.5,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 69,
+          "evaluation_trigger_rate": 0.29411764705882354,
+          "evaluation_false_trigger_rate": 0.11428571428571428,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 2,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.4,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.5
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.78,
+            "auc": 0.8624,
+            "f1": 0.7317073170731707
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.4263857607879929,
+                "std": 0.04203448169514597,
+                "p50": 0.41850401764913786,
+                "p90": 0.49048625185315475,
+                "p95": 0.49771028023817715,
+                "max": 0.5343915229168493
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5105470003892715,
+                "std": 0.06568157631859191,
+                "p50": 0.5104771497128672,
+                "p90": 0.5697952103367917,
+                "p95": 0.620497511791769,
+                "max": 0.654190585346747
+              },
+              "rest_windows_over_threshold_rate": 0.04,
+              "intention_windows_over_threshold_rate": 0.6
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.4486361236251402,
+                "std": 0.0760665812948618,
+                "p50": 0.44695594879501727,
+                "p90": 0.5480863060234616,
+                "p95": 0.5754791155179331,
+                "max": 0.6589275058602958
+              },
+              "motor_intention": {
+                "count": 170,
+                "mean": 0.4918555486077176,
+                "std": 0.07424814285632943,
+                "p50": 0.4958559579598495,
+                "p90": 0.5880641193248375,
+                "p95": 0.6048272806570141,
+                "max": 0.6307548270030839
+              },
+              "rest_windows_over_threshold_rate": 0.24,
+              "intention_windows_over_threshold_rate": 0.4764705882352941
+            },
+            "rest_p95_delta": 0.07776883527975592,
+            "rest_mean_delta": 0.02225036283714732,
+            "intention_mean_delta": -0.018691451781553903
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-14",
+          "selected_threshold": 0.5,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 70,
+          "evaluation_trigger_rate": 0.7142857142857143,
+          "evaluation_false_trigger_rate": 0.22857142857142856,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 5,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 1.0,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.5
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.8,
+            "auc": 0.9104,
+            "f1": 0.8333333333333334
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.4871443463199284,
+                "std": 0.04893355953363954,
+                "p50": 0.47535740298290524,
+                "p90": 0.5471276885699975,
+                "p95": 0.5610356998345446,
+                "max": 0.5736103775738415
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5759968736844611,
+                "std": 0.043236388549066,
+                "p50": 0.5649423686153908,
+                "p90": 0.6431831085495159,
+                "p95": 0.6550860104454197,
+                "max": 0.6617368890579384
+              },
+              "rest_windows_over_threshold_rate": 0.4,
+              "intention_windows_over_threshold_rate": 1.0
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.4863779448104861,
+                "std": 0.079118368184957,
+                "p50": 0.4916646329237566,
+                "p90": 0.5777101138236549,
+                "p95": 0.6034919054480936,
+                "max": 0.658428688293363
+              },
+              "motor_intention": {
+                "count": 175,
+                "mean": 0.5706214735283922,
+                "std": 0.07238850616906922,
+                "p50": 0.5676365446233459,
+                "p90": 0.6667052904825032,
+                "p95": 0.6854515398444563,
+                "max": 0.7565136902493482
+              },
+              "rest_windows_over_threshold_rate": 0.45714285714285713,
+              "intention_windows_over_threshold_rate": 0.8342857142857143
+            },
+            "rest_p95_delta": 0.042456205613549014,
+            "rest_mean_delta": -0.0007664015094423493,
+            "intention_mean_delta": -0.005375400156068855
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-21",
+          "selected_threshold": 0.55,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 66,
+          "evaluation_trigger_rate": 0.7878787878787878,
+          "evaluation_false_trigger_rate": 0.2727272727272727,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 3,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.6,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0833333333333333,
+            "threshold": 0.55
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.54,
+            "auc": 0.8208000000000001,
+            "f1": 0.676056338028169
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.5478086499642013,
+                "std": 0.047678772507849375,
+                "p50": 0.537818514932206,
+                "p90": 0.6297331059434007,
+                "p95": 0.6392841462440041,
+                "max": 0.6470561194710253
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.6312161995742863,
+                "std": 0.07198115130831136,
+                "p50": 0.6511196619204483,
+                "p90": 0.7019580868669655,
+                "p95": 0.7049823504550317,
+                "max": 0.7478496684230708
+              },
+              "rest_windows_over_threshold_rate": 0.36,
+              "intention_windows_over_threshold_rate": 0.8
+            },
+            "evaluation": {
+              "rest": {
+                "count": 165,
+                "mean": 0.5345029976829647,
+                "std": 0.09152994282504825,
+                "p50": 0.5335447902138447,
+                "p90": 0.6564425469276125,
+                "p95": 0.6744845335030364,
+                "max": 0.7202330092214262
+              },
+              "motor_intention": {
+                "count": 165,
+                "mean": 0.6062620546844469,
+                "std": 0.05235383693726621,
+                "p50": 0.6055882322440259,
+                "p90": 0.6734752624265194,
+                "p95": 0.686543955290059,
+                "max": 0.7329929755569258
+              },
+              "rest_windows_over_threshold_rate": 0.4666666666666667,
+              "intention_windows_over_threshold_rate": 0.8787878787878788
+            },
+            "rest_p95_delta": 0.035200387259032295,
+            "rest_mean_delta": -0.01330565228123659,
+            "intention_mean_delta": -0.02495414488983938
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "test_subject_ids": [
+        "sub-17",
+        "sub-19",
+        "sub-20",
+        "sub-22",
+        "sub-24",
+        "sub-27",
+        "sub-30",
+        "sub-36",
+        "sub-39",
+        "sub-42",
+        "sub-43",
+        "sub-45",
+        "sub-49"
+      ],
+      "high_false_subjects": [
+        {
+          "subject_id": "sub-19",
+          "selected_threshold": 0.55,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 61,
+          "evaluation_trigger_rate": 0.41379310344827586,
+          "evaluation_false_trigger_rate": 0.125,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 4,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.8,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.125,
+            "threshold": 0.55
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.76,
+            "auc": 0.8400000000000001,
+            "f1": 0.8064516129032258
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.5073089575275983,
+                "std": 0.0801857884119757,
+                "p50": 0.4856885949014636,
+                "p90": 0.6214375015732188,
+                "p95": 0.6535099020430468,
+                "max": 0.7052855293723027
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.6125986089504164,
+                "std": 0.06518463561068953,
+                "p50": 0.5994017182153938,
+                "p90": 0.6950318196354389,
+                "p95": 0.7352254770686096,
+                "max": 0.748942994766281
+              },
+              "rest_windows_over_threshold_rate": 0.24,
+              "intention_windows_over_threshold_rate": 0.8
+            },
+            "evaluation": {
+              "rest": {
+                "count": 160,
+                "mean": 0.5005773952241661,
+                "std": 0.08669616999644754,
+                "p50": 0.5047335591110345,
+                "p90": 0.5944646165530109,
+                "p95": 0.6401515185270532,
+                "max": 0.7573916154126731
+              },
+              "motor_intention": {
+                "count": 145,
+                "mean": 0.5583279455813108,
+                "std": 0.07976204594996184,
+                "p50": 0.5591251948377014,
+                "p90": 0.6593353260083443,
+                "p95": 0.6804395261493245,
+                "max": 0.783782534233695
+              },
+              "rest_windows_over_threshold_rate": 0.29375,
+              "intention_windows_over_threshold_rate": 0.5448275862068965
+            },
+            "rest_p95_delta": -0.01335838351599361,
+            "rest_mean_delta": -0.0067315623034321925,
+            "intention_mean_delta": -0.054270663369105576
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-22",
+          "selected_threshold": 0.6,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 66,
+          "evaluation_trigger_rate": 0.45161290322580644,
+          "evaluation_false_trigger_rate": 0.11428571428571428,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 5,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 1.0,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.1,
+            "threshold": 0.6
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.6799999999999999,
+            "auc": 0.9552,
+            "f1": 0.7575757575757576
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.5207684632040459,
+                "std": 0.07699181182708753,
+                "p50": 0.5289931738351986,
+                "p90": 0.6036887616270917,
+                "p95": 0.6115068850225005,
+                "max": 0.6203435314633232
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.6504315571937676,
+                "std": 0.0468929359699462,
+                "p50": 0.6433999430448979,
+                "p90": 0.7081167289655144,
+                "p95": 0.730731915046745,
+                "max": 0.7451668448631384
+              },
+              "rest_windows_over_threshold_rate": 0.12,
+              "intention_windows_over_threshold_rate": 0.92
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.5383595882452991,
+                "std": 0.08220557163362983,
+                "p50": 0.5410894077330402,
+                "p90": 0.644143989599738,
+                "p95": 0.6603731271426033,
+                "max": 0.7347653699753547
+              },
+              "motor_intention": {
+                "count": 155,
+                "mean": 0.6288528320664061,
+                "std": 0.0669082242162004,
+                "p50": 0.6369704494433558,
+                "p90": 0.7053669486752393,
+                "p95": 0.7202782730932578,
+                "max": 0.7690018751851353
+              },
+              "rest_windows_over_threshold_rate": 0.26857142857142857,
+              "intention_windows_over_threshold_rate": 0.6709677419354839
+            },
+            "rest_p95_delta": 0.04886624212010282,
+            "rest_mean_delta": 0.017591125041253153,
+            "intention_mean_delta": -0.021578725127361476
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-30",
+          "selected_threshold": 0.525,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 70,
+          "evaluation_trigger_rate": 0.2571428571428571,
+          "evaluation_false_trigger_rate": 0.11428571428571428,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 2,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.4,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.125,
+            "threshold": 0.525
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.72,
+            "auc": 0.8495999999999999,
+            "f1": 0.65
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.3859108855964645,
+                "std": 0.08019811290530575,
+                "p50": 0.386920075178496,
+                "p90": 0.4804425170746514,
+                "p95": 0.5129964043787739,
+                "max": 0.5334896029134697
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5105470431057179,
+                "std": 0.0782256669143804,
+                "p50": 0.5092468026503482,
+                "p90": 0.6256732612267206,
+                "p95": 0.6343433031835117,
+                "max": 0.6406254766075479
+              },
+              "rest_windows_over_threshold_rate": 0.04,
+              "intention_windows_over_threshold_rate": 0.44
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.45260156042253796,
+                "std": 0.0924179213777507,
+                "p50": 0.44860445113944064,
+                "p90": 0.5778770106756894,
+                "p95": 0.6036391931414931,
+                "max": 0.6530769326424056
+              },
+              "motor_intention": {
+                "count": 175,
+                "mean": 0.513631426862893,
+                "std": 0.08514819479093404,
+                "p50": 0.5196952084202048,
+                "p90": 0.6220626064322395,
+                "p95": 0.6409213082877124,
+                "max": 0.6994053791888355
+              },
+              "rest_windows_over_threshold_rate": 0.25142857142857145,
+              "intention_windows_over_threshold_rate": 0.4685714285714286
+            },
+            "rest_p95_delta": 0.09064278876271914,
+            "rest_mean_delta": 0.06669067482607344,
+            "intention_mean_delta": 0.0030843837571751243
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-42",
+          "selected_threshold": 0.575,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 69,
+          "evaluation_trigger_rate": 0.5294117647058824,
+          "evaluation_false_trigger_rate": 0.17142857142857143,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 3,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.6,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.575
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.64,
+            "auc": 0.752,
+            "f1": 0.6896551724137931
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.4912322199931024,
+                "std": 0.09793039983599047,
+                "p50": 0.5175631415559693,
+                "p90": 0.5947190944965264,
+                "p95": 0.6242296777007447,
+                "max": 0.6834848523508877
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5852973551547415,
+                "std": 0.09843141912767295,
+                "p50": 0.6075705160070018,
+                "p90": 0.6929756346208524,
+                "p95": 0.7126630771909402,
+                "max": 0.7897540723063777
+              },
+              "rest_windows_over_threshold_rate": 0.2,
+              "intention_windows_over_threshold_rate": 0.6
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.5380955254644958,
+                "std": 0.08995601454469672,
+                "p50": 0.5323610631111625,
+                "p90": 0.6638092421831554,
+                "p95": 0.6786159052368305,
+                "max": 0.7590586064490842
+              },
+              "motor_intention": {
+                "count": 170,
+                "mean": 0.5976082806379297,
+                "std": 0.08141453006703706,
+                "p50": 0.61205984211161,
+                "p90": 0.6897837726281736,
+                "p95": 0.7196864982080604,
+                "max": 0.8007968060287204
+              },
+              "rest_windows_over_threshold_rate": 0.34285714285714286,
+              "intention_windows_over_threshold_rate": 0.6058823529411764
+            },
+            "rest_p95_delta": 0.054386227536085796,
+            "rest_mean_delta": 0.04686330547139339,
+            "intention_mean_delta": 0.01231092548318824
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-43",
+          "selected_threshold": 0.675,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 60,
+          "evaluation_trigger_rate": 0.5185185185185185,
+          "evaluation_false_trigger_rate": 0.12121212121212122,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 4,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.8,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0625,
+            "threshold": 0.675
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.62,
+            "auc": 0.8688,
+            "f1": 0.7246376811594203
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.6016381661745194,
+                "std": 0.09530028498830581,
+                "p50": 0.6476016136358518,
+                "p90": 0.7017127926863839,
+                "p95": 0.7187801140499586,
+                "max": 0.75310191856137
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.7332014189160527,
+                "std": 0.0658396184895737,
+                "p50": 0.7350478154874943,
+                "p90": 0.8246097580095525,
+                "p95": 0.8333928011732219,
+                "max": 0.8377747196836545
+              },
+              "rest_windows_over_threshold_rate": 0.24,
+              "intention_windows_over_threshold_rate": 0.8
+            },
+            "evaluation": {
+              "rest": {
+                "count": 165,
+                "mean": 0.623657727158862,
+                "std": 0.07754499141501954,
+                "p50": 0.6211996306539384,
+                "p90": 0.7188546999460589,
+                "p95": 0.7492215517550116,
+                "max": 0.7844593005140128
+              },
+              "motor_intention": {
+                "count": 135,
+                "mean": 0.6840824137113193,
+                "std": 0.08208124767933382,
+                "p50": 0.6983302634009018,
+                "p90": 0.7792537750601436,
+                "p95": 0.7912113183082615,
+                "max": 0.8307008520686617
+              },
+              "rest_windows_over_threshold_rate": 0.2787878787878788,
+              "intention_windows_over_threshold_rate": 0.6222222222222222
+            },
+            "rest_p95_delta": 0.03044143770505303,
+            "rest_mean_delta": 0.022019560984342657,
+            "intention_mean_delta": -0.049119005204733446
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-45",
+          "selected_threshold": 0.5,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 70,
+          "evaluation_trigger_rate": 0.5428571428571428,
+          "evaluation_false_trigger_rate": 0.22857142857142856,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 4,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.8,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.5
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.8999999999999999,
+            "auc": 0.9536,
+            "f1": 0.8936170212765957
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.4196178842253548,
+                "std": 0.05127391383290602,
+                "p50": 0.40985089172276284,
+                "p90": 0.491163864526096,
+                "p95": 0.4980919701913096,
+                "max": 0.5117443497169424
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5385659230250034,
+                "std": 0.053723524690844016,
+                "p50": 0.5271912921456167,
+                "p90": 0.6173134170740926,
+                "p95": 0.6297558250794721,
+                "max": 0.6417763598249001
+              },
+              "rest_windows_over_threshold_rate": 0.04,
+              "intention_windows_over_threshold_rate": 0.84
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.48904864819877136,
+                "std": 0.08969936378893517,
+                "p50": 0.49151931147135364,
+                "p90": 0.6048725516707321,
+                "p95": 0.6372513907710815,
+                "max": 0.6847777270483761
+              },
+              "motor_intention": {
+                "count": 175,
+                "mean": 0.5453878379108249,
+                "std": 0.07813433443156963,
+                "p50": 0.5481919738196789,
+                "p90": 0.6440259395516289,
+                "p95": 0.6597574399627316,
+                "max": 0.7465404846265992
+              },
+              "rest_windows_over_threshold_rate": 0.48,
+              "intention_windows_over_threshold_rate": 0.6857142857142857
+            },
+            "rest_p95_delta": 0.13915942057977193,
+            "rest_mean_delta": 0.06943076397341658,
+            "intention_mean_delta": 0.006821914885821512
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "test_subject_ids": [
+        "sub-01",
+        "sub-07",
+        "sub-10",
+        "sub-12",
+        "sub-15",
+        "sub-21",
+        "sub-24",
+        "sub-28",
+        "sub-29",
+        "sub-40",
+        "sub-44",
+        "sub-46",
+        "sub-47"
+      ],
+      "high_false_subjects": [
+        {
+          "subject_id": "sub-21",
+          "selected_threshold": 0.575,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 66,
+          "evaluation_trigger_rate": 0.30303030303030304,
+          "evaluation_false_trigger_rate": 0.15151515151515152,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 2,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.4,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.575
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.62,
+            "auc": 0.8320000000000001,
+            "f1": 0.7164179104477612
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.5406653638705375,
+                "std": 0.06349262819859777,
+                "p50": 0.5348890286931304,
+                "p90": 0.6302424161677599,
+                "p95": 0.6427799116880669,
+                "max": 0.6552904223700473
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.6346421447307571,
+                "std": 0.07107409469414551,
+                "p50": 0.6560271189052204,
+                "p90": 0.7198252873925198,
+                "p95": 0.7393247441459956,
+                "max": 0.7575990944249943
+              },
+              "rest_windows_over_threshold_rate": 0.32,
+              "intention_windows_over_threshold_rate": 0.8
+            },
+            "evaluation": {
+              "rest": {
+                "count": 165,
+                "mean": 0.5153624029892181,
+                "std": 0.09671078448454505,
+                "p50": 0.5105885287018962,
+                "p90": 0.6433197566896192,
+                "p95": 0.6632548066000524,
+                "max": 0.7160231393494326
+              },
+              "motor_intention": {
+                "count": 165,
+                "mean": 0.5777550352804729,
+                "std": 0.05920015491840186,
+                "p50": 0.5777251498543133,
+                "p90": 0.6474384605606245,
+                "p95": 0.6691201881698419,
+                "max": 0.73900186705329
+              },
+              "rest_windows_over_threshold_rate": 0.296969696969697,
+              "intention_windows_over_threshold_rate": 0.5151515151515151
+            },
+            "rest_p95_delta": 0.02047489491198551,
+            "rest_mean_delta": -0.025302960881319447,
+            "intention_mean_delta": -0.05688710945028419
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        },
+        {
+          "subject_id": "sub-44",
+          "selected_threshold": 0.55,
+          "calibration_epochs": 10,
+          "evaluation_epochs": 70,
+          "evaluation_trigger_rate": 0.6571428571428571,
+          "evaluation_false_trigger_rate": 0.17142857142857143,
+          "calibration_selected_metrics": {
+            "n_trials": 10,
+            "true_intention_trials": 5,
+            "rest_trials": 5,
+            "triggered_intention_trials": 2,
+            "triggered_rest_trials": 0,
+            "trigger_rate": 0.4,
+            "false_trigger_rate": 0.0,
+            "mean_trigger_delay_seconds": 1.0,
+            "threshold": 0.55
+          },
+          "calibration_offline": {
+            "n_samples": 50,
+            "balanced_accuracy": 0.64,
+            "auc": 0.736,
+            "f1": 0.6785714285714286
+          },
+          "probability_shift": {
+            "calibration": {
+              "rest": {
+                "count": 25,
+                "mean": 0.49962206311867186,
+                "std": 0.061831520770519816,
+                "p50": 0.49279397791832985,
+                "p90": 0.5819942102952456,
+                "p95": 0.5859894888234894,
+                "max": 0.6097295148431533
+              },
+              "motor_intention": {
+                "count": 25,
+                "mean": 0.5656381136764125,
+                "std": 0.08312893420465385,
+                "p50": 0.594746585093426,
+                "p90": 0.6634355229380194,
+                "p95": 0.6824888162067583,
+                "max": 0.7047067910741038
+              },
+              "rest_windows_over_threshold_rate": 0.24,
+              "intention_windows_over_threshold_rate": 0.64
+            },
+            "evaluation": {
+              "rest": {
+                "count": 175,
+                "mean": 0.5260287532525154,
+                "std": 0.07124342434571156,
+                "p50": 0.5244539111516627,
+                "p90": 0.6154297427888697,
+                "p95": 0.6537697454378053,
+                "max": 0.6891721509443594
+              },
+              "motor_intention": {
+                "count": 175,
+                "mean": 0.6023521660803735,
+                "std": 0.06921882078648466,
+                "p50": 0.6037711510068967,
+                "p90": 0.6857354851750965,
+                "p95": 0.7080694583860112,
+                "max": 0.7490207402081118
+              },
+              "rest_windows_over_threshold_rate": 0.34285714285714286,
+              "intention_windows_over_threshold_rate": 0.7885714285714286
+            },
+            "rest_p95_delta": 0.06778025661431586,
+            "rest_mean_delta": 0.026406690133843558,
+            "intention_mean_delta": 0.03671405240396097
+          },
+          "interpretation": [
+            "Evaluation rest p95 reaches or exceeds selected threshold."
+          ]
+        }
+      ]
+    }
+  ]
+}
