@@ -11,7 +11,7 @@ from stroke_bci_mvp.online.trigger_decision import TriggerDecision, TriggerParam
 from stroke_bci_mvp.signal import apply_subject_normalization
 from stroke_bci_mvp.signal.quality import assess_epoch_quality, filter_valid_epochs
 
-from scripts.evaluate_calibration_window_adaptation import _split_subject_calibration
+from scripts.evaluate_calibration_window_adaptation import _select_candidate, _split_subject_calibration
 
 
 def _small_config() -> dict:
@@ -97,6 +97,26 @@ def test_calibration_window_split_keeps_balanced_prefix_per_class() -> None:
     assert evaluation_idx.tolist() == [4, 5, 6, 7]
     assert y[calibration_idx].tolist().count(0) == 2
     assert y[calibration_idx].tolist().count(1) == 2
+
+
+def test_calibration_candidate_selection_supports_safety_margin_and_steps() -> None:
+    candidates = [
+        {"threshold": 0.50, "trigger_rate": 0.8, "false_trigger_rate": 0.10, "mean_trigger_delay_seconds": 1.0},
+        {"threshold": 0.55, "trigger_rate": 0.6, "false_trigger_rate": 0.05, "mean_trigger_delay_seconds": 1.1},
+        {"threshold": 0.60, "trigger_rate": 0.4, "false_trigger_rate": 0.00, "mean_trigger_delay_seconds": 1.2},
+    ]
+
+    selected = _select_candidate(candidates, max_false_trigger_rate=0.10, false_trigger_margin=0.05)
+    safer = _select_candidate(
+        candidates,
+        max_false_trigger_rate=0.10,
+        false_trigger_margin=0.05,
+        threshold_safety_steps=1,
+    )
+
+    assert selected["threshold"] == 0.55
+    assert safer["threshold"] == 0.60
+    assert safer["selection_adjustment"]["original_threshold"] == 0.55
 
 
 def test_online_windows_follow_task_timing() -> None:

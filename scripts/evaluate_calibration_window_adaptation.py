@@ -26,6 +26,8 @@ def evaluate_calibration_window_adaptation(
     calibration_trials_per_class: int = 5,
     output_path: str | None = None,
     max_false_trigger_rate: float | None = None,
+    false_trigger_margin: float = 0.0,
+    threshold_safety_steps: int = 0,
     min_trigger_rate: float = 0.05,
     min_auc: float = 0.60,
 ) -> dict:
@@ -84,7 +86,12 @@ def evaluate_calibration_window_adaptation(
             config=config,
             thresholds=thresholds,
         )
-        selected = _select_candidate(candidates, max_false_trigger_rate)
+        selected = _select_candidate(
+            candidates,
+            max_false_trigger_rate=max_false_trigger_rate,
+            false_trigger_margin=false_trigger_margin,
+            threshold_safety_steps=threshold_safety_steps,
+        )
         eval_report = _evaluate_selected_threshold(
             model=model,
             X=X_valid[evaluation_idx],
@@ -120,6 +127,8 @@ def evaluate_calibration_window_adaptation(
             "thresholds": thresholds,
             "calibration_trials_per_class": int(calibration_trials_per_class),
             "max_false_trigger_rate": max_false_trigger_rate,
+            "false_trigger_margin": float(false_trigger_margin),
+            "threshold_safety_steps": int(threshold_safety_steps),
             "min_trigger_rate": min_trigger_rate,
             "min_auc": min_auc,
             "n_epochs_total": int(len(dataset.y)),
@@ -204,11 +213,38 @@ def _compact_report(report: dict) -> dict:
     }
 
 
-def _select_candidate(candidates: list[dict], max_false_trigger_rate: float) -> dict:
-    feasible = [row for row in candidates if row["false_trigger_rate"] <= max_false_trigger_rate]
+def _select_candidate(
+    candidates: list[dict],
+    max_false_trigger_rate: float,
+    false_trigger_margin: float = 0.0,
+    threshold_safety_steps: int = 0,
+) -> dict:
+    effective_max_false = max(0.0, float(max_false_trigger_rate) - float(false_trigger_margin))
+    feasible = [row for row in candidates if row["false_trigger_rate"] <= effective_max_false]
     if feasible:
-        return max(feasible, key=lambda row: (row["trigger_rate"], _delay_score(row["mean_trigger_delay_seconds"]), row["threshold"]))
-    return min(candidates, key=lambda row: (row["false_trigger_rate"], -row["trigger_rate"], -row["threshold"]))
+        selected = max(
+            feasible,
+            key=lambda row: (row["trigger_rate"], _delay_score(row["mean_trigger_delay_seconds"]), row["threshold"]),
+        )
+    else:
+        selected = min(candidates, key=lambda row: (row["false_trigger_rate"], -row["trigger_rate"], -row["threshold"]))
+    return _apply_threshold_safety_step(candidates, selected, threshold_safety_steps)
+
+
+def _apply_threshold_safety_step(candidates: list[dict], selected: dict, threshold_safety_steps: int) -> dict:
+    if threshold_safety_steps <= 0:
+        return selected
+    ordered = sorted(candidates, key=lambda row: row["threshold"])
+    thresholds = [float(row["threshold"]) for row in ordered]
+    selected_threshold = float(selected["threshold"])
+    selected_idx = thresholds.index(selected_threshold)
+    safer_idx = min(len(ordered) - 1, selected_idx + int(threshold_safety_steps))
+    safer = dict(ordered[safer_idx])
+    safer["selection_adjustment"] = {
+        "original_threshold": selected_threshold,
+        "threshold_safety_steps": int(threshold_safety_steps),
+    }
+    return safer
 
 
 def _subject_status(
@@ -276,6 +312,8 @@ def main() -> None:
     parser.add_argument("--thresholds", nargs="+", type=float, default=[0.5, 0.55, 0.6, 0.65, 0.7, 0.75])
     parser.add_argument("--calibration-trials-per-class", type=int, default=5)
     parser.add_argument("--max-false-trigger-rate", type=float)
+    parser.add_argument("--false-trigger-margin", type=float, default=0.0)
+    parser.add_argument("--threshold-safety-steps", type=int, default=0)
     parser.add_argument("--min-trigger-rate", type=float, default=0.05)
     parser.add_argument("--min-auc", type=float, default=0.60)
     parser.add_argument("--output")
@@ -287,6 +325,8 @@ def main() -> None:
         calibration_trials_per_class=args.calibration_trials_per_class,
         output_path=args.output,
         max_false_trigger_rate=args.max_false_trigger_rate,
+        false_trigger_margin=args.false_trigger_margin,
+        threshold_safety_steps=args.threshold_safety_steps,
         min_trigger_rate=args.min_trigger_rate,
         min_auc=args.min_auc,
     )
