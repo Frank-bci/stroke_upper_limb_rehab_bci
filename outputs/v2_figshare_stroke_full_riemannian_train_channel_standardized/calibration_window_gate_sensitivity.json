@@ -1,0 +1,393 @@
+{
+  "metadata": {
+    "source": "outputs/v2_figshare_stroke_full_riemannian_train_channel_standardized/calibration_window_repeated_splits_gated.json",
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "min_thresholds": [
+      0.0,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625
+    ],
+    "min_calibration_auc": 0.6
+  },
+  "gate_sweep": [
+    {
+      "min_selected_threshold": 0.0,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.2837568138026669,
+          "std": 0.050809355281470917,
+          "min": 0.2119815668202765,
+          "max": 0.3225806451612903
+        },
+        "false_trigger_rate": {
+          "mean": 0.05569696176826292,
+          "std": 0.018917248837336822,
+          "min": 0.03146067415730337,
+          "max": 0.0776255707762557
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 1.059629758863754,
+          "std": 0.013343012694756634,
+          "min": 1.0407608695652173,
+          "max": 1.0692307692307692
+        },
+        "ready_subjects": {
+          "mean": 11.333333333333334,
+          "std": 0.4714045207910317,
+          "min": 11.0,
+          "max": 12.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 130,
+          "triggered_rest_trials": 25,
+          "trigger_rate": 0.3225806451612903,
+          "false_trigger_rate": 0.058004640371229696,
+          "mean_trigger_delay_seconds": 1.0692307692307692,
+          "ready_subjects": 12.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 127,
+          "triggered_rest_trials": 34,
+          "trigger_rate": 0.3167082294264339,
+          "false_trigger_rate": 0.0776255707762557,
+          "mean_trigger_delay_seconds": 1.0688976377952757,
+          "ready_subjects": 11.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 92,
+          "triggered_rest_trials": 14,
+          "trigger_rate": 0.2119815668202765,
+          "false_trigger_rate": 0.03146067415730337,
+          "mean_trigger_delay_seconds": 1.0407608695652173,
+          "ready_subjects": 11.0
+        }
+      ]
+    },
+    {
+      "min_selected_threshold": 0.525,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.2040815484625315,
+          "std": 0.037062948625966013,
+          "min": 0.15207373271889402,
+          "max": 0.23573200992555832
+        },
+        "false_trigger_rate": {
+          "mean": 0.036534735547129986,
+          "std": 0.009690566314821032,
+          "min": 0.029213483146067417,
+          "max": 0.0502283105022831
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 1.0593035619351407,
+          "std": 0.009799279224921647,
+          "min": 1.0454545454545454,
+          "max": 1.0666666666666667
+        },
+        "ready_subjects": {
+          "mean": 9.0,
+          "std": 1.4142135623730951,
+          "min": 7.0,
+          "max": 10.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 95,
+          "triggered_rest_trials": 13,
+          "trigger_rate": 0.23573200992555832,
+          "false_trigger_rate": 0.030162412993039442,
+          "mean_trigger_delay_seconds": 1.0657894736842106,
+          "ready_subjects": 10.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 90,
+          "triggered_rest_trials": 22,
+          "trigger_rate": 0.22443890274314215,
+          "false_trigger_rate": 0.0502283105022831,
+          "mean_trigger_delay_seconds": 1.0666666666666667,
+          "ready_subjects": 7.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 66,
+          "triggered_rest_trials": 13,
+          "trigger_rate": 0.15207373271889402,
+          "false_trigger_rate": 0.029213483146067417,
+          "mean_trigger_delay_seconds": 1.0454545454545454,
+          "ready_subjects": 10.0
+        }
+      ]
+    },
+    {
+      "min_selected_threshold": 0.55,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.1448455547884395,
+          "std": 0.044215976260007325,
+          "min": 0.09429280397022333,
+          "max": 0.20199501246882792
+        },
+        "false_trigger_rate": {
+          "mean": 0.03271720031173886,
+          "std": 0.00595101792017187,
+          "min": 0.027842227378190254,
+          "max": 0.0410958904109589
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 1.059256551873511,
+          "std": 0.015491924796291304,
+          "min": 1.0375,
+          "max": 1.0723684210526316
+        },
+        "ready_subjects": {
+          "mean": 7.0,
+          "std": 1.4142135623730951,
+          "min": 6.0,
+          "max": 9.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 38,
+          "triggered_rest_trials": 12,
+          "trigger_rate": 0.09429280397022333,
+          "false_trigger_rate": 0.027842227378190254,
+          "mean_trigger_delay_seconds": 1.0723684210526316,
+          "ready_subjects": 6.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 81,
+          "triggered_rest_trials": 18,
+          "trigger_rate": 0.20199501246882792,
+          "false_trigger_rate": 0.0410958904109589,
+          "mean_trigger_delay_seconds": 1.0679012345679013,
+          "ready_subjects": 6.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 60,
+          "triggered_rest_trials": 13,
+          "trigger_rate": 0.1382488479262673,
+          "false_trigger_rate": 0.029213483146067417,
+          "mean_trigger_delay_seconds": 1.0375,
+          "ready_subjects": 9.0
+        }
+      ]
+    },
+    {
+      "min_selected_threshold": 0.575,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.05732080645603291,
+          "std": 0.04059707434452847,
+          "min": 0.02729528535980149,
+          "max": 0.11471321695760599
+        },
+        "false_trigger_rate": {
+          "mean": 0.01669566253891627,
+          "std": 0.011383559271433709,
+          "min": 0.004640371229698376,
+          "max": 0.0319634703196347
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 1.0870705381574945,
+          "std": 0.01895852259839186,
+          "min": 1.0706521739130435,
+          "max": 1.1136363636363635
+        },
+        "ready_subjects": {
+          "mean": 5.0,
+          "std": 1.4142135623730951,
+          "min": 4.0,
+          "max": 7.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 11,
+          "triggered_rest_trials": 2,
+          "trigger_rate": 0.02729528535980149,
+          "false_trigger_rate": 0.004640371229698376,
+          "mean_trigger_delay_seconds": 1.1136363636363635,
+          "ready_subjects": 4.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 46,
+          "triggered_rest_trials": 14,
+          "trigger_rate": 0.11471321695760599,
+          "false_trigger_rate": 0.0319634703196347,
+          "mean_trigger_delay_seconds": 1.0706521739130435,
+          "ready_subjects": 4.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 13,
+          "triggered_rest_trials": 6,
+          "trigger_rate": 0.029953917050691243,
+          "false_trigger_rate": 0.01348314606741573,
+          "mean_trigger_delay_seconds": 1.0769230769230769,
+          "ready_subjects": 7.0
+        }
+      ]
+    },
+    {
+      "min_selected_threshold": 0.6,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.03237357392292634,
+          "std": 0.028731395759967478,
+          "min": 0.0,
+          "max": 0.06982543640897755
+        },
+        "false_trigger_rate": {
+          "mean": 0.0076350704707822585,
+          "std": 0.007751441344800902,
+          "min": 0.0,
+          "max": 0.0182648401826484
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 0.7253787878787877,
+          "std": 0.513344927152535,
+          "min": 0.0,
+          "max": 1.1136363636363635
+        },
+        "ready_subjects": {
+          "mean": 4.0,
+          "std": 0.816496580927726,
+          "min": 3.0,
+          "max": 5.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 11,
+          "triggered_rest_trials": 2,
+          "trigger_rate": 0.02729528535980149,
+          "false_trigger_rate": 0.004640371229698376,
+          "mean_trigger_delay_seconds": 1.1136363636363635,
+          "ready_subjects": 4.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 28,
+          "triggered_rest_trials": 8,
+          "trigger_rate": 0.06982543640897755,
+          "false_trigger_rate": 0.0182648401826484,
+          "mean_trigger_delay_seconds": 1.0625,
+          "ready_subjects": 3.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null,
+          "ready_subjects": 5.0
+        }
+      ]
+    },
+    {
+      "min_selected_threshold": 0.625,
+      "min_calibration_auc": 0.6,
+      "summary": {
+        "trigger_rate": {
+          "mean": 0.018254611609932983,
+          "std": 0.014297694320055102,
+          "min": 0.0,
+          "max": 0.034912718204488775
+        },
+        "false_trigger_rate": {
+          "mean": 0.0038175352353911293,
+          "std": 0.003875720672400451,
+          "min": 0.0,
+          "max": 0.0091324200913242
+        },
+        "mean_trigger_delay_seconds": {
+          "mean": 0.7276785714285715,
+          "std": 0.5145496801080724,
+          "min": 0.0,
+          "max": 1.09375
+        },
+        "ready_subjects": {
+          "mean": 3.3333333333333335,
+          "std": 1.247219128924647,
+          "min": 2.0,
+          "max": 5.0
+        }
+      },
+      "runs": [
+        {
+          "true_intention_trials": 403,
+          "rest_trials": 431,
+          "triggered_intention_trials": 8,
+          "triggered_rest_trials": 1,
+          "trigger_rate": 0.019851116625310174,
+          "false_trigger_rate": 0.002320185614849188,
+          "mean_trigger_delay_seconds": 1.09375,
+          "ready_subjects": 3.0
+        },
+        {
+          "true_intention_trials": 401,
+          "rest_trials": 438,
+          "triggered_intention_trials": 14,
+          "triggered_rest_trials": 4,
+          "trigger_rate": 0.034912718204488775,
+          "false_trigger_rate": 0.0091324200913242,
+          "mean_trigger_delay_seconds": 1.0892857142857142,
+          "ready_subjects": 2.0
+        },
+        {
+          "true_intention_trials": 434,
+          "rest_trials": 445,
+          "triggered_intention_trials": 0,
+          "triggered_rest_trials": 0,
+          "trigger_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "mean_trigger_delay_seconds": null,
+          "ready_subjects": 5.0
+        }
+      ]
+    }
+  ]
+}

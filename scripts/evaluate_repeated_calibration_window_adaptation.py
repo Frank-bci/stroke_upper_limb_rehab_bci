@@ -51,7 +51,9 @@ def evaluate_repeated_calibration_window_adaptation(
                 "seed": int(seed),
                 "test_subject_ids": result["metadata"]["test_subject_ids"],
                 "aggregate_evaluation_metrics": result["aggregate_evaluation_metrics"],
+                "aggregate_ready_evaluation_metrics": result["aggregate_ready_evaluation_metrics"],
                 "status_counts": result["status_counts"],
+                "deployment_status_counts": result["deployment_status_counts"],
                 "subjects": result["subjects"],
             }
         )
@@ -90,10 +92,17 @@ def _summary(runs: list[dict]) -> dict:
         "trigger_rate": ["aggregate_evaluation_metrics", "trigger_rate"],
         "false_trigger_rate": ["aggregate_evaluation_metrics", "false_trigger_rate"],
         "mean_trigger_delay_seconds": ["aggregate_evaluation_metrics", "mean_trigger_delay_seconds"],
+        "ready_trigger_rate": ["aggregate_ready_evaluation_metrics", "trigger_rate"],
+        "ready_false_trigger_rate": ["aggregate_ready_evaluation_metrics", "false_trigger_rate"],
+        "ready_mean_trigger_delay_seconds": ["aggregate_ready_evaluation_metrics", "mean_trigger_delay_seconds"],
         "ready_for_trigger": ["status_counts", "ready_for_trigger"],
         "monitor_only_low_trigger": ["status_counts", "monitor_only_low_trigger"],
         "not_ready_high_false_trigger": ["status_counts", "not_ready_high_false_trigger"],
         "not_ready_low_auc": ["status_counts", "not_ready_low_auc"],
+        "deployment_ready_for_trigger": ["deployment_status_counts", "ready_for_trigger"],
+        "deployment_monitor_only_low_trigger": ["deployment_status_counts", "monitor_only_low_trigger"],
+        "deployment_not_ready_high_false_trigger": ["deployment_status_counts", "not_ready_high_false_trigger"],
+        "deployment_not_ready_low_auc": ["deployment_status_counts", "not_ready_low_auc"],
     }
     return {key: _mean_std([_get_path(run, path) for run in runs]) for key, path in paths.items()}
 

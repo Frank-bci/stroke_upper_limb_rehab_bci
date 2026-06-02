@@ -61,7 +61,8 @@ def evaluate_calibration_window_adaptation(
     model.fit(train_data["X"], train_data["y"])
 
     subject_rows = []
-    aggregate = _empty_aggregate()
+    aggregate_all = _empty_aggregate()
+    aggregate_ready = _empty_aggregate()
     for subject_id in sorted(map(str, np.unique(valid_subject_ids[split.test_idx]))):
         subject_mask = valid_subject_ids[split.test_idx].astype(str) == subject_id
         subject_epoch_idx = split.test_idx[subject_mask]
@@ -96,6 +97,20 @@ def evaluate_calibration_window_adaptation(
             false_trigger_margin=false_trigger_margin,
             threshold_safety_steps=threshold_safety_steps,
         )
+        calibration_offline = _offline_metrics(
+            model,
+            X_valid[calibration_idx],
+            y_valid[calibration_idx],
+            dataset.sfreq,
+            config,
+        )
+        deployment_status = _subject_status(
+            offline=calibration_offline,
+            evaluation=selected,
+            max_false_trigger_rate=max_false_trigger_rate,
+            min_trigger_rate=min_trigger_rate,
+            min_auc=min_auc,
+        )
         eval_report = _evaluate_selected_threshold(
             model=model,
             X=X_valid[evaluation_idx],
@@ -107,15 +122,21 @@ def evaluate_calibration_window_adaptation(
         )
         offline = _offline_metrics(model, X_valid[evaluation_idx], y_valid[evaluation_idx], dataset.sfreq, config)
         status = _subject_status(offline, eval_report, max_false_trigger_rate, min_trigger_rate, min_auc)
-        _add_to_aggregate(aggregate, eval_report)
+        _add_to_aggregate(aggregate_all, eval_report)
+        if deployment_status == "ready_for_trigger":
+            _add_to_aggregate(aggregate_ready, eval_report)
+        else:
+            _add_monitor_only_to_aggregate(aggregate_ready, eval_report)
         subject_rows.append(
             {
                 "subject_id": subject_id,
                 "status": status,
+                "deployment_status": deployment_status,
                 "calibration_epochs": int(len(calibration_idx)),
                 "evaluation_epochs": int(len(evaluation_idx)),
                 "selected_threshold": float(selected["threshold"]),
                 "calibration_selected_metrics": selected,
+                "calibration_offline": calibration_offline,
                 "evaluation_metrics": eval_report,
                 "offline": offline,
                 "calibration_candidates": candidates,
@@ -140,8 +161,10 @@ def evaluate_calibration_window_adaptation(
             "n_epochs_valid": int(len(y_valid)),
             "quality_reject_rate": float(1.0 - len(y_valid) / max(1, len(dataset.y))),
         },
-        "aggregate_evaluation_metrics": _finalize_aggregate(aggregate),
+        "aggregate_evaluation_metrics": _finalize_aggregate(aggregate_all),
+        "aggregate_ready_evaluation_metrics": _finalize_aggregate(aggregate_ready),
         "status_counts": _status_counts(subject_rows),
+        "deployment_status_counts": _status_counts(subject_rows, key="deployment_status"),
         "subjects": subject_rows,
     }
 
@@ -290,6 +313,11 @@ def _add_to_aggregate(aggregate: dict, selected: dict) -> None:
         aggregate["delay_count"] += int(selected["triggered_intention_trials"])
 
 
+def _add_monitor_only_to_aggregate(aggregate: dict, selected: dict) -> None:
+    aggregate["true_intention_trials"] += int(selected["true_intention_trials"])
+    aggregate["rest_trials"] += int(selected["rest_trials"])
+
+
 def _finalize_aggregate(aggregate: dict) -> dict:
     delay_count = int(aggregate.pop("delay_count"))
     delay_sum = float(aggregate.pop("delay_sum"))
@@ -299,10 +327,11 @@ def _finalize_aggregate(aggregate: dict) -> dict:
     return aggregate
 
 
-def _status_counts(subject_rows: list[dict]) -> dict:
+def _status_counts(subject_rows: list[dict], key: str = "status") -> dict:
     counts: dict[str, int] = {}
     for row in subject_rows:
-        counts[row["status"]] = counts.get(row["status"], 0) + 1
+        status = row.get(key, "unknown")
+        counts[status] = counts.get(status, 0) + 1
     return counts
 
 
@@ -339,7 +368,9 @@ def main() -> None:
     compact = {
         "metadata": result["metadata"],
         "aggregate_evaluation_metrics": result["aggregate_evaluation_metrics"],
+        "aggregate_ready_evaluation_metrics": result["aggregate_ready_evaluation_metrics"],
         "status_counts": result["status_counts"],
+        "deployment_status_counts": result["deployment_status_counts"],
     }
     print(json.dumps(compact, indent=2, ensure_ascii=False))
 
