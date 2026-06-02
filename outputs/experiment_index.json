@@ -90,6 +90,22 @@
       "recommendation": ""
     },
     {
+      "name": "v2_figshare_stroke_full_riemannian_covariance_aligned",
+      "dataset": "figshare_stroke",
+      "task": "rest_vs_motor_intention",
+      "config": "configs/v2/figshare_stroke_full_riemannian_covariance_aligned.yaml",
+      "split": "subject",
+      "ba": 0.6471912048524951,
+      "auc": 0.7019356561896886,
+      "f1": 0.6342093925032314,
+      "repeated_ba": null,
+      "repeated_auc": null,
+      "repeated_f1": null,
+      "trigger_rate": 0.3141025641025641,
+      "false_trigger_rate": 0.036290322580645164,
+      "recommendation": "near-baseline covariance alignment; no clear gain"
+    },
+    {
       "name": "v2_figshare_stroke_full_riemannian_epoch_standardized",
       "dataset": "figshare_stroke",
       "task": "rest_vs_motor_intention",

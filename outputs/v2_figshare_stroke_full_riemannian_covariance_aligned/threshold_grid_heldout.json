@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "dataset": "figshare_stroke",
+    "config_path": "configs/v2/figshare_stroke_full_riemannian_covariance_aligned.yaml",
+    "model_path": "outputs/v2_figshare_stroke_full_riemannian_covariance_aligned/model.joblib",
+    "split_strategy": "subject",
+    "test_subject_ids": [
+      "sub-02",
+      "sub-11",
+      "sub-14",
+      "sub-16",
+      "sub-21",
+      "sub-23",
+      "sub-28",
+      "sub-31",
+      "sub-33",
+      "sub-35",
+      "sub-37",
+      "sub-43",
+      "sub-47"
+    ]
+  },
+  "selected_threshold": 0.6,
+  "selection_reason": "max_heldout_trigger_rate_under_false_trigger_constraint",
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "n_trials": 964,
+      "trigger_rate": 0.5042735042735043,
+      "false_trigger_rate": 0.1975806451612903,
+      "mean_trigger_delay_seconds": 1.0497881355932204,
+      "triggered_intention_trials": 236,
+      "triggered_rest_trials": 98
+    },
+    {
+      "threshold": 0.55,
+      "n_trials": 964,
+      "trigger_rate": 0.33547008547008544,
+      "false_trigger_rate": 0.10080645161290322,
+      "mean_trigger_delay_seconds": 1.0732484076433122,
+      "triggered_intention_trials": 157,
+      "triggered_rest_trials": 50
+    },
+    {
+      "threshold": 0.6,
+      "n_trials": 964,
+      "trigger_rate": 0.16880341880341881,
+      "false_trigger_rate": 0.04435483870967742,
+      "mean_trigger_delay_seconds": 1.0949367088607596,
+      "triggered_intention_trials": 79,
+      "triggered_rest_trials": 22
+    },
+    {
+      "threshold": 0.65,
+      "n_trials": 964,
+      "trigger_rate": 0.0641025641025641,
+      "false_trigger_rate": 0.010080645161290322,
+      "mean_trigger_delay_seconds": 1.1166666666666667,
+      "triggered_intention_trials": 30,
+      "triggered_rest_trials": 5
+    },
+    {
+      "threshold": 0.7,
+      "n_trials": 964,
+      "trigger_rate": 0.021367521367521368,
+      "false_trigger_rate": 0.0,
+      "mean_trigger_delay_seconds": 1.175,
+      "triggered_intention_trials": 10,
+      "triggered_rest_trials": 0
+    }
+  ]
+}

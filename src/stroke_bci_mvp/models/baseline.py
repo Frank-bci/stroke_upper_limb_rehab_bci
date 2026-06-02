@@ -7,6 +7,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from scipy.linalg import eigh
 from scipy import signal
 
 from stroke_bci_mvp.features import BandpowerTransformer, FBCSPTransformer
@@ -109,6 +110,9 @@ def _build_riemannian_model(config: dict, sfreq: float, ch_names: list[str] | No
         + [
             ("bandpass", BandpassTransformer(sfreq=sfreq, band=tuple(map(float, bandpass_hz)))),
             ("covariances", Covariances(estimator=covariance_estimator)),
+        ]
+        + _covariance_alignment_steps(model_cfg)
+        + [
             ("tangent_space", TangentSpace(metric=metric)),
             ("scaler", StandardScaler()),
             ("clf", classifier),
@@ -162,6 +166,22 @@ def _normalization_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
     if normalization in {"train_channel_zscore", "train_channel_standardize", "channel_standardize"}:
         return [("train_channel_standardize", TrainChannelStandardizer())]
     raise ValueError(f"Unsupported model normalization: {normalization}")
+
+
+def _covariance_alignment_steps(model_cfg: dict) -> list[tuple[str, BaseEstimator]]:
+    alignment_cfg = model_cfg.get("covariance_alignment", {})
+    if not alignment_cfg or not bool(alignment_cfg.get("enabled", False)):
+        return []
+
+    method = str(alignment_cfg.get("method", "euclidean")).lower()
+    if method not in {"euclidean", "euclidean_alignment"}:
+        raise ValueError(f"Unsupported covariance_alignment method: {method}")
+    return [
+        (
+            "covariance_alignment",
+            EuclideanAlignment(eps=float(alignment_cfg.get("eps", 1e-10))),
+        )
+    ]
 
 
 def _maybe_calibrate(model, model_cfg: dict):
@@ -278,3 +298,31 @@ class TrainChannelStandardizer(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         return (X - self.mean_) / np.maximum(self.std_, self.eps)
+
+
+class EuclideanAlignment(BaseEstimator, TransformerMixin):
+    """Align covariance matrices by whitening the training-set Euclidean mean."""
+
+    def __init__(self, eps: float = 1e-10):
+        self.eps = eps
+
+    def fit(self, X, y=None):
+        covariances = np.asarray(X, dtype=float)
+        if covariances.ndim != 3 or covariances.shape[1] != covariances.shape[2]:
+            raise ValueError("EuclideanAlignment expects shape (n_matrices, n_channels, n_channels).")
+
+        reference = np.mean(covariances, axis=0)
+        reference = _symmetrize(reference)
+        eigenvalues, eigenvectors = eigh(reference)
+        clipped = np.maximum(eigenvalues, self.eps)
+        self.whitener_ = eigenvectors @ np.diag(1.0 / np.sqrt(clipped)) @ eigenvectors.T
+        return self
+
+    def transform(self, X):
+        covariances = np.asarray(X, dtype=float)
+        aligned = self.whitener_[None, :, :] @ covariances @ self.whitener_.T[None, :, :]
+        return _symmetrize(aligned)
+
+
+def _symmetrize(matrix: np.ndarray) -> np.ndarray:
+    return 0.5 * (matrix + np.swapaxes(matrix, -1, -2))

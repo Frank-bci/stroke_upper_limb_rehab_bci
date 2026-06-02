@@ -178,6 +178,8 @@ def _format_repeated(summary: dict[str, Any], key: str) -> str | None:
 def _recommendation(name: str) -> str:
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized":
         return "recommended Figshare v2 trigger baseline"
+    if name == "v2_figshare_stroke_full_riemannian_covariance_aligned":
+        return "near-baseline covariance alignment; no clear gain"
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24":
         return "v2.1 candidate; higher trigger, audit artifact risk"
     if name == "v2_figshare_stroke_full_riemannian_train_channel_standardized_top24_no_eog":

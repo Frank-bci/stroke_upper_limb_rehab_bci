@@ -176,6 +176,37 @@ def test_riemannian_model_supports_train_channel_standardization() -> None:
     assert model.predict_proba(windows.X[:4]).shape == (4, 2)
 
 
+def test_riemannian_model_supports_covariance_alignment() -> None:
+    dataset = make_synthetic_dataset(_small_config())
+    config = {
+        "model": {
+            "type": "riemannian_logreg",
+            "covariance_estimator": "oas",
+            "riemannian_metric": "riemann",
+            "class_weight": "balanced",
+            "normalization": "train_channel_standardize",
+            "covariance_alignment": {
+                "enabled": True,
+                "method": "euclidean",
+            },
+            "training_mode": "online_windows",
+        },
+        "online": {
+            "window_seconds": 0.5,
+            "step_seconds": 0.25,
+            "task_start_seconds": 0.5,
+            "task_end_seconds": 1.5,
+        },
+    }
+    windows = make_online_windows(dataset.X, dataset.y, dataset.sfreq, config)
+
+    model = build_model(config, dataset.sfreq)
+    model.fit(windows.X, windows.y)
+
+    assert "covariance_alignment" in model.named_steps
+    assert model.predict_proba(windows.X[:4]).shape == (4, 2)
+
+
 def test_fbcsp_model_supports_train_channel_standardization() -> None:
     dataset = make_synthetic_dataset(_small_config())
     config = {
